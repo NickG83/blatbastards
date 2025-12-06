@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: NickG83/blatbastards  # <-- change this
+  branch: main                             # or 'master' if that's your branch
+  # auth_endpoint will be added later when we wire GitHub OAuth via Cloudflare
+
+media_folder: "static/uploads"   # where uploaded files live in the repo
+public_folder: "/uploads"        # how those files are referenced in the site
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }

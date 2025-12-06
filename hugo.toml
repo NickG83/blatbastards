@@ -1,0 +1,4 @@
+baseURL = 'https://test.blatbastards.com/'
+languageCode = 'en-us'
+title = 'Test Blat Bastards'
+theme = "ananke"
