@@ -3,7 +3,7 @@ backend:
   repo: NickG83/blatbastards  # <-- change this
   branch: main                             # or 'master' if that's your branch
   base_url: "https://test.blatbastards.com"
-  # auth_endpoint will be added later when we wire GitHub OAuth via Cloudflare
+  auth_endpoint: "api/auth"
 
 media_folder: "static/uploads"   # where uploaded files live in the repo
 public_folder: "/uploads"        # how those files are referenced in the site
