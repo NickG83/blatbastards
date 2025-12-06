@@ -1,14 +1,23 @@
 backend:
   name: github
-  repo: NickG83/blatbastards  # <-- change this
-  branch: main                             # or 'master' if that's your branch
+  repo: NickG83/blatbastards
+  branch: main
   base_url: "https://test.blatbastards.com"
   auth_endpoint: "api/auth"
+
+# Optional: lets you run Decap locally if you ever dev locally
+# local_backend: true
 
 media_folder: "static/uploads"   # where uploaded files live in the repo
 public_folder: "/uploads"        # how those files are referenced in the site
 
+editor:
+  preview: true
+
 collections:
+  # ------------------------
+  # PAGES (what you already had)
+  # ------------------------
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
@@ -21,3 +30,94 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  # ------------------------
+  # RIDES (NEW)
+  # ------------------------
+  - name: "rides"
+    label: "Rides"
+    label_singular: "Ride"
+    description: "Adventure rides, day trips and overnighters."
+    folder: "content/rides"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    sortable_fields: ["ride_date", "title"]
+    summary: "{{ride_date}} — {{title}} ({{region}})"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+      - label: "Ride Date"
+        name: "ride_date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+
+      - label: "Region"
+        name: "region"
+        widget: "string"
+        hint: "e.g. Brindabellas, Wee Jasper, Crookwell loop"
+
+      - label: "Distance (km)"
+        name: "distance_km"
+        widget: "number"
+        value_type: "int"
+        required: false
+
+      - label: "Difficulty"
+        name: "difficulty"
+        widget: "select"
+        options: ["Easy", "Moderate", "Hard", "Expert"]
+        default: "Moderate"
+
+      - label: "Surface"
+        name: "surface"
+        widget: "select"
+        options: ["Sealed", "Unsealed", "Mixed"]
+        default: "Mixed"
+
+      - label: "Meeting Point"
+        name: "meeting_point"
+        widget: "string"
+        required: false
+
+      - label: "Departure Time"
+        name: "departure_time"
+        widget: "string"
+        required: false
+        hint: "e.g. 08:00 at Caltex Yass"
+
+      - label: "GPX / KML File"
+        name: "route_file"
+        widget: "file"
+        required: false
+        hint: "Upload the route file (GPX/KML)."
+
+      - label: "Hero Image"
+        name: "hero_image"
+        widget: "image"
+        required: false
+        hint: "Main image for the ride page."
+
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        required: false
+        summary: "{{fields.image}}"
+        field:
+          label: "Image"
+          name: "image"
+          widget: "image"
+
+      - label: "Short Intro"
+        name: "intro"
+        widget: "text"
+        required: false
+        hint: "One or two sentences for ride lists and previews."
+
+      - label: "Ride Notes (full write-up)"
+        name: "body"
+        widget: "markdown"
+        hint: "Full trip description, hazards, fuel stops, etc."
