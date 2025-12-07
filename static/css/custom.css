@@ -86,3 +86,22 @@
   margin-bottom: 6px;
   font-size: 0.95rem;
 }
+
+.rides-list {
+  margin-top: 20px;
+}
+
+.ride-item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.ride-item:last-child {
+  border-bottom: none;
+}
+
+.ride-meta {
+  font-size: 0.9rem;
+  color: #777;
+}

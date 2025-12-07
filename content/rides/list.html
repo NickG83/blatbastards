@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="container">
+  <h1>Rides</h1>
+  <p>Browse all Blat Bastards rides.</p>
+
+  <div class="rides-list">
+    {{ range .Pages.ByDate.Reverse }}
+      <article class="ride-item">
+        <h2>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        <p class="ride-meta">
+          {{ .Date.Format "2 Jan 2006" }}
+          {{ with .Params.distance }} • {{ . }} km{{ end }}
+          {{ with .Params.duration }} • {{ . }} hours{{ end }}
+          {{ with .Params.difficulty }} • {{ . }}{{ end }}
+        </p>
+
+        {{ with .Summary }}
+          <p>{{ . }}</p>
+        {{ else }}
+          <p>{{ .Plain | truncate 180 }}</p>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
