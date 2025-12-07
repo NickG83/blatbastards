@@ -71,3 +71,18 @@
 .navbar-custom .navbar-brand:focus {
   color: #ffffff;
 }
+
+.bb-sidebar-tags h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.bb-sidebar-tags ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bb-sidebar-tags li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
