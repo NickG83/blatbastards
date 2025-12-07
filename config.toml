@@ -2,11 +2,29 @@ baseURL = 'https://test.blatbastards.com/'
 languageCode = 'en-us'
 title = 'Test Blat Bastards'
 theme = "hugo-theme-cleanwhite"
-#  theme = "ananke"
+# theme = "ananke"
 
 [params]
   # Load our extra CSS
   custom_css = ["css/custom.css"]
+
+  # Don't auto-show categories in the nav; we'll define our own items
+  omit_categories = true
+
+  # Top-right menu items
+  [[params.addtional_menus]]
+    title = "RIDES"
+    href  = "/rides/"
+
+  [[params.addtional_menus]]
+    title = "LOGISTICS"
+    href  = "/logistics/"
+
+# Allow HTML inside markdown (needed for the logistics page layout divs)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [taxonomies]
   tag = "tags"

@@ -7,7 +7,7 @@ title: "Blat Logistics"
 
 <div class="logistics-row">
   <div class="logistics-col logistics-col-image">
-    <img src="/uploads/blat-peter-bike.jpg" alt="Packed adventure bike">
+    <img src="/static/img/fg_adv.jpg" alt="Packed adventure bike">
   </div>
 
   <div class="logistics-col logistics-col-text">
