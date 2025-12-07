@@ -48,3 +48,26 @@
   font-size: 0.9rem;
   color: #777;
 }
+
+/* Top navigation colours */
+.navbar-custom {
+  background-color: #333333;   /* dark grey */
+  border-color: #333333;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav > li > a {
+  color: #f5f5f5;              /* light text */
+}
+
+/* Hover / active states */
+.navbar-custom .nav > li > a:hover,
+.navbar-custom .nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: #ffffff;
+}
