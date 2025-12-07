@@ -1,0 +1,50 @@
+.hero-header {
+  padding-top: 100px; /* clears fixed nav */
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.hero-header .hero-image {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/* 80/20 layout */
+.home-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.home-content {
+  flex: 0 0 80%;
+  max-width: 80%;
+}
+
+.home-sidebar {
+  flex: 0 0 20%;
+  max-width: 20%;
+  padding-left: 20px;
+}
+
+/* Stack on mobile */
+@media (max-width: 768px) {
+  .home-content,
+  .home-sidebar {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home-sidebar {
+    margin-top: 30px;
+    padding-left: 0;
+  }
+}
+
+/* Footer tweak */
+.bb-footer {
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #777;
+}

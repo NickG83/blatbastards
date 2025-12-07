@@ -3,3 +3,7 @@ languageCode = 'en-us'
 title = 'Test Blat Bastards'
 theme = "hugo-theme-cleanwhite"
 #  theme = "ananke"
+
+[params]
+  # Load our extra CSS
+  custom_css = ["css/custom.css"]
