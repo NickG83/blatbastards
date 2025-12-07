@@ -1,0 +1,25 @@
+{{ define "header" }}
+<header class="hero-header">
+  <div class="container">
+    <img src="{{ "img/hero.jpg" | relURL }}"
+         alt="Blat Bastards"
+         class="hero-image">
+  </div>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<div class="container">
+  <div class="row home-layout">
+    <!-- Main content (80%) -->
+    <div class="home-content">
+      {{ .Content }}
+    </div>
+
+    <!-- Sidebar (tags) -->
+    <aside class="home-sidebar">
+      {{ partial "sidebar.html" . }}
+    </aside>
+  </div>
+</div>
+{{ end }}
