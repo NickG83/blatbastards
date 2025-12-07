@@ -7,7 +7,7 @@ title: "Blat Logistics"
 
 <div class="logistics-row">
   <div class="logistics-col logistics-col-image">
-    <img src="/static/img/fg_adv.jpg" alt="Packed adventure bike">
+    <img src="/img/fg_adv.jpg" alt="Packed adventure bike">
   </div>
 
   <div class="logistics-col logistics-col-text">
@@ -24,7 +24,7 @@ title: "Blat Logistics"
     It’s pretty powerful once you understand how to use it. Given it underpins the BMW 
     Navigator system, it’s worth the time to run through this series from “EZ Moto Tim” 
     on YouTube.</p>
-    <p><a href="https://youtube.com/playlist?list=PL7SnEAaQ4kJh7gnOHW_IsXDRyauzcFgK7&si=R2uevcYZksw405o5">Watch the series on YouTube</a></p>
+    <p><a href="https://youtu.be/3SZ6SIh2bpk">Watch the series on YouTube</a></p>
   </div>
 
   <div class="logistics-col logistics-col-video">
