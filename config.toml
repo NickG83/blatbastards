@@ -1,4 +1,5 @@
 baseURL = 'https://test.blatbastards.com/'
 languageCode = 'en-us'
 title = 'Test Blat Bastards'
-theme = "ananke"
+theme = "hugo-theme-cleanwhite"
+#  theme = "ananke"
