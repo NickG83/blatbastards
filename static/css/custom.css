@@ -148,3 +148,55 @@
   color: var(--bb-accent-orange);
   text-decoration: none;
 }
+
+/* Logistics page title */
+.logistics-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.logistics-title-bar {
+  width: 180px;
+  height: 4px;
+  margin: 0 auto 40px;
+  background-color: #f44336; /* tweak to match your accent red */
+}
+
+/* Two-column logistics rows */
+.logistics-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.logistics-col {
+  flex: 1 1 50%;
+  padding: 10px 20px;
+}
+
+.logistics-col-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.logistics-col-video iframe {
+  width: 100%;
+  min-height: 260px;
+}
+
+/* Stack nicely on mobile */
+@media (max-width: 768px) {
+  .logistics-row {
+    flex-direction: column;
+  }
+
+  .logistics-col {
+    flex-basis: 100%;
+  }
+}
