@@ -1,7 +1,26 @@
+/* ===========================
+   Blat Bastards Color Palette
+   =========================== */
+:root {
+  --bb-primary:        #1A3560; /* deep navy */
+  --bb-primary-light:  #97B9DC; /* logo text blue */
+  --bb-primary-soft:   #738EA1; /* steel blue */
+  --bb-dark:           #232323; /* dark text */
+  --bb-body-text:      #4C4C4C; /* body copy */
+  --bb-bg:             #FFFFFF; /* main background */
+
+  --bb-accent-orange:  #DF7146; /* dirt / exhaust */
+  --bb-accent-red:     #DA2631; /* suit stripes */
+  --bb-accent-yellow:  #FCE7A6; /* koala ear highlights */
+}
+
+/* Hero header */
 .hero-header {
   padding-top: 100px; /* clears fixed nav */
   padding-bottom: 40px;
   text-align: center;
+  background-color: var(--bb-bg);
+  color: var(--bb-primary);
 }
 
 .hero-header .hero-image {
@@ -46,35 +65,46 @@
 .bb-footer {
   padding: 20px 0;
   font-size: 0.9rem;
-  color: #777;
+  color: var(--bb-primary-soft);
+  background-color: var(--bb-primary);
+}
+
+.bb-footer a {
+  color: var(--bb-primary-light);
+}
+
+.bb-footer a:hover {
+  color: var(--bb-accent-orange);
 }
 
 /* Top navigation colours */
 .navbar-custom {
-  background-color: #333333;   /* dark grey */
-  border-color: #333333;
+  background-color: var(--bb-primary);   /* deep navy */
+  border-color: var(--bb-primary);
 }
 
 .navbar-custom .navbar-brand,
 .navbar-custom .nav > li > a {
-  color: #f5f5f5;              /* light text */
+  color: #ffffff; /* light text */
 }
 
 /* Hover / active states */
 .navbar-custom .nav > li > a:hover,
 .navbar-custom .nav > li > a:focus {
-  color: #ffffff;
+  color: var(--bb-primary-light);
   background-color: transparent;
 }
 
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus {
-  color: #ffffff;
+  color: var(--bb-primary-light);
 }
 
+/* Sidebar tags */
 .bb-sidebar-tags h5 {
   margin-top: 0;
   margin-bottom: 10px;
+  color: var(--bb-primary);
 }
 
 .bb-sidebar-tags ul {
@@ -85,15 +115,17 @@
 .bb-sidebar-tags li {
   margin-bottom: 6px;
   font-size: 0.95rem;
+  color: var(--bb-body-text);
 }
 
+/* Rides list */
 .rides-list {
   margin-top: 20px;
 }
 
 .ride-item {
   margin-bottom: 25px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #E2E8F0; /* light blue-grey divider */
   padding-bottom: 15px;
 }
 
@@ -103,5 +135,16 @@
 
 .ride-meta {
   font-size: 0.9rem;
-  color: #777;
+  color: var(--bb-primary-soft);
+}
+
+/* Optional: links in main content */
+.home-content a {
+  color: var(--bb-primary);
+}
+
+.home-content a:hover,
+.home-content a:focus {
+  color: var(--bb-accent-orange);
+  text-decoration: none;
 }
