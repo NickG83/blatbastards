@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+
+    <!-- Brand: Blat Bastards (left) -->
+    <div class="navbar-header">
+      <button type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bb-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="{{ "/" | relURL }}">
+        Blat Bastards
+      </a>
+    </div>
+
+    <!-- Menu (right) -->
+    <div class="collapse navbar-collapse" id="bb-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ "/rides/" | relURL }}">Rides</a></li>
+        <li><a href "{{ "/logistics/" | relURL }}">Logistics</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
