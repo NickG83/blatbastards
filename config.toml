@@ -7,3 +7,7 @@ theme = "hugo-theme-cleanwhite"
 [params]
   # Load our extra CSS
   custom_css = ["css/custom.css"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
