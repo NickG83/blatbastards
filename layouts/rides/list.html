@@ -11,31 +11,81 @@
         <hr class="bb-page-underline">
       </header>
 
-      <p class="bb-page-subtitle">Browse all Blat Bastards rides.</p>
+   <div class="rides-list">
+  {{ $all := .Pages }}
 
-      <div class="rides-list">
-        {{ if gt (len .Pages) 0 }}
-          {{ range .Pages.ByDate.Reverse }}
-            <article class="ride-item">
-              <h2>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </h2>
+  {{ $halfDay := where $all "Params.duration" "Half-Day" }}
+  {{ if gt (len $halfDay) 0 }}
+    <h2>Half-Day Rides</h2>
+    {{ range $halfDay.ByDate.Reverse }}
+      <article class="ride-item">
+        <h3>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="ride-meta">
+          {{ with .Params.region }}{{ . }}{{ end }}
+          {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+          {{ with .Params.difficulty }} • {{ . }}{{ end }}
+        </p>
+      </article>
+    {{ end }}
+    <hr>
+  {{ end }}
 
-              <p class="ride-meta">
-                {{ with .Params.region }}{{ . }}{{ end }}
-                {{ with .Params.distance }} • ~{{ . }} km{{ end }}
-                {{ with .Params.duration }} • {{ . }}{{ end }}
-                {{ with .Params.difficulty }} • {{ . }}{{ end }}
-              </p>
-            </article>
-            <hr>
-          {{ end }}
-        {{ else }}
-          <p>No rides published yet. Check back soon.</p>
-        {{ end }}
-      </div>
+  {{ $day := where $all "Params.duration" "Day" }}
+  {{ if gt (len $day) 0 }}
+    <h2>Day Rides</h2>
+    {{ range $day.ByDate.Reverse }}
+      <article class="ride-item">
+        <h3>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="ride-meta">
+          {{ with .Params.region }}{{ . }}{{ end }}
+          {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+          {{ with .Params.difficulty }} • {{ . }}{{ end }}
+        </p>
+      </article>
+    {{ end }}
+    <hr>
+  {{ end }}
 
-    </div>
-  </div>
+  {{ $weekend := where $all "Params.duration" "Weekend" }}
+  {{ if gt (len $weekend) 0 }}
+    <h2>Weekend Rides</h2>
+    {{ range $weekend.ByDate.Reverse }}
+      <article class="ride-item">
+        <h3>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="ride-meta">
+          {{ with .Params.region }}{{ . }}{{ end }}
+          {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+          {{ with .Params.difficulty }} • {{ . }}{{ end }}
+        </p>
+      </article>
+    {{ end }}
+    <hr>
+  {{ end }}
+
+  {{ $longer := where $all "Params.duration" "Longer" }}
+  {{ if gt (len $longer) 0 }}
+    <h2>Longer Rides</h2>
+    {{ range $longer.ByDate.Reverse }}
+      <article class="ride-item">
+        <h3>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="ride-meta">
+          {{ with .Params.region }}{{ . }}{{ end }}
+          {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+          {{ with .Params.difficulty }} • {{ . }}{{ end }}
+        </p>
+      </article>
+    {{ end }}
+  {{ end }}
+
+  {{ if and (eq (len $halfDay) 0) (eq (len $day) 0) (eq (len $weekend) 0) (eq (len $longer) 0) }}
+    <p>No rides published yet. Check back soon.</p>
+  {{ end }}
 </div>
-{{ end }}
