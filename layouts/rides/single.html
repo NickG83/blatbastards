@@ -21,9 +21,6 @@
           {{ with .Params.duration }}
             <li><strong>Duration:</strong> {{ . }}</li>
           {{ end }}
-          {{ with .Params.difficulty }}
-            <li><strong>Difficulty:</strong> {{ . }}</li>
-          {{ end }}
           {{ with .Params.surface }}
             <li><strong>Surface:</strong> {{ . }}</li>
           {{ end }}
@@ -56,7 +53,7 @@
           <h2>Ride map</h2>
           <iframe
             src="{{ . }}"
-            width="100%"
+            width="640"
             height="480"
             style="border:0;"
             loading="lazy"
