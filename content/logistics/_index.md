@@ -2,7 +2,7 @@
 title: "Blat Logistics"
 ---
 
-# Blat Logistics
+<h1 class="bb-page-title">Blat Logistics</h1>
 
 <div class="logistics-row">
   <div class="logistics-col logistics-col-image">
@@ -28,7 +28,7 @@ title: "Blat Logistics"
 
   <div class="logistics-col logistics-col-video">
     <iframe
-      src="https://youtu.be/3SZ6SIh2bpk"
+      src="https://www.youtube.com/embed/3SZ6SIh2bpk"
       title="Garmin BaseCamp Tutorials"
       frameborder="0"
       allowfullscreen>

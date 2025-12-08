@@ -14,7 +14,7 @@
   --bb-accent-yellow:  #FCE7A6; /* koala ear highlights */
 }
 
-/* Hero header */
+/* Hero header (not really used now, but harmless) */
 .hero-header {
   padding-top: 100px; /* clears fixed nav */
   padding-bottom: 40px;
@@ -29,7 +29,7 @@
   display: inline-block;
 }
 
-/* 80/20 layout */
+/* 80/20 layout on home page */
 .home-layout {
   display: flex;
   flex-wrap: wrap;
@@ -149,24 +149,21 @@
   text-decoration: none;
 }
 
-/* ==================================================
-   Global page title style for sub-pages and posts
-   - Applies to the first H1 in the main content
-   ================================================== */
-.page-content h1:first-of-type,
-.post-container h1:first-of-type {
+/* ==============================================
+   Global big page title (Rides, Logistics, etc.)
+   Use: <h1 class="bb-page-title">Title</h1>
+   ============================================== */
+.bb-page-title {
   text-align: center;
-  font-size: 5rem;       /* big title */
-  font-weight: 900;      /* extra bold */
-  letter-spacing: 0.05em;
-  margin-top: 10px;
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  margin-top: 40px;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
 
-/* Red underline bar under that first H1 */
-.page-content h1:first-of-type::after,
-.post-container h1:first-of-type::after {
+.bb-page-title::after {
   content: "";
   display: block;
   width: 180px;
@@ -205,7 +202,7 @@
   font-weight: 700;
 }
 
-/* Stack on mobile */
+/* Stack logistics rows on mobile */
 @media (max-width: 768px) {
   .logistics-row {
     flex-direction: column;
@@ -224,12 +221,4 @@
 /* Add a little top padding so content doesn't hug the nav bar */
 body {
   padding-top: 70px; /* tweak to match your blue navbar height */
-}
-
-/* (Unused now, but harmless) – original theme hero title sizing */
-.intro-header .page-heading h1,
-.intro-header .site-heading h1 {
-  font-size: 5.6rem;
-  font-weight: 900;
-  letter-spacing: 0.15em;
 }
