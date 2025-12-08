@@ -8,9 +8,11 @@ surface: Mixed
 meeting_point: Gunning - Old Hume Cafe
 route_file: https://files.blatbastards.com/GPX/Black_Stump_Bogan.gpx
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=1I4zc-ix5-vp0W-gl5LcTPvP0fO9a5W4&ehbc=2E312F
+gallery: []
+intro: This ride takes in a variety of different country and stemmed from an
+  original 2 day ride to a conversation about tying together some aspects from
+  others, creating this 3 day hybrid.
 ---
-This ride takes in a variety of different country and stemmed from an original 2 day ride to a conversation about tying together some aspects from others, creating this 3 day hybrid.
-
 **Day 1;** Muster point in Gunning at the Old Hume Cafe, before heading through the backroads via Crookwell to Bathurst and a lap of Mt Panorama. Late lunch in Hill End. From Hill End, heading for the overnight in Coolah on the "Black Stump Way".
 *(Approx. 450Kms)*
 
