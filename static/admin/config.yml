@@ -31,8 +31,8 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  # ------------------------
-  # RIDES (NEW)
+    # ------------------------
+  # RIDES
   # ------------------------
   - name: "rides"
     label: "Rides"
@@ -43,13 +43,14 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     format: "frontmatter"
     extension: "md"
-    sortable_fields: ["ride_date", "title"]
-    summary: "{{ride_date}} — {{title}} ({{region}})"
+    sortable_fields: ["date", "title"]
+    summary: "{{date}} — {{title}} ({{region}})"
+
     fields:
       - { label: "Title", name: "title", widget: "string" }
 
       - label: "Ride Date"
-        name: "ride_date"
+        name: "date"              # <-- was ride_date; now drives Hugo .Date
         widget: "datetime"
         date_format: "YYYY-MM-DD"
         time_format: false
@@ -61,10 +62,16 @@ collections:
         hint: "e.g. Brindabellas, Wee Jasper, Crookwell loop"
 
       - label: "Distance (km)"
-        name: "distance_km"
+        name: "distance"          # <-- was distance_km; matches .Params.distance
         widget: "number"
         value_type: "int"
         required: false
+
+      - label: "Duration"
+        name: "duration"          # <-- new; matches .Params.duration
+        widget: "select"
+        options: ["Half-Day", "Day", "Weekend", "Longer"]
+        default: "Day"
 
       - label: "Difficulty"
         name: "difficulty"

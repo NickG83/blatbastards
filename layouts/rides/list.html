@@ -1,13 +1,7 @@
 {{ define "main" }}
 <div class="container">
-
-  <h1 class="bb-page-title">{{ .Title }}</h1>
-
-  {{ with .Content }}
-    <div class="section-intro">
-      {{ . }}
-    </div>
-  {{ end }}
+  <h1>Rides</h1>
+  <p>Browse all Blat Bastards rides.</p>
 
   <div class="rides-list">
     {{ range .Pages.ByDate.Reverse }}
@@ -17,19 +11,23 @@
         </h2>
         <p class="ride-meta">
           {{ .Date.Format "2 Jan 2006" }}
+          {{ with .Params.region }} • {{ . }}{{ end }}
           {{ with .Params.distance }} • {{ . }} km{{ end }}
           {{ with .Params.duration }} • {{ . }} hours{{ end }}
           {{ with .Params.difficulty }} • {{ . }}{{ end }}
         </p>
 
-        {{ with .Summary }}
+        {{ with .Params.intro }}
           <p>{{ . }}</p>
         {{ else }}
-          <p>{{ .Plain | truncate 180 }}</p>
+          {{ with .Summary }}
+            <p>{{ . }}</p>
+          {{ else }}
+            <p>{{ .Plain | truncate 180 }}</p>
+          {{ end }}
         {{ end }}
       </article>
     {{ end }}
   </div>
-
 </div>
 {{ end }}
