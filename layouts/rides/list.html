@@ -6,8 +6,12 @@
       col-md-10 col-md-offset-1
       post-container">
 
-      <h1>Rides</h1>
-      <p>Browse all Blat Bastards rides.</p>
+      <header class="bb-page-header">
+        <h1 class="bb-page-title">Rides</h1>
+        <hr class="bb-page-underline">
+      </header>
+
+      <p class="bb-page-subtitle">Browse all Blat Bastards rides.</p>
 
       <div class="rides-list">
         {{ if gt (len .Pages) 0 }}
