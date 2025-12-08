@@ -1,33 +1,50 @@
+{{ define "header" }}
+# Rides
+Browse all Blat Bastards rides.
+{{ end }}
+
 {{ define "main" }}
 <div class="container">
-  <h1>Rides</h1>
-  <p>Browse all Blat Bastards rides.</p>
+  <div class="row">
+    <div class="
+      col-lg-8 col-lg-offset-2
+      col-md-10 col-md-offset-1
+      post-container">
 
-  <div class="rides-list">
-    {{ range .Pages.ByDate.Reverse }}
-      <article class="ride-item">
-        <h2>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h2>
-        <p class="ride-meta">
-          {{ .Date.Format "2 Jan 2006" }}
-          {{ with .Params.region }} • {{ . }}{{ end }}
-          {{ with .Params.distance }} • {{ . }} km{{ end }}
-          {{ with .Params.duration }} • {{ . }} hours{{ end }}
-          {{ with .Params.difficulty }} • {{ . }}{{ end }}
-        </p>
+      {{ $rides := where .Site.RegularPages "Section" "rides" }}
 
-        {{ with .Params.intro }}
-          <p>{{ . }}</p>
-        {{ else }}
-          {{ with .Summary }}
-            <p>{{ . }}</p>
-          {{ else }}
-            <p>{{ .Plain | truncate 180 }}</p>
-          {{ end }}
+      {{ if gt (len $rides) 0 }}
+        {{ range $rides.ByDate.Reverse }}
+          <article class="ride-item post-preview">
+            <h2 class="post-title">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+
+            <p class="ride-meta post-meta">
+              {{ .Date.Format "2 Jan 2006" }}
+              {{ with .Params.region }} • {{ . }}{{ end }}
+              {{ with .Params.distance }} • {{ . }} km{{ end }}
+              {{ with .Params.duration }} • {{ . }} hours{{ end }}
+              {{ with .Params.difficulty }} • {{ . }}{{ end }}
+            </p>
+
+            {{ with .Params.intro }}
+              <p>{{ . }}</p>
+            {{ else }}
+              {{ with .Summary }}
+                <p>{{ . }}</p>
+              {{ else }}
+                <p>{{ .Plain | truncate 180 }}</p>
+              {{ end }}
+            {{ end }}
+          </article>
+          <hr>
         {{ end }}
-      </article>
-    {{ end }}
+      {{ else }}
+        <p>No rides published yet. Check back soon.</p>
+      {{ end }}
+
+    </div>
   </div>
 </div>
 {{ end }}
