@@ -2,8 +2,7 @@
 title: "Blat Logistics"
 ---
 
-<div class="logistics-title">BLAT LOGISTICS</div>
-<div class="logistics-title-bar"></div>
+# Blat Logistics
 
 <div class="logistics-row">
   <div class="logistics-col logistics-col-image">
