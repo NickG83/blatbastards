@@ -134,8 +134,9 @@
 }
 
 .ride-meta {
-  font-size: 0.9rem;
-  color: var(--bb-primary-soft);
+  font-size: 1.2rem;
+  color: var(--bb-accent-orange);
+  margin-top: 2px; 
 }
 
 /* Optional: links in main content */
