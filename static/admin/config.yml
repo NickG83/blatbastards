@@ -96,7 +96,7 @@ collections:
         name: "route_file"
         widget: "file"
         required: false
-        hint: "GPX Route File (https://files.blatbastards.com/GPX/)."
+        hint: "Files in R2 Bucket, link prefix https://files.blatbastards.com/GPX/"
 
       - label: "Map Embed URL"
         name: "map_embed"
@@ -135,4 +135,4 @@ collections:
         name: "youtube_embed"
         widget: "string"
         required: false
-        hint: "Paste the YouTube embed URL (the https://www.youtube.com/embed/... link)."
+        hint: "YouTube embed URL (the https://www.youtube.com/embed/... link)."

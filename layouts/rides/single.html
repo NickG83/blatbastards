@@ -32,13 +32,13 @@
           {{ end }}
         </ul>
 
-      {{ with .Params.route_file }}
-        <p class="ride-download-btn">
-          <a class="btn btn-sm btn-primary ride-download-btn" href="{{ . }}" download>
-            Download route (GPX)
-          </a>
-        </p>
-      {{ end }}
+        {{ with .Params.route_file }}
+          <p class="ride-download-btn">
+            <a class="btn btn-sm btn-primary ride-download-btn" href="{{ . }}" download>
+              Download route (GPX)
+            </a>
+          </p>
+        {{ end }}
       </div>
 
       <!-- Optional hero image -->
@@ -67,6 +67,26 @@
         {{ .Content }}
       </div>
 
+      <!-- YouTube video AFTER notes, BEFORE gallery -->
+      {{ with .Params.youtube_embed }}
+        <div class="ride-video">
+          <h2>Ride video</h2>
+          <div class="ride-video-wrapper">
+            <iframe
+              src="{{ . }}"
+              width="100%"
+              height="360"
+              style="border:0;"
+              title="{{ $.Title }} ride video"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      {{ end }}
+
       <!-- Optional gallery -->
       {{ with .Params.gallery }}
         <div class="ride-detail-gallery">
@@ -81,23 +101,4 @@
     </div>
   </div>
 </div>
-{{ end }}
-
-{{ with .Params.youtube_embed }}
-  <div class="ride-video">
-    <h2>Ride video</h2>
-    <div class="ride-video-wrapper">
-      <iframe
-        src="{{ . }}"
-        width="100%"
-        height="360"
-        style="border:0;"
-        title="{{ $.Title }} ride video"
-        loading="lazy"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
 {{ end }}
