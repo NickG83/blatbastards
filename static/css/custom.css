@@ -211,10 +211,10 @@ body {
   padding-top: 70px; /* tweak to match your blue navbar height */
 }
 
+/* Make the top page title (e.g. BLAT LOGISTICS) bigger and bolder */
 .intro-header .page-heading h1,
 .intro-header .site-heading h1 {
   font-size: 3.6rem;
   font-weight: 900;
   letter-spacing: 0.15em;  /* optional, makes it look more “title-like” */
 }
-
