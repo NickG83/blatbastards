@@ -40,7 +40,7 @@ collections:
     description: "Adventure rides, day trips and overnighters."
     folder: "content/rides"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
     sortable_fields: ["date", "title"]
