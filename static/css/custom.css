@@ -149,21 +149,23 @@
   text-decoration: none;
 }
 
-/* Logistics page title */
+/* Logistics page title – main heading */
 .logistics-title {
   text-align: center;
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-size: 4rem;       /* bigger than section headings */
+  font-weight: 900;      /* extra bold */
+  letter-spacing: 0.18em;
   margin-top: 40px;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
+/* Red underline bar under BLAT LOGISTICS */
 .logistics-title-bar {
   width: 180px;
   height: 4px;
   margin: 0 auto 40px;
-  background-color: #f44336; /* your accent red */
+  background-color: #f44336; /* accent red */
 }
 
 /* Two-column logistics rows */
@@ -190,6 +192,12 @@
   min-height: 260px;
 }
 
+/* Section headings inside logistics rows (Packing List, Learn Basecamp, etc.) */
+.logistics-row h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 /* Stack on mobile */
 @media (max-width: 768px) {
   .logistics-row {
@@ -206,15 +214,15 @@
   display: none;
 }
 
-/* Optional: add a little top padding so content doesn't hug the nav bar */
+/* Add a little top padding so content doesn't hug the nav bar */
 body {
   padding-top: 70px; /* tweak to match your blue navbar height */
 }
 
-/* Make the top page title (e.g. BLAT LOGISTICS) bigger and bolder */
+/* (Unused now, but harmless) – original theme hero title sizing */
 .intro-header .page-heading h1,
 .intro-header .site-heading h1 {
   font-size: 5.6rem;
   font-weight: 900;
-  letter-spacing: 0.15em;  /* optional, makes it look more “title-like” */
+  letter-spacing: 0.15em;
 }
