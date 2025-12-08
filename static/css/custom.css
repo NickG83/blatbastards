@@ -152,10 +152,10 @@
 /* Logistics page title – main heading */
 .logistics-title {
   text-align: center;
-  font-size: 4rem;       /* bigger than section headings */
+  font-size: 5rem;       /* bigger than section headings */
   font-weight: 900;      /* extra bold */
-  letter-spacing: 0.18em;
-  margin-top: 40px;
+  letter-spacing: 0.1em;
+  margin-top: 20px;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
