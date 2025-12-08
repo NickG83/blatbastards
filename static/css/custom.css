@@ -263,6 +263,15 @@ body {
   gap: 10px;
 }
 
+/* Indent all ride facts except the intro line */
+.ride-detail-meta li {
+  margin-left: 0;           /* reset */
+}
+
+.ride-detail-meta li:not(.ride-intro) {
+  margin-left: 2rem;        /* push to the right */
+}
+
 .ride-gallery-img {
   max-width: 48%;
   height: auto;
@@ -304,5 +313,4 @@ body {
   list-style: none;
   font-style: italic;
   margin-bottom: 0.5rem;
-  margin-left: 5rem;
 }
