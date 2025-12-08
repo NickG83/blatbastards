@@ -1,0 +1,73 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="
+      col-lg-8 col-lg-offset-2
+      col-md-10 col-md-offset-1
+      post-container">
+
+      <!-- Big page title -->
+      <h1 class="bb-page-title">{{ .Title }}</h1>
+
+      <!-- Key ride facts -->
+      <div class="ride-detail-meta">
+        <ul>
+          {{ with .Params.region }}
+            <li><strong>Region:</strong> {{ . }}</li>
+          {{ end }}
+          {{ with .Params.distance }}
+            <li><strong>Distance:</strong> ~{{ . }} km</li>
+          {{ end }}
+          {{ with .Params.duration }}
+            <li><strong>Duration:</strong> {{ . }}</li>
+          {{ end }}
+          {{ with .Params.difficulty }}
+            <li><strong>Difficulty:</strong> {{ . }}</li>
+          {{ end }}
+          {{ with .Params.surface }}
+            <li><strong>Surface:</strong> {{ . }}</li>
+          {{ end }}
+          {{ with .Params.meeting_point }}
+            <li><strong>Meeting point:</strong> {{ . }}</li>
+          {{ end }}
+          {{ with .Params.departure_time }}
+            <li><strong>Departure time:</strong> {{ . }}</li>
+          {{ end }}
+        </ul>
+
+        {{ with .Params.route_file }}
+          <p class="ride-detail-download">
+            <a class="btn btn-sm btn-primary" href="{{ . }}" download>
+              Download route (GPX / KML)
+            </a>
+          </p>
+        {{ end }}
+      </div>
+
+      <!-- Optional hero image -->
+      {{ with .Params.hero_image }}
+        <p>
+          <img class="img-responsive" src="{{ . }}" alt="{{ $.Title }}">
+        </p>
+      {{ end }}
+
+      <!-- Main ride notes from Decap ("Ride Notes" field) -->
+      <div class="ride-detail-content">
+        {{ .Content }}
+      </div>
+
+      <!-- Optional gallery -->
+      {{ with .Params.gallery }}
+        <div class="ride-detail-gallery">
+          {{ range . }}
+            {{ with .image }}
+              <img class="ride-gallery-img" src="{{ . }}" alt="">
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>
+{{ end }}

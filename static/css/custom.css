@@ -224,3 +224,47 @@
 body {
   padding-top: 70px; /* tweak to match your blue navbar height */
 }
+
+/* Ride detail page */
+.ride-detail-meta {
+  background-color: #f7fafc;
+  border-radius: 4px;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  font-size: 0.98rem;
+}
+
+.ride-detail-meta ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ride-detail-meta li + li {
+  margin-top: 4px;
+}
+
+.ride-detail-meta strong {
+  color: var(--bb-primary);
+}
+
+.ride-detail-download {
+  margin-top: 10px;
+}
+
+.ride-detail-content {
+  margin-top: 20px;
+}
+
+.ride-detail-gallery {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ride-gallery-img {
+  max-width: 48%;
+  height: auto;
+  display: block;
+}
