@@ -286,3 +286,8 @@ body {
 .ride-detail-meta a.btn.btn-primary:visited {
   color: #ffffff !important;
 }
+
+.ride-intro {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}

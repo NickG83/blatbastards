@@ -12,6 +12,9 @@
       <!-- Key ride facts -->
       <div class="ride-detail-meta">
         <ul>
+          {{ with .Params.intro }}
+            <li class="ride-intro">{{ . }}</li>
+          {{ end }}
           {{ with .Params.region }}
             <li><strong>Region:</strong> {{ . }}</li>
           {{ end }}
