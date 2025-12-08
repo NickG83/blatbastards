@@ -200,3 +200,13 @@
     flex-basis: 100%;
   }
 }
+
+/* Remove the big grey hero header with the site title */
+.intro-header {
+  display: none;
+}
+
+/* Optional: add a little top padding so content doesn't hug the nav bar */
+body {
+  padding-top: 70px; /* tweak to match your blue navbar height */
+}
