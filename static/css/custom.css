@@ -124,7 +124,7 @@
 }
 
 .ride-item {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   border-bottom: 1px solid #E2E8F0; /* light blue-grey divider */
   padding-bottom: 15px;
 }
@@ -137,6 +137,7 @@
   font-size: 1.2rem;
   color: var(--bb-accent-orange);
   margin-top: 2px; 
+  margin-left: 1.5rem;
 }
 
 /* Optional: links in main content */
