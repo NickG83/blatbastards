@@ -38,7 +38,7 @@
       {{ with .Params.route_file }}
         <p class="ride-download-btn">
           <a class="btn btn-sm btn-primary ride-download-btn" href="{{ . }}" download>
-            Download route (GPX / KML)
+            Download route (GPX)
           </a>
         </p>
       {{ end }}
@@ -49,6 +49,20 @@
         <p>
           <img class="img-responsive" src="{{ . }}" alt="{{ $.Title }}">
         </p>
+      {{ end }}
+
+      {{ with .Params.map_embed }}
+        <div class="ride-map-embed">
+          <h2>Ride map</h2>
+          <iframe
+            src="{{ . }}"
+            width="100%"
+            height="480"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
       {{ end }}
 
       <!-- Main ride notes from Decap ("Ride Notes" field) -->

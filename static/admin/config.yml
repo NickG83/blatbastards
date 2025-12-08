@@ -98,11 +98,17 @@ collections:
         required: false
         hint: "e.g. 08:00 at Caltex Yass"
 
-      - label: "GPX / KML File"
+      - label: "GPX File"
         name: "route_file"
         widget: "file"
         required: false
-        hint: "Upload the route file (GPX/KML)."
+        hint: "Upload the route file (GPX)."
+
+      - label: "Map Embed URL"
+        name: "map_embed"
+        widget: "string"
+        required: false
+        hint: "Paste the Google My Maps embed URL (the https://…/embed… link)."
 
       - label: "Hero Image"
         name: "hero_image"
