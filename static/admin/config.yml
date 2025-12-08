@@ -55,6 +55,8 @@ collections:
         date_format: "YYYY-MM-DD"
         time_format: false
         format: "YYYY-MM-DD"
+        required: false
+
 
       - label: "Region"
         name: "region"
