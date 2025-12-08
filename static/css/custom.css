@@ -149,22 +149,29 @@
   text-decoration: none;
 }
 
-/* Logistics page title – main heading */
-.logistics-title {
+/* ==================================================
+   Global page title style for sub-pages and posts
+   - Applies to the first H1 in the main content
+   ================================================== */
+.page-content h1:first-of-type,
+.post-container h1:first-of-type {
   text-align: center;
-  font-size: 5rem;       /* bigger than section headings */
+  font-size: 5rem;       /* big title */
   font-weight: 900;      /* extra bold */
-  letter-spacing: 0.1em;
-  margin-top: 20px;
+  letter-spacing: 0.05em;
+  margin-top: 10px;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
 
-/* Red underline bar under BLAT LOGISTICS */
-.logistics-title-bar {
+/* Red underline bar under that first H1 */
+.page-content h1:first-of-type::after,
+.post-container h1:first-of-type::after {
+  content: "";
+  display: block;
   width: 180px;
   height: 4px;
-  margin: 0 auto 40px;
+  margin: 10px auto 40px;
   background-color: #f44336; /* accent red */
 }
 
