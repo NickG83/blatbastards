@@ -9,6 +9,7 @@ surface: Mixed
 meeting_point: Stromlo Car Park
 departure_time: "0900"
 route_file: https://files.blatbastards.com/GPX/Stromlo_to_Jugiong.gpx
+map_embed: https://www.google.com/maps/d/u/1/embed?mid=1xv9ZL27v3dm-OpxtsniydM_K_KDj77U&ehbc=2E312F
 hero_image: /uploads/sirgeorge.jpg
 gallery: []
 ---
