@@ -1,8 +1,8 @@
 ---
-title: "Blat Logistics"
+title: "Logistics"
 ---
 
-<h1 class="bb-page-title">Blat Logistics</h1>
+<h1 class="bb-page-title">Logistics</h1>
 
 <div class="logistics-row">
   <div class="logistics-col logistics-col-image">
@@ -12,7 +12,7 @@ title: "Blat Logistics"
   <div class="logistics-col logistics-col-text">
     <h2>PACKING LIST</h2>
     <p>General packing list, good place to start for all the essentials. Tune it to your own needs.</p>
-    <p><a href="/packing-list/">Blat Packing List</a></p>
+<p><a href="https://files.blatbastards.com/logistics/packinglist.pdf" target="_blank" rel="noopener">Blat Packing List</a></p>
   </div>
 </div>
 
