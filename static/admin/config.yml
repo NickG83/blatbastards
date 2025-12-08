@@ -96,7 +96,7 @@ collections:
         name: "route_file"
         widget: "file"
         required: false
-        hint: "Upload the route file (GPX)."
+        hint: "GPX Route File (https://files.blatbastards.com/GPX/)."
 
       - label: "Map Embed URL"
         name: "map_embed"
@@ -130,3 +130,9 @@ collections:
         name: "body"
         widget: "markdown"
         hint: "Full trip description, hazards, fuel stops, etc."
+
+      - label: "YouTube Embed URL"
+        name: "youtube_embed"
+        widget: "string"
+        required: false
+        hint: "Paste the YouTube embed URL (the https://www.youtube.com/embed/... link)."
