@@ -1,15 +1,13 @@
 {{ define "main" }}
 <div class="container">
 
-  <header class="section-header">
-    <h1>{{ .Title }}</h1>
+  <h1 class="bb-page-title">{{ .Title }}</h1>
 
-    {{ with .Content }}
-      <div class="section-intro">
-        {{ . }}
-      </div>
-    {{ end }}
-  </header>
+  {{ with .Content }}
+    <div class="section-intro">
+      {{ . }}
+    </div>
+  {{ end }}
 
   <div class="rides-list">
     {{ range .Pages.ByDate.Reverse }}
