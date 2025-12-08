@@ -268,3 +268,21 @@ body {
   height: auto;
   display: block;
 }
+
+/* GPX download button text colour */
+.ride-download-btn,
+.ride-download-btn:visited {
+  color: #ffffff !important;
+}
+
+.ride-download-btn:hover,
+.ride-download-btn:focus {
+  color: #ffffff !important;
+}
+
+/* Make the GPX download button text white */
+.ride-detail-meta a.btn.btn-primary,
+.ride-detail-meta a.btn.btn-primary:link,
+.ride-detail-meta a.btn.btn-primary:visited {
+  color: #ffffff !important;
+}
