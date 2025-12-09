@@ -10,6 +10,8 @@ intro: Fairly easy weekend ride, taking in some pretty varied country. Talk
   around the group was a smoked BBQ place in Berrima that was also a bit of a
   bike mecca. Hence the "Schmokin' Ride" was born.
 ---
-**Day 1;** heading out of Canberra, backroads to Gundaroo then out to Collector, up to Crookwell, Taralga then down to Wombeyan Caves, finishing the day at Berrima and some smokey meats and cold beer. 
+**Day 1**\
+Heading out of Canberra, backroads to Gundaroo then out to Collector, up to Crookwell, Taralga then down to Wombeyan Caves, finishing the day at Berrima and some smokey meats and cold beer. 
 
-**Day 2;** down to Kangaroo Valley, backroad to Nerriga and down to Braidwood, before jumping the highway and though to Majors Creek then onto Captains Flat. From Captains, heading south along the Tinderry ranges and out at Michelago, then into the Brindies via Angle Crossing, Tidbinbilla Rd, down to the Tracking Station then onto home.
+**Day 2**\
+Down to Kangaroo Valley, backroad to Nerriga and down to Braidwood, before jumping the highway and though to Majors Creek then onto Captains Flat. From Captains, heading south along the Tinderry ranges and out at Michelago, then into the Brindies via Angle Crossing, Tidbinbilla Rd, down to the Tracking Station then onto home.
