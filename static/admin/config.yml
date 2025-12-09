@@ -109,7 +109,7 @@ collections:
         required: false
         hint: "Main image for the ride page."
 
-        label: "Gallery"
+      - label: "Gallery"
         name: "gallery"
         widget: "list"
         required: false
