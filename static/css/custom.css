@@ -314,3 +314,24 @@ body {
   font-style: italic;
   margin-bottom: 2.0rem;
 }
+
+/* Ride gallery – 2-wide grid */
+.ride-detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* always 2 columns */
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.ride-gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .ride-detail-gallery {
+    grid-template-columns: 1fr;
+  }
+}
