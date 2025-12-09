@@ -71,7 +71,7 @@ collections:
       - label: "Duration"
         name: "duration"          # <-- new; matches .Params.duration
         widget: "select"
-        options: ["Half-Day", "Day", "Weekend", "Longer"]
+        options: ["Half-Day", "Day", "Weekend", "Longer", "BLAT!"]
         default: "Day"
 
       - label: "Surface"
