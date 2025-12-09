@@ -90,16 +90,13 @@
         </div>
       {{ end }}
 
-      <!-- Optional gallery -->
-      {{ with .Params.gallery }}
-        <div class="ride-detail-gallery">
-          {{ range . }}
-            {{ with .image }}
-              <img class="ride-gallery-img" src="{{ . }}" alt="">
-            {{ end }}
-          {{ end }}
-        </div>
-      {{ end }}
+{{ with .Params.gallery }}
+  <div class="ride-detail-gallery">
+    {{ range . }}
+      <img class="ride-gallery-img" src="{{ . | relURL }}" alt="{{ $.Title }}">
+    {{ end }}
+  </div>
+{{ end }}
 
     </div>
   </div>
