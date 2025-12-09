@@ -2,7 +2,7 @@
 title: Snowy Ride Redux
 region: Snowy Region
 distance: 1100
-duration: Weekend
+duration: Longer
 surface: Mixed
 meeting_point: Captains Flat
 route_file: https://files.blatbastards.com/GPX/Snowy_Ride_Redux.gpx
