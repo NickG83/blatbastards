@@ -15,7 +15,8 @@ intro: >-
 
   However, we're not letting "officially ended" get in the way of an awesome weekend trip and this one follows our last ride for the charity, in which we attempted (and succeeded) to hit all "checkpoints" in one day. Original rules were to get a stamp at 3 checkpoints to enter into the raffle for a Goldwing on Saturday night in Thredbo. Having all 8 didn't help us win anything, just bragging rights
 ---
-**Friday;** meet up point is Captains Flat Pub mid afternoon, then backroads along the Tindery ranges to Nimmitabel before a fun glide down Brown Mountain. From Bemboka, cross country through Candelo and onto Merimbula for the overnight. *(Approx. 250KMs)*
+**Friday**\
+Meet up point is Captains Flat Pub mid afternoon, then backroads along the Tindery ranges to Nimmitabel before a fun glide down Brown Mountain. From Bemboka, cross country through Candelo and onto Merimbula for the overnight. *(Approx. 250KMs)*
 
 **Saturday;** the real redux ride day. 
 
@@ -33,7 +34,8 @@ Each of these stops were checkpoints from the original snowy ride. 
 
 *(Approx. 400KMs)*
 
-**Sunday;** Realistically can be a "choose your own adventure" coming home. Per the route on the map, the intent is to follow the Alpine Way through to Khancoban then turn onto Tooma Road. From there follow Tooma Road onto Elliot Way and get tired (if possible) of all the twisties back to the Snowy Mountain Highway. and follow through to Tumut. At Tumut, head East through the Brindabellas and back to Canberra.
+**Sunday**\
+Realistically can be a "choose your own adventure" coming home. Per the route on the map, the intent is to follow the Alpine Way through to Khancoban then turn onto Tooma Road. From there follow Tooma Road onto Elliot Way and get tired (if possible) of all the twisties back to the Snowy Mountain Highway. and follow through to Tumut. At Tumut, head East through the Brindabellas and back to Canberra.
 *(Approx. 450KMs)*
 
 ***Some alternate options:***
