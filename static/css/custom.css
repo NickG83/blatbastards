@@ -335,8 +335,8 @@ body {
 }
 
 .ride-gallery-caption {
-  margin-top: 4px;
-  font-size: 0.85rem;
+  margin-top: 1px;
+  font-size: 1.25rem;
   color: var(--bb-body-text, #4C4C4C);
   text-align: center;
 }
