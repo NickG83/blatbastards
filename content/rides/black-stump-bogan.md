@@ -8,9 +8,7 @@ surface: Mixed
 meeting_point: Gunning - Old Hume Cafe
 route_file: https://files.blatbastards.com/GPX/Black_Stump_Bogan.gpx
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=1I4zc-ix5-vp0W-gl5LcTPvP0fO9a5W4&ehbc=2E312F
-gallery:
-  - /uploads/bathurst.jpg
-  - /uploads/bridletrack.jpg
+gallery: []
 intro: This ride takes in a variety of different country and stemmed from an
   original 2 day ride to a conversation about tying together some aspects from
   others, creating this 3 day hybrid.
