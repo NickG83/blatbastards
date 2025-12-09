@@ -5,6 +5,8 @@ distance: 1100
 duration: Weekend
 surface: Mixed
 meeting_point: Captains Flat
+route_file: https://files.blatbastards.com/GPX/Snowy_Ride_Redux.gpx
+map_embed: https://www.google.com/maps/d/u/1/embed?mid=1xv9ZL27v3dm-OpxtsniydM_K_KDj77U&ehbc=2E312F
 intro: >-
   "The Snowy Ride" used to be a big motorcycle event for the Steven Walter
   Children's Cancer Foundation, hosted from Thredbo each year and attracted
