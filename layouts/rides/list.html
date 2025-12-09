@@ -78,6 +78,23 @@
           {{ end }}
         {{ end }}
 
+                {{ $day := where $all "Params.duration" "BLAT!" }}
+        {{ if gt (len $day) 0 }}
+          <h2>Annual BLAT</h2>
+          {{ range $day.ByDate.Reverse }}
+            <article class="ride-item">
+              <h3>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h3>
+              <p class="ride-meta">
+                {{ with .Params.region }}{{ . }}{{ end }}
+                {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+              </p>
+            </article>
+          {{ end }}
+          <hr>
+        {{ end }}
+
         {{ if and (eq (len $halfDay) 0) (eq (len $day) 0) (eq (len $weekend) 0) (eq (len $longer) 0) }}
           <p>No rides published yet. Check back soon.</p>
         {{ end }}
