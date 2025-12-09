@@ -13,6 +13,8 @@ gallery:
     caption: Mount Panorama
   - image: /uploads/bridletrack.jpg
     caption: Only saw this after we completed the track.....
+  - image: /uploads/wurrumbungles.jpg
+    caption: Warrumbungles
 intro: This ride takes in a variety of different country and stemmed from an
   original 2 day ride to a conversation about tying together some aspects from
   others, creating this 3 day hybrid.
