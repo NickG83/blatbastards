@@ -5,6 +5,7 @@ distance: 700
 duration: Weekend
 surface: Mixed
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=1twOXGcLts4Lj9OKvWPBrlM4mUVGcWhw&ehbc=2E312F
+hero_image: /uploads/schmokin.jpeg
 intro: Fairly easy weekend ride, taking in some pretty varied country. Talk
   around the group was a smoked BBQ place in Berrima that was also a bit of a
   bike mecca. Hence the "Schmokin' Ride" was born.
