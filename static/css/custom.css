@@ -314,40 +314,45 @@ body {
   font-style: italic;
   margin-bottom: 2.0rem;
 }
-/* 2-wide gallery grid, centred */
+
+/* 2-wide gallery grid */
 .ride-detail-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  justify-items: center;           /* centre content in each grid cell */
   margin: 20px auto 0;
 }
 
-/* Figure + image */
+/* Each cell: vertically + horizontally centered */
 .ride-gallery-item {
-  margin: 0;                       /* kill default figure margins */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;          /* vertical centering inside the cell */
+  align-items: center;              /* horizontal centering */
+  margin: 0;                        /* kill default figure margins */
   text-align: center;
-  width: 95%;                      /* stop them hugging the full column width */
+  padding: 4px 0;                   /* tiny buffer so it doesn’t touch row edges */
 }
 
+/* Image */
 .ride-gallery-img {
   display: block;
   width: 100%;
   height: auto;
-  margin: 0 auto 4px !important;   /* override theme img margins + pull caption closer */
+  margin: 0 auto 4px !important;    /* override theme img margins + small gap to caption */
   border-radius: 6px;
 }
 
-/* Caption right under the image */
+/* Caption tight under image */
 .ride-gallery-caption {
-  margin-top: 0 !important;        /* rely on img margin instead */
+  margin-top: 0 !important;
   font-size: 0.85rem;
   line-height: 1.3;
   color: var(--bb-body-text, #4C4C4C);
   text-align: center;
 }
 
-/* Optional: 1 column on small screens */
+/* Stack 1-wide on small screens */
 @media (max-width: 600px) {
   .ride-detail-gallery {
     grid-template-columns: 1fr;
