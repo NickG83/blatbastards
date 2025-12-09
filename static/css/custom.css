@@ -124,9 +124,9 @@
 }
 
 .ride-item {
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   border-bottom: 1px solid #E2E8F0; /* light blue-grey divider */
-  padding-bottom: 5px;
+  padding-bottom: 1px;
 }
 
 .ride-item:last-child {
