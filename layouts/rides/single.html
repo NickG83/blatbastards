@@ -93,7 +93,21 @@
 {{ with .Params.gallery }}
   <div class="ride-detail-gallery">
     {{ range . }}
-      <img class="ride-gallery-img" src="{{ . | relURL }}" alt="{{ $.Title }}">
+      {{ $t := printf "%T" . }}
+      {{ if eq $t "string" }}
+        <!-- Old format: just a string path -->
+        <figure class="ride-gallery-item">
+          <img class="ride-gallery-img" src="{{ . | relURL }}" alt="{{ $.Title }}">
+        </figure>
+      {{ else }}
+        <!-- New format: object with image + caption -->
+        <figure class="ride-gallery-item">
+          <img class="ride-gallery-img" src="{{ .image | relURL }}" alt="{{ .caption | default $.Title }}">
+          {{ with .caption }}
+            <figcaption class="ride-gallery-caption">{{ . }}</figcaption>
+          {{ end }}
+        </figure>
+      {{ end }}
     {{ end }}
   </div>
 {{ end }}

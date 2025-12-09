@@ -57,7 +57,6 @@ collections:
         format: "YYYY-MM-DD"
         required: false
 
-
       - label: "Region"
         name: "region"
         widget: "string"
@@ -110,15 +109,19 @@ collections:
         required: false
         hint: "Main image for the ride page."
 
-      - label: "Gallery"
+        label: "Gallery"
         name: "gallery"
         widget: "list"
         required: false
         summary: "{{fields.image}}"
-        field:
-          label: "Image"
-          name: "image"
-          widget: "image"
+        fields:
+          - label: "Image"
+            name: "image"
+            widget: "image"
+          - label: "Caption"
+            name: "caption"
+            widget: "string"
+            required: false
 
       - label: "Short Intro"
         name: "intro"
