@@ -4,6 +4,7 @@ region: South East
 distance: 850
 duration: Weekend
 surface: Mixed
+map_embed: https://www.google.com/maps/d/u/1/embed?mid=1lnpBgIHqQDKd_c38L0i3p5bWdW0X-Tk&ehbc=2E312F
 intro: Heading south of the border, down Mexico way, where the roads a tight and
   twisty, but the cops won't let you play....
 ---
