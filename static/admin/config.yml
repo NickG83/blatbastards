@@ -16,7 +16,7 @@ editor:
 
 collections:
   # ------------------------
-  # PAGES (what you already had)
+  # PAGES
   # ------------------------
   - name: "pages"
     label: "Pages"
@@ -50,7 +50,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
 
       - label: "Ride Date"
-        name: "date"              # <-- was ride_date; now drives Hugo .Date
+        name: "date"
         widget: "datetime"
         date_format: "YYYY-MM-DD"
         time_format: false
@@ -63,13 +63,13 @@ collections:
         hint: "e.g. Brindabellas, Wee Jasper, Crookwell loop"
 
       - label: "Distance (km)"
-        name: "distance"          # <-- was distance_km; matches .Params.distance
+        name: "distance"
         widget: "number"
         value_type: "int"
         required: false
 
       - label: "Duration"
-        name: "duration"          # <-- new; matches .Params.duration
+        name: "duration"
         widget: "select"
         options: ["Half-Day", "Day", "Weekend", "Longer", "BLAT!"]
         default: "Day"
