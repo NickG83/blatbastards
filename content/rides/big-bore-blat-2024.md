@@ -12,6 +12,7 @@ intro: "Late spring run into the high country, down to the coast, through the
   to be 5 days total, starting on Wednesday 30th October; racking up around
   2000KMs. Epic back roads, some dirt, plenty of twisties; the areas we're going
   to at this time of year - heaven on earth with a bike. "
+youtube_embed: https://www.youtube.com/embed/2Sk0p6y5AhM?si=4HTkCooqmltxYMqK
 ---
 ### Day 1 - (Wed 30th Oct)
 
