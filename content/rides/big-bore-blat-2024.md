@@ -7,6 +7,18 @@ surface: Mixed
 meeting_point: Wee Jasper
 departure_time: "0830"
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=1-vzWfxA3j_a1ivxfFi3D40zToQa3nGs&ehbc=2E312F
+gallery:
+  - image: /uploads/brindabella_rd.jpg
+    caption: Brindabella Road toward Tumut
+  - image: /uploads/barry_way.jpg
+    caption: Graham sampling Barry Way dirt
+  - image: /uploads/border_crossing.jpg
+    caption: Mexican crossing the border
+  - image: /uploads/wally_pub.jpg
+    caption: Wally Pub - watch out for the friendly Kookaburras!
+  - image: /uploads/warburton_alpine.jpg
+    caption: Alpine Hotel at Warburton - big thanks to the staff for letting us fly
+      the drone in the dinning room.
 intro: "Late spring run into the high country, down to the coast, through the
   Yarra Valley finishing in Melbourne for Adrian's 50th birthday party. Looking
   to be 5 days total, starting on Wednesday 30th October; racking up around
