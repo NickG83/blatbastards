@@ -2,6 +2,7 @@ baseURL = 'https://www.blatbastards.com/'
 languageCode = 'en-us'
 title = 'Blat Bastards'
 theme = "hugo-theme-cleanwhite"
+SEOTitle   = "Blat Bastards"
 # theme = "ananke"
 
 [params]
