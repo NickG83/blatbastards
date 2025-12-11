@@ -1,0 +1,17 @@
+{{/* Simple tags-only sidebar override */}}
+{{ $tags := .Site.Taxonomies.tags }}
+
+{{ if gt (len $tags) 0 }}
+<div class="bb-sidebar-tags">
+  <h5>TAGS</h5>
+  <ul>
+    {{ range $name, $taxonomy := $tags }}
+      <li>
+        <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/">
+          {{ $name }} ({{ len $taxonomy.Pages }})
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
