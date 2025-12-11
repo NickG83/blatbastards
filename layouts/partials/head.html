@@ -1,0 +1,14 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    {{- if .IsHome -}}
+      {{ .Site.Title }} | Home
+    {{- else -}}
+      {{ .Site.Title }} | {{ .Title }}
+    {{- end -}}
+  </title>
+
+  {{ partial "head_custom.html" . | safeHTML }} <!-- keep any extra CSS/JS partial if your theme uses one -->
+</head>
