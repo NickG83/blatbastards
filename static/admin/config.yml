@@ -2,7 +2,7 @@ backend:
   name: github
   repo: NickG83/blatbastards
   branch: main
-  base_url: "https://test.blatbastards.com"
+  base_url: "https://www.blatbastards.com"
   auth_endpoint: "api/auth"
 
 # Optional: lets you run Decap locally if you ever dev locally

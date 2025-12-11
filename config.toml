@@ -1,6 +1,6 @@
-baseURL = 'https://test.blatbastards.com/'
+baseURL = 'https://www.blatbastards.com/'
 languageCode = 'en-us'
-title = 'Test Blat Bastards'
+title = 'Blat Bastards'
 theme = "hugo-theme-cleanwhite"
 # theme = "ananke"
 
