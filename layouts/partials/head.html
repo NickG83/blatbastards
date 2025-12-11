@@ -49,13 +49,13 @@
   <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}">
 
   <!-- *** CHANGED LINE: site name first *** -->
-  <title>
-    {{ if .Title }}
-      {{ .Site.Params.SEOTitle }} | {{ .Title }}
-    {{ else }}
-      {{ .Site.Params.SEOTitle }}
-    {{ end }}
-  </title>
+    <title>
+    {{- if .Title -}}
+        {{ .Site.Title }} | {{ .Title }}
+    {{- else -}}
+        {{ .Site.Title }}
+    {{- end -}}
+    </title>
 
   <link rel="canonical" href="{{ .RelPermalink }}">
 
