@@ -36,8 +36,9 @@
 /* Row containing hero (left) + sidebar (right) */
 .home-hero-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto 320px minmax(0, 1fr);
-  column-gap: 40px;
+  /* left gutter | hero | spacer | sidebar | right gutter */
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 320px minmax(0, 1fr);
+  column-gap: 32px;
   align-items: flex-start;
   margin-top: 20px;
 }
@@ -50,9 +51,9 @@
 
 /* Sidebar column next to hero */
 .home-sidebar {
-  grid-column: 3;
+  grid-column: 4;       /* moved from col 3 -> col 4 */
   max-width: 320px;
-  padding-left: 20px;
+  padding-left: 0;      /* not needed with the spacer column */
 }
 
 /* Main content block under hero row */
