@@ -33,27 +33,27 @@
    Home hero row + sidebar
    =========================== */
 
-/* Row containing hero (left) + sidebar (right) */
+/* Row containing hero (centre) + sidebar (right edge of container) */
 .home-hero-row {
   display: grid;
-  /* left gutter | hero | spacer | sidebar | right gutter */
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 320px minmax(0, 1fr);
+  /* left gutter | hero | spacer | sidebar (right) */
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 320px;
   column-gap: 32px;
   align-items: flex-start;
   margin-top: 20px;
 }
 
-/* Hero column just wraps the image */
+/* Hero sits in the second column and is centred */
 .hero-col {
   grid-column: 2;
   text-align: center;
 }
 
-/* Sidebar column next to hero */
+/* Sidebar sits in the fourth column, flush with container right */
 .home-sidebar {
-  grid-column: 4;       /* moved from col 3 -> col 4 */
+  grid-column: 4;
   max-width: 320px;
-  padding-left: 0;      /* not needed with the spacer column */
+  padding-left: 0;
 }
 
 /* Main content block under hero row */
