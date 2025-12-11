@@ -36,7 +36,8 @@
 /* Row containing hero (left) + sidebar (right) */
 .home-hero-row {
   display: flex;
-  align-items: center;
+  justify-content: center;   /* NEW: centre the whole row */
+  align-items: flex-start;
   gap: 40px;
   margin-top: 20px;
 }
@@ -44,6 +45,7 @@
 /* Hero column just wraps the image */
 .hero-col {
   flex: 0 0 auto;
+  text-align: center; 
 }
 
 /* Sidebar column next to hero */
