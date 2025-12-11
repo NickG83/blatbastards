@@ -5,6 +5,10 @@ region: Western NSW
 distance: 1350
 duration: Longer
 surface: Mixed
+tags:
+  - Canberra
+  - Easy
+  - Day Ride
 meeting_point: Gunning - Old Hume Cafe
 route_file: https://files.blatbastards.com/GPX/Black_Stump_Bogan.gpx
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=1I4zc-ix5-vp0W-gl5LcTPvP0fO9a5W4&ehbc=2E312F
