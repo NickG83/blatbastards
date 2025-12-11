@@ -1,6 +1,40 @@
-<div class="bb-sidebar-tags">
-  <p>SIDEBAR TEST</p>
+{{/* Blat Bastards sidebar */}}
 
+<aside class="home-sidebar">
+
+  <!-- Static About box -->
+  <section class="sidebar-box">
+    <h3>About Blat Bastards</h3>
+    <p>Adventure rides, dirt, bad jokes and good coffee out of Canberra &amp; Yass.</p>
+  </section>
+
+  <!-- Recent rides -->
+  <section class="sidebar-box">
+    <h3>Recent Rides</h3>
+    <ul>
+      {{ range first 5 (where .Site.RegularPages "Section" "rides") }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <!-- Tags (only if we have any) -->
   {{ $tags := .Site.Taxonomies.tags }}
-  <p>Total tags: {{ len $tags }}</p>
-</div>
+  {{ if gt (len $tags) 0 }}
+    <section class="sidebar-box bb-sidebar-tags">
+      <h3>Tags</h3>
+      <ul>
+        {{ range $name, $taxonomy := $tags }}
+          <li>
+            <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/">
+              {{ $name }} ({{ len $taxonomy.Pages }})
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+</aside>
