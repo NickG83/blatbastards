@@ -1,14 +1,25 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{{/* Used by baseof.html inside <head> – no <head> tags here */}}
 
-  <title>
-    {{- if .IsHome -}}
-      {{ .Site.Title }} | Home
-    {{- else -}}
-      {{ .Site.Title }} | {{ .Title }}
-    {{- end -}}
-  </title>
+{{/* Browser tab title: Blat Bastards | Page Title */}}
+<title>
+  {{- if .IsHome -}}
+    {{ .Site.Title }} | Home
+  {{- else if .Title -}}
+    {{ .Site.Title }} | {{ .Title }}
+  {{- else -}}
+    {{ .Site.Title }}
+  {{- end -}}
+</title>
 
-  {{ partial "head_custom.html" . | safeHTML }} <!-- keep any extra CSS/JS partial if your theme uses one -->
-</head>
+{{/* Keep hooks for any custom CSS/JS you configure in [params] */}}
+{{ range .Site.Params.custom_css }}
+  <link rel="stylesheet" href="{{ . | relURL }}">
+{{ end }}
+
+{{ range .Site.Params.custom_js }}
+  <script src="{{ . | relURL }}"></script>
+{{ end }}
+
+{{ if .Site.Config.Services.GoogleAnalytics.ID }}
+  {{ template "_internal/google_analytics.html" . }}
+{{ end }}
