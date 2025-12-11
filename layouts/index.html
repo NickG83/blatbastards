@@ -1,25 +1,23 @@
-{{ define "header" }}
-<header class="hero-header">
+  {{ define "main" }}
   <div class="container">
-    <img src="{{ "img/hero.jpg" | relURL }}"
-         alt="Blat Bastards"
-         class="hero-image">
-  </div>
-</header>
-{{ end }}
 
-{{ define "main" }}
-<div class="container">
-  <div class="row home-layout">
-    <!-- Main content (80%) -->
+    <!-- ONE flex row: hero on the left, sidebar on the right -->
+    <div class="home-hero-row">
+      <div class="hero-col">
+        <header class="hero-header">
+          <img class="hero-image" src="/img/hero.png" alt="Blat Bastards" />
+        </header>
+      </div>
+
+      <aside class="home-sidebar">
+        {{ partial "sidebar.html" . }}
+      </aside>
+    </div>
+
+    <!-- Main body content sits underneath -->
     <div class="home-content">
       {{ .Content }}
     </div>
 
-    <!-- Sidebar (tags) -->
-    <aside class="home-sidebar">
-      {{ partial "sidebar.html" . }}
-    </aside>
   </div>
-</div>
-{{ end }}
+  {{ end }}

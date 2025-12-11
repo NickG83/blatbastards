@@ -14,10 +14,10 @@
   --bb-accent-yellow:  #FCE7A6; /* koala ear highlights */
 }
 
-/* Hero header (not really used now, but harmless) */
+/* Hero header */
 .hero-header {
-  padding-top: 100px; /* clears fixed nav */
-  padding-bottom: 40px;
+  padding-top: 40px;      /* smaller, so it lines up better with sidebar */
+  padding-bottom: 0;
   text-align: center;
   background-color: var(--bb-bg);
   color: var(--bb-primary);
@@ -29,39 +29,51 @@
   display: inline-block;
 }
 
-/* 80/20 layout on home page */
-.home-layout {
+/* ===========================
+   Home hero row + sidebar
+   =========================== */
+
+/* Row containing hero (left) + sidebar (right) */
+.home-hero-row {
   display: flex;
-  align-items: flex-start;
-  gap: 40px;           /* space between main + sidebar */
+  align-items: center;
+  gap: 40px;
   margin-top: 20px;
 }
 
-.home-content {
-  flex: 0 0 65%;       /* was 80% – give some back to sidebar */
-  max-width: 65%;
+/* Hero column just wraps the image */
+.hero-col {
+  flex: 0 0 auto;
 }
 
+/* Sidebar column next to hero */
 .home-sidebar {
-  flex: 1 1 35%;       /* allow it to grow and shrink around ~35% */
-  max-width: 380px;    /* sensible upper bound */
-  min-width: 260px;    /* stop the “one word per line” issue */
+  flex: 1 1 40%;
+  max-width: 380px;
+  min-width: 260px;
   padding-left: 20px;
 }
 
-/* Stack on mobile */
+/* Main content block under hero row */
+.home-content {
+  margin-top: 40px;
+}
+
+/* Stack hero, sidebar, content on mobile */
 @media (max-width: 768px) {
-  .home-layout {
+  .home-hero-row {
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  .home-content,
   .home-sidebar {
-    flex: 0 0 100%;
     max-width: 100%;
+    min-width: 0;
     padding-left: 0;
+    margin-top: 20px;
   }
- .home-sidebar {
+
+  .home-content {
     margin-top: 30px;
   }
 }
@@ -158,7 +170,6 @@
 
 /* ==============================================
    Global big page title (Rides, Logistics, etc.)
-   Use: <h1 class="bb-page-title">Title</h1>
    ============================================== */
 .bb-page-title {
   text-align: center;
@@ -203,7 +214,7 @@
   min-height: 260px;
 }
 
-/* Section headings inside logistics rows (Packing List, Learn Basecamp, etc.) */
+/* Section headings inside logistics rows */
 .logistics-row h2 {
   font-size: 2rem;
   font-weight: 700;
