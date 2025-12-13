@@ -21,6 +21,10 @@ SEOTitle = "Blat Bastards"
     title = "LOGISTICS"
     href  = "/logistics/"
 
+  [[params.addtional_menus]]
+    title = "Top Roads"
+    href  = "/toproads/"
+
 # Allow HTML inside markdown (needed for the logistics page layout divs)
 [markup]
   [markup.goldmark]
