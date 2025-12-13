@@ -17,23 +17,56 @@
       <div class="rides-list">
         {{ $all := .Pages }}
 
-        {{ if gt (len $all) 0 }}
-          {{ range $all.ByDate.Reverse }}
-            <article class="ride-item">
-              <h3>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </h3>
+        {{ $nsw := where $all "Params.state" "NSW" }}
+        {{ $vic := where $all "Params.state" "VIC" }}
+        {{ $act := where $all "Params.state" "ACT" }}
 
+        {{ if gt (len $nsw) 0 }}
+          <h2>NSW</h2>
+          {{ range $nsw.ByDate.Reverse }}
+            <article class="ride-item">
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
               <p class="ride-meta">
                 {{ with .Params.region }}{{ . }}{{ end }}
                 {{ with .Params.surface }} • {{ . }}{{ end }}
                 {{ with .Params.distance }} • ~{{ . }} km{{ end }}
               </p>
-
-
             </article>
           {{ end }}
-        {{ else }}
+          <hr>
+        {{ end }}
+
+        {{ if gt (len $vic) 0 }}
+          <h2>VIC</h2>
+          {{ range $vic.ByDate.Reverse }}
+            <article class="ride-item">
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              <p class="ride-meta">
+                {{ with .Params.region }}{{ . }}{{ end }}
+                {{ with .Params.surface }} • {{ . }}{{ end }}
+                {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+              </p>
+            </article>
+          {{ end }}
+          <hr>
+        {{ end }}
+
+        {{ if gt (len $act) 0 }}
+          <h2>ACT</h2>
+          {{ range $act.ByDate.Reverse }}
+            <article class="ride-item">
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              <p class="ride-meta">
+                {{ with .Params.region }}{{ . }}{{ end }}
+                {{ with .Params.surface }} • {{ . }}{{ end }}
+                {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+              </p>
+            </article>
+          {{ end }}
+          <hr>
+        {{ end }}
+
+        {{ if and (eq (len $nsw) 0) (eq (len $vic) 0) (eq (len $act) 0) }}
           <p>No Top Roads published yet. Check back soon.</p>
         {{ end }}
       </div>
