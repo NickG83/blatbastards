@@ -158,18 +158,9 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
 
-      - label: "Publish Date"
-        name: "date"
-        widget: "datetime"
-        date_format: "YYYY-MM-DD"
-        time_format: false
-        format: "YYYY-MM-DD"
-        required: false
-
       - label: "State"
         name: "state"
         widget: "select"
-        required: false
         options: ["NSW", "ACT", "VIC", "TAS"]
         default: "NSW"
 
@@ -195,14 +186,10 @@ collections:
       - label: "Start"
         name: "start"
         widget: "string"
-        required: false
-        hint: "e.g. Goulburn"
 
       - label: "Finish"
         name: "finish"
         widget: "string"
-        required: false
-        hint: "e.g. Oberon"
 
       - label: "Highlights"
         name: "highlights"
@@ -247,5 +234,3 @@ collections:
         fields:
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Caption", name: "caption", widget: "string", required: false }
-
-
