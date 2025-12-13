@@ -9,7 +9,6 @@ date: 2025-12-13
 finish: Walcha
 map_embed: https://www.google.com/maps/d/u/0/embed?mid=1PITRe_Gq5MgChOxHnaAbSdaMcqe_4PY&ehbc=2E312F
 hero_image: /uploads/oxley_highway.jpg
-map_link: https://www.google.com/maps/d/u/0/embed?mid=1PITRe_Gq5MgChOxHnaAbSdaMcqe_4PY&ehbc=2E312F
 ---
 Legendary twisty highway from the coastal plains near Wauchope up through rainforest and ridge country to Walcha through the New England Tablelands. Worth staying overnight in Port Mac then hitting this in the morning with the sun at your back. 
 
