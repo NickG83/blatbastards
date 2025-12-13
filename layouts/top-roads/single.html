@@ -1,0 +1,131 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="
+      col-lg-8 col-lg-offset-2
+      col-md-10 col-md-offset-1
+      post-container">
+
+      <!-- Big page title -->
+      <h1 class="bb-page-title">{{ .Title }}</h1>
+
+      <!-- Key road facts -->
+      <div class="ride-detail-meta">
+        <ul>
+          {{ with .Params.intro }}
+            <li class="ride-intro">{{ . }}</li>
+          {{ end }}
+
+          {{ with .Params.region }}
+            <li><strong>Region:</strong> {{ . }}</li>
+          {{ end }}
+
+          {{ with .Params.surface }}
+            <li><strong>Surface:</strong> {{ . }}</li>
+          {{ end }}
+
+          {{ with .Params.distance }}
+            <li><strong>Distance:</strong> ~{{ . }} km</li>
+          {{ end }}
+
+          {{ with .Params.start }}
+            <li><strong>Start:</strong> {{ . }}</li>
+          {{ end }}
+
+          {{ with .Params.finish }}
+            <li><strong>Finish:</strong> {{ . }}</li>
+          {{ end }}
+        </ul>
+
+        {{ with .Params.map_link }}
+          <p class="ride-download-btn">
+            <a class="btn btn-sm btn-primary" href="{{ . }}" target="_blank" rel="noopener">
+              Open in Google Maps
+            </a>
+          </p>
+        {{ end }}
+      </div>
+
+      <!-- Optional hero image -->
+      {{ with .Params.hero_image }}
+        <p>
+          <img class="img-responsive" src="{{ . }}" alt="{{ $.Title }}">
+        </p>
+      {{ end }}
+
+      {{ with .Params.map_embed }}
+        <div class="ride-map-embed">
+            <h2>Map</h2>
+            <iframe
+            src="{{ . }}"
+            width="640"
+            height="480"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen>
+            </iframe>
+         </div>
+      {{ end }}
+
+      {{ with .Params.highlights }}
+        <div class="ride-detail-content">
+          <h2>Highlights</h2>
+          <ul>
+            {{ range . }}
+              {{ $t := printf "%T" . }}
+              {{ if eq $t "string" }}
+                <li>{{ . }}</li>
+              {{ else }}
+                <li>{{ .item }}</li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+
+      {{ with .Params.warnings }}
+        <div class="ride-detail-content">
+          <h2>Warnings</h2>
+          <ul>
+            {{ range . }}
+              {{ $t := printf "%T" . }}
+              {{ if eq $t "string" }}
+                <li>{{ . }}</li>
+              {{ else }}
+                <li>{{ .item }}</li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+
+      <!-- Main write-up -->
+      <div class="ride-detail-content">
+        {{ .Content }}
+      </div>
+
+      <!-- Gallery (same logic as rides: supports old string format + new object format) -->
+      {{ with .Params.gallery }}
+        <div class="ride-detail-gallery">
+          {{ range . }}
+            {{ $t := printf "%T" . }}
+            {{ if eq $t "string" }}
+              <figure class="ride-gallery-item">
+                <img class="ride-gallery-img" src="{{ . | relURL }}" alt="{{ $.Title }}">
+              </figure>
+            {{ else }}
+              <figure class="ride-gallery-item">
+                <img class="ride-gallery-img" src="{{ .image | relURL }}" alt="{{ .caption | default $.Title }}">
+                {{ with .caption }}
+                  <figcaption class="ride-gallery-caption">{{ . }}</figcaption>
+                {{ end }}
+              </figure>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>
+{{ end }}

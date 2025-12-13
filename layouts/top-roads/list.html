@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="
+      col-lg-8 col-lg-offset-2
+      col-md-10 col-md-offset-1
+      post-container">
+
+      <h1 class="bb-page-title">Top Roads</h1>
+
+      {{ with .Content }}
+        <div class="post-content">
+          {{ . }}
+        </div>
+      {{ end }}
+
+      <div class="rides-list">
+        {{ $all := .Pages }}
+
+        {{ if gt (len $all) 0 }}
+          {{ range $all.ByDate.Reverse }}
+            <article class="ride-item">
+              <h3>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h3>
+
+              <p class="ride-meta">
+                {{ with .Params.region }}{{ . }}{{ end }}
+                {{ with .Params.surface }} • {{ . }}{{ end }}
+                {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+              </p>
+
+              {{ with .Params.intro }}
+                <p>{{ . }}</p>
+              {{ else }}
+                {{ with .Summary }}
+                  <p>{{ . }}</p>
+                {{ else }}
+                  <p>{{ .Plain | truncate 180 }}</p>
+                {{ end }}
+              {{ end }}
+            </article>
+          {{ end }}
+        {{ else }}
+          <p>No Top Roads published yet. Check back soon.</p>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</div>
+{{ end }}
