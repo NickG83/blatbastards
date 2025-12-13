@@ -35,13 +35,14 @@
           {{ end }}
         </ul>
 
-        {{ with .Params.route_file }}
-          <p class="ride-download-btn">
-            <a class="btn btn-sm btn-primary ride-download-btn" href="{{ . }}" download>
-              Download route (GPX)
-            </a>
-          </p>
-        {{ end }}
+      {{ with .Params.route_file }}
+        <p class="ride-download-btn">
+          <a class="btn btn-sm btn-primary ride-download-btn" href="{{ . }}" target="_blank" rel="noopener">
+            Download route (GPX)
+          </a>
+        </p>
+      {{ end }}
+
       </div>
 
       <!-- Optional hero image -->

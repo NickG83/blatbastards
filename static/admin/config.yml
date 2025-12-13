@@ -206,7 +206,7 @@ collections:
           - { label: "Warning", name: "item", widget: "string" }
 
       - label: "Map Link"
-        name: "map_link"
+        name: "map_embed"
         widget: "string"
         required: false
         hint: "Google Maps link"
