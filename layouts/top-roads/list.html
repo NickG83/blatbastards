@@ -30,15 +30,7 @@
                 {{ with .Params.distance }} • ~{{ . }} km{{ end }}
               </p>
 
-              {{ with .Params.intro }}
-                <p>{{ . }}</p>
-              {{ else }}
-                {{ with .Summary }}
-                  <p>{{ . }}</p>
-                {{ else }}
-                  <p>{{ .Plain | truncate 180 }}</p>
-                {{ end }}
-              {{ end }}
+
             </article>
           {{ end }}
         {{ else }}
