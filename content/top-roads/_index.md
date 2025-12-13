@@ -1,6 +1,6 @@
 ---
 title: "Top Roads"
-description: "Our favourite sealed and dirt roads worth riding."
+description: "The best stretches of tarmac and dirt worth riding."
 ---
 
-Add your intro text here.
+Intro text goes here.
