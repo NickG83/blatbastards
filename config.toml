@@ -23,7 +23,7 @@ SEOTitle = "Blat Bastards"
 
   [[params.addtional_menus]]
     title = "Top Roads"
-    href  = "/toproads/"
+  href  = "/top-roads/"
 
 # Allow HTML inside markdown (needed for the logistics page layout divs)
 [markup]
