@@ -3,7 +3,7 @@ title: Waterfall Way
 state: NSW
 region: New England Tablelands
 surface: Sealed
-distance: 180
+distance: 200
 start: Coffs Harbour
 finish: Armidale
 intro: Scenic climb from the coast through rainforest and waterfalls to the New
