@@ -1,22 +1,94 @@
-/* ===========================
-   Blat Bastards Color Palette
-   =========================== */
-:root {
-  --bb-primary:        #1A3560; /* deep navy */
-  --bb-primary-light:  #97B9DC; /* logo text blue */
-  --bb-primary-soft:   #738EA1; /* steel blue */
-  --bb-dark:           #232323; /* dark text */
-  --bb-body-text:      #4C4C4C; /* body copy */
-  --bb-bg:             #FFFFFF; /* main background */
+/* =========================================================
+   BLAT BASTARDS — custom.css
+   ---------------------------------------------------------
+   QUICK NAV:
+   - GLOBAL / SITE-WIDE
+   - HEADER + NAV (ALL PAGES)
+   - HOME PAGE ONLY
+   - LIST PAGES ONLY (Top Roads / Rides list)
+   - RIDE DETAIL PAGES ONLY (single ride)
+   - LOGISTICS PAGE ONLY
+   - RESPONSIVE (ONE PLACE)
+   ========================================================= */
 
-  --bb-accent-orange:  #DF7146; /* dirt / exhaust */
-  --bb-accent-red:     #DA2631; /* suit stripes */
-  --bb-accent-yellow:  #FCE7A6; /* koala ear highlights */
+
+/* =========================================================
+   GLOBAL / SITE-WIDE
+   ========================================================= */
+
+:root {
+  --bb-primary:        #1A3560;
+  --bb-primary-light:  #97B9DC;
+  --bb-primary-soft:   #738EA1;
+  --bb-dark:           #232323;
+  --bb-body-text:      #4C4C4C;
+  --bb-bg:             #FFFFFF;
+
+  --bb-accent-orange:  #DF7146;
+  --bb-accent-red:     #DA2631;
+  --bb-accent-yellow:  #FCE7A6;
 }
 
-/* Hero header */
+/* Theme default hero header off */
+.intro-header { display: none; }
+
+/* Clear fixed nav */
+body { padding-top: 70px; }
+
+/* Global big page title (Rides, Logistics, etc.) */
+.bb-page-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.bb-page-title::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 4px;
+  margin: 10px auto 40px;
+  background-color: #f44336;
+}
+
+/* Small utility bits */
+.section-title { display: flex; align-items: center; gap: 10px; }
+.bb-emoji { line-height: 1; }
+
+
+/* =========================================================
+   HEADER + NAV (ALL PAGES)
+   ========================================================= */
+
+.navbar-custom {
+  background-color: var(--bb-primary);
+  border-color: var(--bb-primary);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-custom .nav > li > a:hover,
+.navbar-custom .nav > li > a:focus,
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: var(--bb-primary-light);
+  background-color: transparent;
+}
+
+
+/* =========================================================
+   HOME PAGE ONLY
+   ========================================================= */
+
 .hero-header {
-  padding-top: 30px;      /* smaller, so it lines up better with sidebar */
+  padding-top: 30px;
   padding-bottom: 0;
   text-align: center;
   background-color: var(--bb-bg);
@@ -29,100 +101,38 @@
   display: inline-block;
 }
 
-/* ===========================
-   Home hero row + sidebar
-   =========================== */
-
-/* Row containing hero (centre) + sidebar (right edge of container) */
+/* Hero + sidebar row */
 .home-hero-row {
   display: grid;
-  /* left gutter | hero | spacer | sidebar (right) */
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 320px;
   column-gap: 32px;
   align-items: flex-start;
   margin-top: 20px;
 }
 
-/* Hero sits in the second column and is centred */
 .hero-col {
   grid-column: 2;
   text-align: center;
 }
 
-/* Sidebar sits in the fourth column, flush with container right */
 .home-sidebar {
   grid-column: 4;
   max-width: 320px;
   padding-left: 0;
 }
 
-/* Main content block under hero row */
-.home-content {
-  margin-top: 40px;
-}
+.home-content { margin-top: 40px; }
 
-/* Mobile / narrow screens: stack hero, sidebar, then content */
-@media (max-width: 768px) {
-  .home-hero-row {
-    display: block;          /* drop back to normal flow */
-  }
+/* Home content link styling */
+.home-content a { color: var(--bb-primary); }
 
-  .hero-col,
-  .home-sidebar {
-    grid-column: auto;
-  }
-
-  .home-sidebar {
-    max-width: 100%;
-    padding-left: 0;
-    margin-top: 20px;
-  }
-
-  .home-content {
-    margin-top: 30px;
-  }
-}
-
-/* Footer tweak */
-.bb-footer {
-  padding: 20px 0;
-  font-size: 0.9rem;
-  color: var(--bb-primary-soft);
-  background-color: var(--bb-primary);
-}
-
-.bb-footer a {
-  color: var(--bb-primary-light);
-}
-
-.bb-footer a:hover {
+.home-content a:hover,
+.home-content a:focus {
   color: var(--bb-accent-orange);
+  text-decoration: none;
 }
 
-/* Top navigation colours */
-.navbar-custom {
-  background-color: var(--bb-primary);   /* deep navy */
-  border-color: var(--bb-primary);
-}
-
-.navbar-custom .navbar-brand,
-.navbar-custom .nav > li > a {
-  color: #ffffff; /* light text */
-}
-
-/* Hover / active states */
-.navbar-custom .nav > li > a:hover,
-.navbar-custom .nav > li > a:focus {
-  color: var(--bb-primary-light);
-  background-color: transparent;
-}
-
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus {
-  color: var(--bb-primary-light);
-}
-
-/* Sidebar tags */
+/* Sidebar tags (home sidebar partial) */
 .bb-sidebar-tags h5 {
   margin-top: 0;
   margin-bottom: 10px;
@@ -140,62 +150,186 @@
   color: var(--bb-body-text);
 }
 
-/* Rides list */
-.rides-list {
-  margin-top: 20px;
+
+/* =========================================================
+   FOOTER (ALL PAGES)
+   ========================================================= */
+
+.bb-footer {
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: var(--bb-primary-soft);
+  background-color: var(--bb-primary);
 }
+
+.bb-footer a { color: var(--bb-primary-light); }
+.bb-footer a:hover { color: var(--bb-accent-orange); }
+
+
+/* =========================================================
+   LIST PAGES ONLY (Top Roads / Rides list)
+   ========================================================= */
+
+.rides-list { margin-top: 20px; }
 
 .ride-item {
   margin-bottom: 1px;
-  border-bottom: 1px solid #E2E8F0; /* light blue-grey divider */
+  border-bottom: 1px solid #E2E8F0;
   padding-bottom: 1px;
 }
 
-.ride-item:last-child {
-  border-bottom: none;
-}
+.ride-item:last-child { border-bottom: none; }
 
 .ride-meta {
   font-size: 1.2rem;
   color: var(--bb-accent-orange);
-  margin-top: 2px; 
+  margin-top: 2px;
   margin-left: 1.5rem;
 }
 
-/* Optional: links in main content */
-.home-content a {
-  color: var(--bb-primary);
-}
-
-.home-content a:hover,
-.home-content a:focus {
-  color: var(--bb-accent-orange);
-  text-decoration: none;
-}
-
-/* ==============================================
-   Global big page title (Rides, Logistics, etc.)
-   ============================================== */
-.bb-page-title {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 900;
-  letter-spacing: 0.18em;
-  margin-top: 40px;
+/* Top Roads: 2-column grid */
+.rides-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
   margin-bottom: 10px;
-  text-transform: uppercase;
 }
 
-.bb-page-title::after {
-  content: "";
+/* Optional “card” styling */
+.ride-card {
+  padding: 18px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   RIDE DETAIL PAGES ONLY (single ride)
+   ========================================================= */
+
+/* Fast Facts / Meta box */
+.ride-detail-meta {
+  background-color: #f7fafc;
+  border-radius: 4px;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.ride-detail-meta strong { color: var(--bb-primary); }
+
+/* Meta list: 2 columns */
+.ride-detail-meta ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 24px;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Normalize li sizing */
+.ride-detail-meta ul li {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4;
+}
+
+/* Intro spans both columns */
+.ride-detail-meta ul .ride-intro { grid-column: 1 / -1; }
+
+/* Indent facts except intro */
+.ride-detail-meta li { margin-left: 0; }
+.ride-detail-meta li:not(.ride-intro) { margin-left: 1rem; }
+
+.ride-detail-download { margin-top: 10px; }
+.ride-detail-content { margin-top: 20px; }
+
+/* GPX download button */
+.ride-download-btn.btn-primary {
+  background-color: var(--bb-accent-orange);
+  border-color: var(--bb-accent-orange);
+}
+
+.ride-download-btn.btn-primary:hover,
+.ride-download-btn.btn-primary:focus {
+  background-color: #c95e34;
+  border-color: #c95e34;
+}
+
+/* Force white text on button */
+.ride-download-btn,
+.ride-download-btn:visited,
+.ride-download-btn:hover,
+.ride-download-btn:focus,
+.ride-detail-meta a.btn.btn-primary,
+.ride-detail-meta a.btn.btn-primary:link,
+.ride-detail-meta a.btn.btn-primary:visited {
+  color: #ffffff !important;
+}
+
+/* Intro line styling */
+.ride-intro {
+  list-style: none;
+  font-style: italic;
+  margin-bottom: 2.0rem;
+}
+
+/* Ride gallery */
+.ride-detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px auto 0;
+}
+
+.ride-gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.ride-gallery-img {
   display: block;
-  width: 180px;
-  height: 4px;
-  margin: 10px auto 40px;
-  background-color: #f44336; /* accent red */
+  width: 100%;
+  height: auto;
+  margin: 0 auto 4px !important;
+  border-radius: 6px;
 }
 
-/* Two-column logistics rows */
+.ride-gallery-caption {
+  margin-top: 0 !important;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-style: italic;
+  color: var(--bb-body-text, #4C4C4C);
+  text-align: center;
+}
+
+/* Highlights + Warnings grid */
+.bb-hw-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Fast facts title */
+.bb-fast-facts-title{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 10px;
+}
+
+
+/* =========================================================
+   LOGISTICS PAGE ONLY
+   ========================================================= */
+
 .logistics-row {
   display: flex;
   flex-wrap: wrap;
@@ -219,225 +353,42 @@
   min-height: 260px;
 }
 
-/* Section headings inside logistics rows */
 .logistics-row h2 {
   font-size: 2rem;
   font-weight: 700;
 }
 
-/* Stack logistics rows on mobile */
+
+/* =========================================================
+   RESPONSIVE (ONE PLACE)
+   ========================================================= */
+
 @media (max-width: 768px) {
-  .logistics-row {
-    flex-direction: column;
+  /* HOME PAGE ONLY */
+  .home-hero-row { display: block; }
+  .hero-col,
+  .home-sidebar { grid-column: auto; }
+
+  .home-sidebar {
+    max-width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
   }
 
-  .logistics-col {
-    flex-basis: 100%;
-  }
+  .home-content { margin-top: 30px; }
+
+  /* LIST PAGES ONLY */
+  .rides-grid { grid-template-columns: 1fr; }
+
+  /* RIDE DETAIL PAGES ONLY */
+  .bb-hw-grid { grid-template-columns: 1fr; }
+
+  /* LOGISTICS PAGE ONLY */
+  .logistics-row { flex-direction: column; }
+  .logistics-col { flex-basis: 100%; }
 }
 
-/* Remove the big grey hero header with the site title */
-.intro-header {
-  display: none;
-}
-
-/* Add a little top padding so content doesn't hug the nav bar */
-body {
-  padding-top: 70px; /* tweak to match your blue navbar height */
-}
-
-/* Ride detail page */
-.ride-detail-meta {
-  background-color: #f7fafc;
-  border-radius: 4px;
-  padding: 15px 20px;
-  margin-bottom: 25px;
-  font-size: 1.5rem;
-}
-
-.ride-detail-meta ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.ride-detail-meta li + li {
-  margin-top: 4px;
-}
-
-.ride-detail-meta strong {
-  color: var(--bb-primary);
-}
-
-.ride-detail-download {
-  margin-top: 10px;
-}
-
-.ride-detail-content {
-  margin-top: 20px;
-}
-
-.ride-detail-gallery {
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* Indent all ride facts except the intro line */
-.ride-detail-meta li {
-  margin-left: 0;           /* reset */
-}
-
-.ride-detail-meta li:not(.ride-intro) {
-  margin-left: 1rem;        /* push to the right */
-}
-
-.ride-gallery-img {
-  max-width: 48%;
-  height: auto;
-  display: block;
-}
-
-/* GPX download button base styles: use accent orange background */
-.ride-download-btn.btn-primary {
-  background-color: var(--bb-accent-orange);
-  border-color: var(--bb-accent-orange);
-}
-
-/* Hover/focus state – slightly darker orange */
-.ride-download-btn.btn-primary:hover,
-.ride-download-btn.btn-primary:focus {
-  background-color: #c95e34;
-  border-color: #c95e34;
-}
-
-/* GPX download button text colour */
-.ride-download-btn,
-.ride-download-btn:visited {
-  color: #ffffff !important;
-}
-
-.ride-download-btn:hover,
-.ride-download-btn:focus {
-  color: #ffffff !important;
-}
-
-/* Make the GPX download button text white (extra safety) */
-.ride-detail-meta a.btn.btn-primary,
-.ride-detail-meta a.btn.btn-primary:link,
-.ride-detail-meta a.btn.btn-primary:visited {
-  color: #ffffff !important;
-}
-
-.ride-intro {
-  list-style: none;
-  font-style: italic;
-  margin-bottom: 2.0rem;
-}
-
-/* 2-wide gallery grid */
-.ride-detail-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin: 20px auto 0;
-}
-
-/* Each cell: vertically + horizontally centered */
-.ride-gallery-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;          /* vertical centering inside the cell */
-  align-items: center;              /* horizontal centering */
-  margin: 0;                        /* kill default figure margins */
-  text-align: center;
-  padding: 4px 0;                   /* tiny buffer so it doesn’t touch row edges */
-}
-
-/* Image */
-.ride-gallery-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 4px !important;    /* override theme img margins + small gap to caption */
-  border-radius: 6px;
-}
-
-/* Caption tight under image */
-.ride-gallery-caption {
-  margin-top: 0 !important;
-  font-size: 1.25rem;
-  line-height: 1.3;
-  font-style: italic;
-  color: var(--bb-body-text, #4C4C4C);
-  text-align: center;
-}
-
-/* Stack 1-wide on small screens */
+/* RIDE DETAIL PAGES ONLY: gallery stack */
 @media (max-width: 600px) {
-  .ride-detail-gallery {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Top Roads / Rides meta: 2-column facts list */
-.ride-detail-meta ul {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 6px 24px;            /* row gap, column gap */
-  padding-left: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/* Make the intro span both columns */
-.ride-detail-meta ul .ride-intro {
-  grid-column: 1 / -1;
-}
-
-/* Optional: keep the download button aligned nicely */
-.ride-detail-meta .ride-download-btn {
-  margin-top: 12px;
-}
-
-/* Normalize meta list item sizing (kills the “first row is taller” issue) */
-.ride-detail-meta ul li {
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1.4;
-}
-
-/* In case the theme targets the first item */
-.ride-detail-meta ul li:first-child {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.ride-detail-meta ul li strong {
-  line-height: inherit;
-}
-
-.section-title { display: flex; align-items: center; gap: 10px; }
-.bb-emoji { line-height: 1; }
-
-/* Highlights + Warnings 2-column layout */
-.bb-hw-grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-/* Stack on mobile */
-@media (max-width: 768px){
-  .bb-hw-grid{
-    grid-template-columns: 1fr;
-  }
-}
-
-.bb-fast-facts-title{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 18px 0 10px;   /* space above, tighter gap to the box */
+  .ride-detail-gallery { grid-template-columns: 1fr; }
 }

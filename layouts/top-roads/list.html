@@ -23,46 +23,73 @@
 
         {{ if gt (len $nsw) 0 }}
           <h2>NSW</h2>
-          {{ range $nsw.ByDate.Reverse }}
-            <article class="ride-item">
-              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-              <p class="ride-meta">
-                {{ with .Params.region }}{{ . }}{{ end }}
-                {{ with .Params.surface }} • {{ . }}{{ end }}
-                {{ with .Params.distance }} • ~{{ . }} km{{ end }}
-              </p>
-            </article>
-          {{ end }}
+          <div class="rides-grid">
+            {{ $items := slice }}
+            {{ range $nsw }}
+              {{ $key := lower (replaceRE "(?i)^the\\s+" "" .Title) }}
+              {{ $items = $items | append (dict "key" $key "p" .) }}
+            {{ end }}
+
+            {{ range sort $items "key" }}
+              {{ $p := .p }}
+              <article class="ride-item ride-card">
+                <h3><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+                <p class="ride-meta">
+                  {{ with $p.Params.region }}{{ . }}{{ end }}
+                  {{ with $p.Params.surface }} • {{ . }}{{ end }}
+                  {{ with $p.Params.distance }} • ~{{ . }} km{{ end }}
+                </p>
+              </article>
+            {{ end }}
+          </div>
           <hr>
         {{ end }}
 
         {{ if gt (len $vic) 0 }}
           <h2>VIC</h2>
-          {{ range $vic.ByDate.Reverse }}
-            <article class="ride-item">
-              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-              <p class="ride-meta">
-                {{ with .Params.region }}{{ . }}{{ end }}
-                {{ with .Params.surface }} • {{ . }}{{ end }}
-                {{ with .Params.distance }} • ~{{ . }} km{{ end }}
-              </p>
-            </article>
-          {{ end }}
+          <div class="rides-grid">
+            {{ $items := slice }}
+            {{ range $vic }}
+              {{ $key := lower (replaceRE "(?i)^the\\s+" "" .Title) }}
+              {{ $items = $items | append (dict "key" $key "p" .) }}
+            {{ end }}
+
+            {{ range sort $items "key" }}
+              {{ $p := .p }}
+              <article class="ride-item ride-card">
+                <h3><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+                <p class="ride-meta">
+                  {{ with $p.Params.region }}{{ . }}{{ end }}
+                  {{ with $p.Params.surface }} • {{ . }}{{ end }}
+                  {{ with $p.Params.distance }} • ~{{ . }} km{{ end }}
+                </p>
+              </article>
+            {{ end }}
+          </div>
           <hr>
         {{ end }}
 
         {{ if gt (len $act) 0 }}
           <h2>ACT</h2>
-          {{ range $act.ByDate.Reverse }}
-            <article class="ride-item">
-              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-              <p class="ride-meta">
-                {{ with .Params.region }}{{ . }}{{ end }}
-                {{ with .Params.surface }} • {{ . }}{{ end }}
-                {{ with .Params.distance }} • ~{{ . }} km{{ end }}
-              </p>
-            </article>
-          {{ end }}
+          <div class="rides-grid">
+            {{ $items := slice }}
+            {{ range $act }}
+              {{ $key := lower (replaceRE "(?i)^the\\s+" "" .Title) }}
+              {{ $items = $items | append (dict "key" $key "p" .) }}
+            {{ end }}
+
+            {{ range sort $items "key" }}
+              {{ $p := .p }}
+              <article class="ride-item ride-card">
+                <h3><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+                <p class="ride-meta">
+                  {{ with $p.Params.region }}{{ . }}{{ end }}
+                  {{ with $p.Params.surface }} • {{ . }}{{ end }}
+                  {{ with $p.Params.distance }} • ~{{ . }} km{{ end }}
+                </p>
+              </article>
+            {{ end }}
+          </div>
           <hr>
         {{ end }}
 
