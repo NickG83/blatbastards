@@ -420,3 +420,17 @@ body {
 
 .section-title { display: flex; align-items: center; gap: 10px; }
 .bb-emoji { line-height: 1; }
+
+/* Highlights + Warnings 2-column layout */
+.bb-hw-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Stack on mobile */
+@media (max-width: 768px){
+  .bb-hw-grid{
+    grid-template-columns: 1fr;
+  }
+}

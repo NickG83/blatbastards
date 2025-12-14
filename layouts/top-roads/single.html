@@ -61,7 +61,13 @@
         {{ end }}
       </div>
 
-      {{ with .Params.highlights }}
+    {{ $hasHighlights := .Params.highlights }}
+{{ $hasWarnings := .Params.warnings }}
+{{ if or $hasHighlights $hasWarnings }}
+  <div class="bb-hw-grid">
+
+    {{ with .Params.highlights }}
+      <div class="bb-hw-col">
         <div class="ride-detail-content">
           <h4 class="section-title">
             <span class="bb-emoji" aria-hidden="true">🌟</span>
@@ -78,9 +84,11 @@
             {{ end }}
           </ul>
         </div>
-      {{ end }}
+      </div>
+    {{ end }}
 
-      {{ with .Params.warnings }}
+    {{ with .Params.warnings }}
+      <div class="bb-hw-col">
         <div class="ride-detail-content">
           <h4 class="section-title">
             <span class="bb-emoji" aria-hidden="true">⚠️</span>
@@ -97,7 +105,12 @@
             {{ end }}
           </ul>
         </div>
-      {{ end }}
+      </div>
+    {{ end }}
+
+  </div>
+{{ end }}
+
 
       <!-- Optional hero image -->
       {{ with .Params.hero_image }}
