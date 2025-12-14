@@ -418,3 +418,5 @@ body {
   line-height: inherit;
 }
 
+.section-title { display: flex; align-items: center; gap: 10px; }
+.bb-emoji { line-height: 1; }

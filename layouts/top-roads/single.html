@@ -15,7 +15,7 @@
           {{ with .Params.intro }}
             <li class="ride-intro">{{ . }}</li>
           {{ end }}
-          
+
           {{ with .Params.state }}
             <li><strong>State:</strong> {{ . }}</li>
           {{ end }}
@@ -42,26 +42,31 @@
         </ul>
 
         {{ with .Params.route_file }}
-        <p class="ride-download-btn">
+          <p class="ride-download-btn">
             <a class="btn btn-sm btn-primary ride-download-btn" href="{{ . }}" target="_blank" rel="noopener">
-            Download route (GPX)
+              Download route (GPX)
             </a>
-        </p>
+          </p>
         {{ end }}
-
       </div>
 
-            {{ with .Params.highlights }}
+      <!-- Main write-up -->
+      <div class="ride-detail-content">
+        {{ if .Content }}
+          {{ .Content }}
+        {{ else }}
+          {{ with .Params.body }}
+            {{ . | markdownify }}
+          {{ end }}
+        {{ end }}
+      </div>
+
+      {{ with .Params.highlights }}
         <div class="ride-detail-content">
-        <h4 class="section-title">
-        <span class="bb-icon" aria-hidden="true">
-            <!-- spark icon -->
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M12 2l1.6 6.2L20 10l-6.4 1.8L12 18l-1.6-6.2L4 10l6.4-1.8L12 2z"/>
-            </svg>
-        </span>
-        Highlights
-        </h4>
+          <h4 class="section-title">
+            <span class="bb-emoji" aria-hidden="true">🌟</span>
+            Highlights
+          </h4>
           <ul>
             {{ range . }}
               {{ $t := printf "%T" . }}
@@ -77,15 +82,10 @@
 
       {{ with .Params.warnings }}
         <div class="ride-detail-content">
-        <h4 class="section-title">
-        <span class="bb-icon" aria-hidden="true">
-            <!-- warning triangle -->
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-8h-2v6h2V8z"/>
-            </svg>
-        </span>
-        Warnings
-        </h4>
+          <h4 class="section-title">
+            <span class="bb-emoji" aria-hidden="true">⚠️</span>
+            Warnings
+          </h4>
           <ul>
             {{ range . }}
               {{ $t := printf "%T" . }}
@@ -99,16 +99,6 @@
         </div>
       {{ end }}
 
-        <div class="ride-detail-content">
-        {{ if .Content }}
-            {{ .Content }}
-        {{ else }}
-            {{ with .Params.body }}
-            {{ . | markdownify }}
-            {{ end }}
-        {{ end }}
-        </div>
-
       <!-- Optional hero image -->
       {{ with .Params.hero_image }}
         <p>
@@ -118,16 +108,16 @@
 
       {{ with .Params.map_embed }}
         <div class="ride-map-embed">
-            <h3>Route</h3>
-            <iframe
+          <h3>Route</h3>
+          <iframe
             src="{{ . }}"
             width="640"
             height="480"
             style="border:0;"
             loading="lazy"
             allowfullscreen>
-            </iframe>
-         </div>
+          </iframe>
+        </div>
       {{ end }}
 
       <!-- Gallery (same logic as rides: supports old string format + new object format) -->
