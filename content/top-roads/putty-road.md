@@ -15,6 +15,7 @@ highlights:
 warnings:
   - item: Police presence on popular weekends
   - item: Bikes/cars crossing centreline
+  - item: Other riders ambitions outstripping their abilities
 map_embed: https://www.google.com/maps/d/u/0/embed?mid=1qb1BmF8-3w0_duVKDVD5cBt5uErvxiE&ehbc=2E312F
 hero_image: /uploads/puttyrd.jpg
 ---
