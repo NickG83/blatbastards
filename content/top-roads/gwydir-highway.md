@@ -3,7 +3,7 @@ title: Gwydir Highway
 state: NSW
 region: Gibraltar Range
 surface: Sealed
-distance: 220
+distance: 180
 start: Glen Innes
 finish: Grafton
 intro: A high-to-low mountain crossing through Gibraltar Range and Washpool
