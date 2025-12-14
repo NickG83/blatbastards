@@ -3,7 +3,7 @@ title: Thunderbolts Way
 state: NSW
 region: Barrington Tops / Northern Tablelands
 surface: Sealed
-distance: 200
+distance: 195
 start: Gloucester
 finish: Uralla
 intro: Long rural highway with rolling bends and big views, linking dairy
