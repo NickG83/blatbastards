@@ -380,3 +380,23 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Top Roads / Rides meta: 2-column facts list */
+.ride-detail-meta ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 24px;            /* row gap, column gap */
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Make the intro span both columns */
+.ride-detail-meta ul .ride-intro {
+  grid-column: 1 / -1;
+}
+
+/* Optional: keep the download button aligned nicely */
+.ride-detail-meta .ride-download-btn {
+  margin-top: 12px;
+}
