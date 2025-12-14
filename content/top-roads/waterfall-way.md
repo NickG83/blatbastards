@@ -6,6 +6,7 @@ surface: Sealed
 distance: 180
 start: Coffs Harbour
 finish: Armidale
+map_embed: https://www.google.com/maps/d/u/0/embed?mid=1Ko8nb1_S2z7tytqQMAbmksHeTbIERJ0&ehbc=2E312F
 hero_image: /uploads/waterfall-way.jpg
 ---
 Spectacular climb from the Coffs Coast through rainforest and waterfall country up to the New England tablelands at Armidale
