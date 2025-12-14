@@ -2,7 +2,7 @@
 state: NSW
 region: New England Tablelands.
 surface: Sealed
-distance: 165
+distance: 245
 start: Wauchope
 date: 2025-12-13
 title: Oxley Highway
