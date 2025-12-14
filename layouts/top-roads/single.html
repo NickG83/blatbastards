@@ -37,13 +37,14 @@
           {{ end }}
         </ul>
 
-        {{ with .Params.map_link }}
-          <p class="ride-download-btn">
-            <a class="btn btn-sm btn-primary" href="{{ . }}" target="_blank" rel="noopener">
-              Open in Google Maps
+        {{ with .Params.route_file }}
+        <p class="ride-download-btn">
+            <a class="btn btn-sm btn-primary ride-download-btn" href="{{ . }}" target="_blank" rel="noopener">
+            Download route (GPX)
             </a>
-          </p>
+        </p>
         {{ end }}
+
       </div>
 
       <!-- Optional hero image -->
@@ -99,10 +100,16 @@
         </div>
       {{ end }}
 
-      <!-- Main write-up -->
-      <div class="ride-detail-content">
-        {{ .Content }}
-      </div>
+        <div class="ride-detail-content">
+        {{ if .Content }}
+            {{ .Content }}
+        {{ else }}
+            {{ with .Params.body }}
+            {{ . | markdownify }}
+            {{ end }}
+        {{ end }}
+        </div>
+
 
       <!-- Gallery (same logic as rides: supports old string format + new object format) -->
       {{ with .Params.gallery }}

@@ -191,6 +191,12 @@ collections:
         name: "finish"
         widget: "string"
 
+      - label: "Short Intro"
+        name: "intro"
+        widget: "text"
+        required: false
+        hint: "One or two sentences shown near the top and in lists."
+
       - label: "Highlights"
         name: "highlights"
         widget: "list"
