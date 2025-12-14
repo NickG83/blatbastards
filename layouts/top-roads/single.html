@@ -51,30 +51,9 @@
 
       </div>
 
-      <!-- Optional hero image -->
-      {{ with .Params.hero_image }}
-        <p>
-          <img class="img-responsive" src="{{ . }}" alt="{{ $.Title }}">
-        </p>
-      {{ end }}
-
-      {{ with .Params.map_embed }}
-        <div class="ride-map-embed">
-            <h2>Map</h2>
-            <iframe
-            src="{{ . }}"
-            width="640"
-            height="480"
-            style="border:0;"
-            loading="lazy"
-            allowfullscreen>
-            </iframe>
-         </div>
-      {{ end }}
-
-      {{ with .Params.highlights }}
+            {{ with .Params.highlights }}
         <div class="ride-detail-content">
-          <h2>Highlights</h2>
+          <h3>Highlights</h3>
           <ul>
             {{ range . }}
               {{ $t := printf "%T" . }}
@@ -90,7 +69,7 @@
 
       {{ with .Params.warnings }}
         <div class="ride-detail-content">
-          <h2>Warnings</h2>
+          <h3>Warnings</h3>
           <ul>
             {{ range . }}
               {{ $t := printf "%T" . }}
@@ -114,6 +93,26 @@
         {{ end }}
         </div>
 
+      <!-- Optional hero image -->
+      {{ with .Params.hero_image }}
+        <p>
+          <img class="img-responsive" src="{{ . }}" alt="{{ $.Title }}">
+        </p>
+      {{ end }}
+
+      {{ with .Params.map_embed }}
+        <div class="ride-map-embed">
+            <h3>Map</h3>
+            <iframe
+            src="{{ . }}"
+            width="640"
+            height="480"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen>
+            </iframe>
+         </div>
+      {{ end }}
 
       <!-- Gallery (same logic as rides: supports old string format + new object format) -->
       {{ with .Params.gallery }}
