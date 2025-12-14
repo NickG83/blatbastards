@@ -3,7 +3,7 @@ title: Alpine Way
 state: NSW
 region: Snowy Mountains
 surface: Sealed
-distance: 170
+distance: 120
 start: Jindabyne
 finish: Khancoban
 intro: Snowy Mountains alpine pass with hairpins, river flats and high-country
