@@ -400,3 +400,21 @@ body {
 .ride-detail-meta .ride-download-btn {
   margin-top: 12px;
 }
+
+/* Normalize meta list item sizing (kills the “first row is taller” issue) */
+.ride-detail-meta ul li {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4;
+}
+
+/* In case the theme targets the first item */
+.ride-detail-meta ul li:first-child {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ride-detail-meta ul li strong {
+  line-height: inherit;
+}
+
