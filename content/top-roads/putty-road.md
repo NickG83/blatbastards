@@ -3,7 +3,7 @@ title: Putty Road
 state: NSW
 region: Wollemi National Park (Sydney Hinterland)
 surface: Sealed
-distance: 180
+distance: 185
 start: Windsor
 finish: Singleton
 intro: Classic Sydney escape through Wollemi NP with a mix of sweepers,
