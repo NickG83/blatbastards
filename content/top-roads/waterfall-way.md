@@ -18,4 +18,4 @@ warnings:
 map_embed: https://www.google.com/maps/d/u/0/embed?mid=1Ko8nb1_S2z7tytqQMAbmksHeTbIERJ0&ehbc=2E312F
 hero_image: /uploads/waterfall-way.jpg
 ---
-Spectacular climb from the Coffs Coast through rainforest and waterfall country up to the New England tablelands at Armidale
+Waterfall Way is one of NSW’s most scenic coast-to-tablelands rides, climbing steadily from humid coastal air into cool New England country. The road winds through dense rainforest near Dorrigo, past multiple waterfalls and deep gullies, before opening into fast, flowing sections across the plateau toward Armidale.
