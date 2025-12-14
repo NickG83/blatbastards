@@ -434,3 +434,10 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.bb-fast-facts-title{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 10px;   /* space above, tighter gap to the box */
+}
