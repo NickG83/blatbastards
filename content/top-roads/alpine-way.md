@@ -14,6 +14,7 @@ highlights:
 warnings:
   - item: Tourist traffic
   - item: "*Very Low* speed limits in sections"
+  - item: Falling rocks, especially closer to Khancoban
 map_embed: https://www.google.com/maps/d/u/0/embed?mid=1tb0seFuDroB25SSmyrF23GyFoXRnjqE&ehbc=2E312F
 hero_image: /uploads/alpine-way.jpg
 ---
