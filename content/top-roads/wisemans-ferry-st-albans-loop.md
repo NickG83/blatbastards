@@ -3,7 +3,7 @@ title: Wisemans Ferry + St Albans Loop
 state: NSW
 region: Hawkesbury River
 surface: Sealed
-distance: 200
+distance: 135
 start: Windsor
 finish: Windsor
 intro: Classic Hawkesbury loop with cable ferries, river lanes and heritage pub stops.
