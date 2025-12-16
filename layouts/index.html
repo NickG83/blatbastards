@@ -1,23 +1,15 @@
-  {{ define "main" }}
-  <div class="container">
+{{ define "main" }}
+<div class="container">
 
-    <!-- ONE flex row: hero on the left, sidebar on the right -->
-    <div class="home-hero-row">
-      <div class="hero-col">
-        <header class="hero-header">
-          <img class="hero-image" src="/img/hero.jpg" alt="Blat Bastards" />
-        </header>
-      </div>
+  <!-- Centered hero only -->
+  <header class="hero-header">
+    <img class="hero-image" src="/img/hero.jpg" alt="Blat Bastards" />
+  </header>
 
-      <aside class="home-sidebar">
-        {{ partial "sidebar.html" . }}
-      </aside>
-    </div>
-
-    <!-- Main body content sits underneath -->
-    <div class="home-content">
-      {{ .Content }}
-    </div>
-
+  <!-- Main body content sits underneath -->
+  <div class="home-content">
+    {{ .Content }}
   </div>
-  {{ end }}
+
+</div>
+{{ end }}

@@ -101,26 +101,6 @@ body { padding-top: 70px; }
   display: inline-block;
 }
 
-/* Hero + sidebar row */
-.home-hero-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 320px;
-  column-gap: 32px;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-
-.hero-col {
-  grid-column: 2;
-  text-align: center;
-}
-
-.home-sidebar {
-  grid-column: 4;
-  max-width: 320px;
-  padding-left: 0;
-}
-
 .home-content { margin-top: 40px; }
 
 /* Home content link styling */
@@ -131,6 +111,7 @@ body { padding-top: 70px; }
   color: var(--bb-accent-orange);
   text-decoration: none;
 }
+
 
 /* Sidebar tags (home sidebar partial) */
 .bb-sidebar-tags h5 {
