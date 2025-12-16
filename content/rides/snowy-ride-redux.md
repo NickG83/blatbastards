@@ -7,6 +7,11 @@ surface: Mixed
 meeting_point: Captains Flat
 route_file: https://files.blatbastards.com/GPX/Snowy_Ride_Redux.gpx
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=1xv9ZL27v3dm-OpxtsniydM_K_KDj77U&ehbc=2E312F
+gallery:
+  - image: /uploads/img_1012.jpg
+    caption: From Charlottes Pass
+  - image: /uploads/2-ncg01281.jpg
+    caption: O'Hares Campground on the Elliott Way
 intro: >-
   "The Snowy Ride" used to be a big motorcycle event for the Steven Walter
   Children's Cancer Foundation, hosted from Thredbo each year and attracted
