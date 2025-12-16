@@ -373,3 +373,37 @@ body { padding-top: 70px; }
 @media (max-width: 600px) {
   .ride-detail-gallery { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   MOBILE NAV FIX (CleanWhite)
+   Make collapsed menu readable (white panel + dark links)
+   ========================================================= */
+@media (max-width: 767px) {
+
+  /* The collapsed panel */
+  #huxblog_navbar,
+  .navbar-custom .navbar-collapse {
+    background: #fff !important;
+  }
+
+  /* Top-level links */
+  #huxblog_navbar .navbar-nav > li > a,
+  .navbar-custom .navbar-nav > li > a {
+    color: var(--bb-primary) !important;
+  }
+
+  /* Hover/focus */
+  #huxblog_navbar .navbar-nav > li > a:hover,
+  #huxblog_navbar .navbar-nav > li > a:focus,
+  .navbar-custom .navbar-nav > li > a:hover,
+  .navbar-custom .navbar-nav > li > a:focus {
+    color: var(--bb-accent-orange) !important;
+    background: transparent !important;
+  }
+
+  /* Dropdown items (if any) */
+  #huxblog_navbar .dropdown-menu > li > a,
+  .navbar-custom .dropdown-menu > li > a {
+    color: var(--bb-primary) !important;
+  }
+}
