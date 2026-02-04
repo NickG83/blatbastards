@@ -2,7 +2,7 @@
 title: Cave and Misbehave Ride
 date: ""
 region: Southern Highlands
-distance: 650
+distance: 700
 duration: Weekend
 surface: Mixed
 meeting_point: Gunning
@@ -20,6 +20,10 @@ Kick off will be from Gunning around 1000. We're not doing a high km count day, 
 
 Instead, we'll run down to the caves and back to Taralga, then head down to Canyonleigh and across to Moss Vale before winding down to Kangaroo Valley for the night.
 
+*(Approx. 300KMs)*
+
 **Sunday**
 
 Sunday morning we'll do the Macquarie Pass loop counter clockwise and make a left just before getting back to Kangaroo Valley to head south to Nowra and on to Nerriga. From there, it'll be onto Tarago and out to the flats around Lake George up to Collector for a final beer and the backroad down to Gundaroo.
+
+(Approx. 400KMs)
