@@ -24,6 +24,6 @@ Instead, we'll run down to the caves and back to Taralga, then head down to Cany
 
 **Sunday**
 
-Sunday morning we'll do the Macquarie Pass loop counter clockwise and make a left just before getting back to Kangaroo Valley to head south to Nowra and on to Nerriga. From there, it'll be onto Tarago and out to the flats around Lake George up to Collector for a final beer and the backroad down to Gundaroo.
+Sunday morning we'll do the Macquarie Pass loop clockwise and make a left just before getting back to Kangaroo Valley to head south to Nowra and on to Nerriga. From there, it'll be onto Tarago and out to the flats around Lake George up to Collector for a final beer at the Bushranger and the backroad down to Gundaroo.
 
 (Approx. 400KMs)
