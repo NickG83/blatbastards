@@ -6,7 +6,7 @@ distance: 650
 duration: Weekend
 surface: Mixed
 meeting_point: Gunning
-departure_time: "0900"
+departure_time: "1000"
 map_embed: https://www.google.com/maps/d/u/0/embed?mid=1CmphMm20uuHKblhBmgxN-IHGpZveeT4&ehbc=2E312F
 hero_image: /uploads/kangaroo-valley.jpg
 intro: Late summer run to Kangaroo Valley, the the loop around Macquarie Pass,
@@ -22,4 +22,4 @@ Instead, we'll run down to the caves and back to Taralga, then head down to Cany
 
 **Sunday**
 
-Sunday morning we'll do the Macquarie Pass loop counter clockwise and make a left just before getting back to Kangaroo Valley to head south to Nowra and on to Nerriga. From there, it'll be onto Tarago and onto the flats around Lake George up to Collector for a final beer and the backroad down to Gundaroo.
+Sunday morning we'll do the Macquarie Pass loop counter clockwise and make a left just before getting back to Kangaroo Valley to head south to Nowra and on to Nerriga. From there, it'll be onto Tarago and out to the flats around Lake George up to Collector for a final beer and the backroad down to Gundaroo.
