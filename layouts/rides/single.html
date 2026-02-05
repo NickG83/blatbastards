@@ -15,6 +15,9 @@
           {{ with .Params.intro }}
             <li class="ride-intro">{{ . }}</li>
           {{ end }}
+          {{ with .Params.rideDate }}
+          <li><strong>Ride date:</strong> {{ (time.AsTime .).Format "2 Jan 2006" }}</li>
+          {{ end }}
           {{ with .Params.region }}
             <li><strong>Region:</strong> {{ . }}</li>
           {{ end }}
