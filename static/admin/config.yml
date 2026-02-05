@@ -31,7 +31,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-    # ------------------------
+  # ------------------------
   # RIDES
   # ------------------------
   - name: "rides"
@@ -43,19 +43,34 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
-    sortable_fields: ["date", "title"]
-    summary: "{{date}} — {{title}} ({{region}})"
+
+    # sort & summary should reflect the *ride date*, not publish date
+    sortable_fields: ["rideDate", "title"]
+    summary: "{{rideDate}} — {{title}} ({{region}})"
 
     fields:
       - { label: "Title", name: "title", widget: "string" }
 
-      - label: "Ride Date"
+      # Keep the page published: date = publish date (today/past)
+      - label: "Publish Date"
         name: "date"
         widget: "datetime"
         date_format: "YYYY-MM-DD"
         time_format: false
         format: "YYYY-MM-DD"
+        required: true
+        default: "{{now}}"
+        hint: "Controls publishing. Keep this today or earlier so the ride page appears on the site."
+
+      # Actual ride date can be future
+      - label: "Ride Date"
+        name: "rideDate"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
         required: false
+        hint: "The intended date of the ride. Used for sorting and upcoming/past logic."
 
       - label: "Region"
         name: "region"

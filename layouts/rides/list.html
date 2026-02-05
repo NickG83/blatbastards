@@ -11,91 +11,96 @@
       <div class="rides-list">
         {{ $all := .Pages }}
 
-        {{ $halfDay := where $all "Params.duration" "Half-Day" }}
+        {{ $halfDay  := where $all "Params.duration" "Half-Day" }}
+        {{ $dayRides := where $all "Params.duration" "Day" }}
+        {{ $weekend  := where $all "Params.duration" "Weekend" }}
+        {{ $longer   := where $all "Params.duration" "Longer" }}
+        {{ $blat     := where $all "Params.duration" "BLAT!" }}
+
+        {{/* Helper note: sort by rideDate (YYYY-MM-DD). Keep publish `date` <= today so pages are included in $all */}}
+
         {{ if gt (len $halfDay) 0 }}
           <h2>Half-Day Rides</h2>
-          {{ range $halfDay.ByDate.Reverse }}
+          {{ range (sort $halfDay "Params.rideDate" "asc") }}
             <article class="ride-item">
-              <h3>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </h3>
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
               <p class="ride-meta">
                 {{ with .Params.region }}{{ . }}{{ end }}
                 {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+                {{ with .Params.rideDate }} • {{ (time.AsTime .).Format "2 Jan 2006" }}{{ end }}
               </p>
             </article>
           {{ end }}
           <hr>
         {{ end }}
 
-        {{ $day := where $all "Params.duration" "Day" }}
-        {{ if gt (len $day) 0 }}
+        {{ if gt (len $dayRides) 0 }}
           <h2>Day Rides</h2>
-          {{ range $day.ByDate.Reverse }}
+          {{ range (sort $dayRides "Params.rideDate" "asc") }}
             <article class="ride-item">
-              <h3>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </h3>
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
               <p class="ride-meta">
                 {{ with .Params.region }}{{ . }}{{ end }}
                 {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+                {{ with .Params.rideDate }} • {{ (time.AsTime .).Format "2 Jan 2006" }}{{ end }}
               </p>
             </article>
           {{ end }}
           <hr>
         {{ end }}
 
-        {{ $weekend := where $all "Params.duration" "Weekend" }}
         {{ if gt (len $weekend) 0 }}
           <h2>Weekend Rides</h2>
-          {{ range $weekend.ByDate.Reverse }}
+          {{ range (sort $weekend "Params.rideDate" "asc") }}
             <article class="ride-item">
-              <h3>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </h3>
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
               <p class="ride-meta">
                 {{ with .Params.region }}{{ . }}{{ end }}
                 {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+                {{ with .Params.rideDate }} • {{ (time.AsTime .).Format "2 Jan 2006" }}{{ end }}
               </p>
             </article>
           {{ end }}
           <hr>
         {{ end }}
 
-        {{ $longer := where $all "Params.duration" "Longer" }}
         {{ if gt (len $longer) 0 }}
           <h2>Longer Rides</h2>
-          {{ range $longer.ByDate.Reverse }}
+          {{ range (sort $longer "Params.rideDate" "asc") }}
             <article class="ride-item">
-              <h3>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </h3>
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
               <p class="ride-meta">
                 {{ with .Params.region }}{{ . }}{{ end }}
                 {{ with .Params.distance }} • ~{{ . }} km{{ end }}
-              </p>
-            </article>
-          {{ end }}
-        {{ end }}
-
-                {{ $day := where $all "Params.duration" "BLAT!" }}
-        {{ if gt (len $day) 0 }}
-          <h2>Annual BLAT</h2>
-          {{ range $day.ByDate.Reverse }}
-            <article class="ride-item">
-              <h3>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              </h3>
-              <p class="ride-meta">
-                {{ with .Params.region }}{{ . }}{{ end }}
-                {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+                {{ with .Params.rideDate }} • {{ (time.AsTime .).Format "2 Jan 2006" }}{{ end }}
               </p>
             </article>
           {{ end }}
           <hr>
         {{ end }}
 
-        {{ if and (eq (len $halfDay) 0) (eq (len $day) 0) (eq (len $weekend) 0) (eq (len $longer) 0) }}
+        {{ if gt (len $blat) 0 }}
+          <h2>Annual BLAT</h2>
+          {{ range (sort $blat "Params.rideDate" "asc") }}
+            <article class="ride-item">
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              <p class="ride-meta">
+                {{ with .Params.region }}{{ . }}{{ end }}
+                {{ with .Params.distance }} • ~{{ . }} km{{ end }}
+                {{ with .Params.rideDate }} • {{ (time.AsTime .).Format "2 Jan 2006" }}{{ end }}
+              </p>
+            </article>
+          {{ end }}
+          <hr>
+        {{ end }}
+
+        {{ if and
+            (eq (len $halfDay) 0)
+            (eq (len $dayRides) 0)
+            (eq (len $weekend) 0)
+            (eq (len $longer) 0)
+            (eq (len $blat) 0)
+        }}
           <p>No rides published yet. Check back soon.</p>
         {{ end }}
       </div>
