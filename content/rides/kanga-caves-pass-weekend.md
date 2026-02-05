@@ -1,6 +1,7 @@
 ---
 title: Cave and Misbehave Ride
-date: ""
+date: 2026-02-05
+rideDate: 2026-03-07
 region: Southern Highlands
 distance: 700
 duration: Weekend
