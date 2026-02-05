@@ -62,7 +62,7 @@
 
       {{ with .Params.map_embed }}
         <div class="ride-map-embed">
-          <h3>Ride map</h3>
+          <h3>🗺️ Ride map</h3>
           <iframe
             src="{{ . }}"
             width="640"
@@ -76,13 +76,14 @@
 
       <!-- Main ride notes from Decap ("Ride Notes" field) -->
       <div class="ride-detail-content">
+          <h3>ℹ️ Ride Details</h3>
         {{ .Content }}
       </div>
 
       <!-- YouTube video AFTER notes, BEFORE gallery -->
       {{ with .Params.youtube_embed }}
         <div class="ride-video">
-          <h3>Ride video</h3>
+          <h3>🎥 Ride video</h3>
           <div class="ride-video-wrapper">
             <iframe
               src="{{ . }}"
