@@ -1,5 +1,6 @@
 ---
 title: ANZAC Ride
+date: 2026-02-05
 region: Melbourne - Canberra
 distance: 800
 duration: Day
