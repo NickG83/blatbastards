@@ -1,5 +1,6 @@
 ---
 title: Snowy Ride Redux
+date: 2026-02-05
 region: Snowy Region
 distance: 1100
 duration: Longer

@@ -1,6 +1,6 @@
 ---
 title: Black Stump Bogan
-date: ""
+date: 2026-02-05
 region: Western NSW
 distance: 1350
 duration: Longer

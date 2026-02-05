@@ -1,5 +1,6 @@
 ---
 title: Big Bore Blat 2024
+date: 2026-02-05
 region: Snowies, Coast, Yarra Valley
 distance: 2000
 duration: BLAT!

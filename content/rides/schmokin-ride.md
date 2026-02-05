@@ -1,5 +1,6 @@
 ---
 title: Schmokin' Ride
+date: 2026-02-05
 region: Southern Tablelands
 distance: 700
 duration: Weekend

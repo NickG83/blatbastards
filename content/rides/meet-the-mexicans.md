@@ -1,5 +1,6 @@
 ---
 title: Meet the Mexicans
+date: 2026-02-05
 region: South East
 distance: 850
 duration: Weekend
