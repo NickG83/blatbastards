@@ -9,10 +9,10 @@
       <!-- Big page title -->
       <h1 class="bb-page-title">{{ .Title }}</h1>
 
-    <h4 class="bb-fast-facts-title">
+    <h3 class="bb-fast-facts-title">
     <span class="bb-emoji" aria-hidden="true">🏍️</span>
     Fast Facts
-    </h4>
+    </h3>
     
       <!-- Key ride facts -->
       <div class="ride-detail-meta">
@@ -62,7 +62,7 @@
 
       {{ with .Params.map_embed }}
         <div class="ride-map-embed">
-          <h2>Ride map</h2>
+          <h3>Ride map</h3>
           <iframe
             src="{{ . }}"
             width="640"
@@ -82,7 +82,7 @@
       <!-- YouTube video AFTER notes, BEFORE gallery -->
       {{ with .Params.youtube_embed }}
         <div class="ride-video">
-          <h2>Ride video</h2>
+          <h3>Ride video</h3>
           <div class="ride-video-wrapper">
             <iframe
               src="{{ . }}"
