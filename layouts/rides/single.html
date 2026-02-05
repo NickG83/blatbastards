@@ -18,7 +18,7 @@
       <div class="ride-detail-meta">
         <ul>
           {{ with .Params.intro }}
-            <li class="ride-intro">{{ . }}</li>
+            <li class="ride-intro">{{ . }}<br><br></li>
           {{ end }}
           {{ with .Params.rideDate }}
           <li><strong>Ride date:</strong> {{ (time.AsTime .).Format "2 Jan 2006" }}</li>
