@@ -6,8 +6,9 @@ region: Southern Highlands
 distance: 700
 duration: Weekend
 surface: Mixed
-meeting_point: Gunning
+meeting_point: Yass
 departure_time: "1000"
+route_file: https://files.blatbastards.com/GPX/Cave_n_Misbehave.gpx
 map_embed: https://www.google.com/maps/d/u/0/embed?mid=1CmphMm20uuHKblhBmgxN-IHGpZveeT4&ehbc=2E312F
 hero_image: /uploads/kangaroo-valley.jpg
 intro: Late summer run to Kangaroo Valley, the the loop around Macquarie Pass,
