@@ -44,6 +44,18 @@ collections:
     format: "frontmatter"
     extension: "md"
 
+  # ------------------------
+  # PEOPLE
+  # ------------------------
+  - name: "people"
+    label: "People"
+    folder: "content/people"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Nickname", name: "nickname", widget: "string", required: false }
+
     # sort & summary should reflect the *ride date*, not publish date
     sortable_fields: ["rideDate", "title"]
     summary: "{{rideDate}} — {{title}} ({{region}})"
@@ -148,6 +160,16 @@ collections:
         name: "body"
         widget: "markdown"
         hint: "Full trip description, hazards, fuel stops, etc."
+
+      - label: "Attendees"
+        name: "attendees"
+        widget: "relation"
+        collection: "people"
+        search_fields: ["name", "nickname"]
+        display_fields: ["name", "nickname"]
+        value_field: "name"
+        multiple: true
+        required: false
 
       - label: "YouTube Embed URL"
         name: "youtube_embed"
