@@ -81,13 +81,19 @@
       </div>
 
       {{ with .Params.attendees }}
-        <h3>Attendees</h3>
+        <h3>👥 Attendees</h3>
         <ul>
           {{ range . }}
             {{ $p := site.GetPage (printf "people/%s" .) }}
             {{ if $p }}
-              {{ $name := $p.Params.name | default $p.Title }}
-              <li>{{ $name }}{{ with $p.Params.nickname }} ({{ . }}){{ end }}</li>
+              {{ $real := $p.Params.name | default $p.Title }}
+              {{ $nick := $p.Params.nickname | default "" }}
+
+              {{ if $nick }}
+                <li>{{ $nick }} ({{ $real }})</li>
+              {{ else }}
+                <li>{{ $real }}</li>
+              {{ end }}
             {{ else }}
               <li>{{ . }}</li>
             {{ end }}
