@@ -5,11 +5,10 @@ backend:
   base_url: "https://www.blatbastards.com"
   auth_endpoint: "api/auth"
 
-# Optional: lets you run Decap locally if you ever dev locally
 # local_backend: true
 
-media_folder: "static/uploads"   # where uploaded files live in the repo
-public_folder: "/uploads"        # how those files are referenced in the site
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 editor:
   preview: true
@@ -32,6 +31,31 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   # ------------------------
+  # PEOPLE
+  # ------------------------
+  - name: "people"
+    label: "People"
+    label_singular: "Person"
+    folder: "content/people"
+    create: true
+    format: "frontmatter"
+    extension: "md"
+
+    # Use `id` to generate the entry slug/filename
+    identifier_field: "id"
+    summary: "{{name}} ({{id}})"
+
+    fields:
+      - label: "ID (stable, don’t change)"
+        name: "id"
+        widget: "string"
+        hint: "Short handle used for filenames/links (e.g. nick, gaz, sarah). Set once, don’t change."
+        pattern: ["^[a-z0-9-]+$", "Use lowercase letters, numbers, and hyphens only."]
+
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Nickname", name: "nickname", widget: "string", required: false }
+
+  # ------------------------
   # RIDES
   # ------------------------
   - name: "rides"
@@ -43,18 +67,6 @@ collections:
     slug: "{{slug}}"
     format: "frontmatter"
     extension: "md"
-
-  # ------------------------
-  # PEOPLE
-  # ------------------------
-  - name: "people"
-    label: "People"
-    folder: "content/people"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Nickname", name: "nickname", widget: "string", required: false }
 
     # sort & summary should reflect the *ride date*, not publish date
     sortable_fields: ["rideDate", "title"]
@@ -165,9 +177,9 @@ collections:
         name: "attendees"
         widget: "relation"
         collection: "people"
-        search_fields: ["name", "nickname"]
-        display_fields: ["name", "nickname"]
-        value_field: "name"
+        search_fields: ["name", "nickname", "id"]
+        display_fields: ["{{name}}", "{{nickname}}", "{{id}}"]
+        value_field: "{{slug}}"
         multiple: true
         required: false
 
