@@ -79,6 +79,20 @@
           <h3>ℹ️ Ride Details</h3>
         {{ .Content }}
       </div>
+      
+      {{ with .Params.attendees }}
+        <h3>Attendees</h3>
+        <ul>
+          {{ range . }}
+            {{ $p := site.GetPage (printf "people/%s" .) }}
+            {{ if $p }}
+              <li>{{ $p.Title }}{{ with $p.Params.nickname }} ({{ . }}){{ end }}</li>
+            {{ else }}
+              <li>{{ . }}</li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      {{ end }}
 
       <!-- YouTube video AFTER notes, BEFORE gallery -->
       {{ with .Params.youtube_embed }}
