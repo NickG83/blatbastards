@@ -87,10 +87,8 @@
             {{ $p := site.GetPage (printf "people/%s" .) }}
             {{ if $p }}
               {{ $real := $p.Params.name | default $p.Title }}
-              {{ $nick := $p.Params.nickname | default "" }}
-
-              {{ if $nick }}
-                <li>{{ $nick }} ({{ $real }})</li>
+              {{ with $p.Params.nickname }}
+                <li>{{ $real }} "{{ . }}"</li>
               {{ else }}
                 <li>{{ $real }}</li>
               {{ end }}
