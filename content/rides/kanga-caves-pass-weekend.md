@@ -13,7 +13,11 @@ map_embed: https://www.google.com/maps/d/u/0/embed?mid=1CmphMm20uuHKblhBmgxN-IHG
 hero_image: /uploads/kangaroo-valley.jpg
 intro: Early Autumn run to Kangaroo Valley, the the loop around Macquarie Pass,
   including Wombeyan Caves.
-attendees: []
+attendees:
+  - nickg
+  - ross
+  - gav
+  - moe
 ---
 This ride intends to integrate with the [Macquarie Pass loop](/top-roads/kangaroo-valley-macquarie-pass-loop/) turning this into a weekend ride.
 
