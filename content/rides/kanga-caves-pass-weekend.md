@@ -20,6 +20,7 @@ attendees:
   - moe
   - johng
   - nickc
+  - evanw
 ---
 This ride intends to integrate with the [Macquarie Pass loop](/top-roads/kangaroo-valley-macquarie-pass-loop/) turning this into a weekend ride.
 
