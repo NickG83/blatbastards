@@ -5,6 +5,8 @@ backend:
   base_url: "https://www.blatbastards.com"
   auth_endpoint: "api/auth"
 
+publish_mode: editorial_workflow
+
 # local_backend: true
 
 media_folder: "static/uploads"
