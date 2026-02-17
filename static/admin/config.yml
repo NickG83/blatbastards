@@ -4,6 +4,7 @@ backend:
   branch: main
   base_url: "https://www.blatbastards.com"
   auth_endpoint: "api/auth"
+  auth_scope: repo
 
 publish_mode: editorial_workflow
 
