@@ -8,6 +8,9 @@ surface: Mixed
 meeting_point: Yass
 map_embed: https://www.google.com/maps/d/embed?mid=1AfnD-NJ5LRoAyCaGuhqIMzSseJIX6Aw&ehbc=2E312F
 hero_image: /uploads/rrr-hero.jpg
+gallery:
+  - image: /uploads/dalton-lunch.jpg
+    caption: Lunch @ Royal Hotel - Dalton
 intro: Sunday morning run for mid-morning coffee followed by some dusty trails
   to a pub for a coldie and a bite for lunch.
 ---
@@ -19,3 +22,5 @@ Given the northbound route, Red Robin Nursery is actually in a perfect spot. You
 Back on the road, heading east for ~10KMs before the right turn onto Wheeo Rd and more fast flowing dirt. Some fences were down when I went through and livestock in areas on the side of the road, so just be aware. The Bulleys Crossing link road to Rugby Rd, despite being a faint line on a map is actually fine - I was expecting something nasty. Running down to Dalton via Rugby Rd, it's hard to go past the Royal Hotel for a cold beer and a bit of lunch before following the train lines back toward Yass.
 
 All up, it's only about 170 KMs, 2/3rds of which is high speed dirt.
+
+There are a number of causeways on this route (north and south bound legs); when I rode it, we hadn't seen rain for months, so they were dry. I'd be careful to run this route after heavy rainfall, unless you wanna wash the dust off.
