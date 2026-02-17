@@ -1,4 +1,4 @@
 ---
 id: johng
-name: Johnny
+name: Johnny G.
 ---
