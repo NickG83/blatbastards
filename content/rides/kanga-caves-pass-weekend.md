@@ -51,12 +51,13 @@ We’ll finish with the backroad run down to Gundaroo, where the ride wraps up a
 
 ##### ⛽ Fuel stops
 
-* Yass Ampol
+* Yass
 * Crookwell (for those with smaller tanks)
 * Bundanoon
+* Gerringong (for those with smaller tanks)
 * Nowra
 
-##### 🍽️ / ☕ Food stops
+##### 🍽️☕ Food stops
 
 * Yass - Kaffine (breakfast)
 * Red Robin Nursey (coffee)
