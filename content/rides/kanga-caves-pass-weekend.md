@@ -46,3 +46,22 @@ Sunday starts with the Macquarie Pass loop ridden clockwise, with the aim of sto
 From there, we’ll head back toward Kangaroo Valley for a coffee stop, then double back a few kilometers and take the right turn to head south toward Nowra, before continuing through to Nerriga for a later lunch.\
 After lunch, we’ll continue through Tarago, then ride out across the Lake George flats and up to Collector for a final beer at the Bushranger Hotel.\
 We’ll finish with the backroad run down to Gundaroo, where the ride wraps up and everyone can head off their separate ways.
+
+### Key Notes
+
+##### ⛽ Fuel stops
+
+* Yass Ampol
+* Crookwell (for those with smaller tanks)
+* Bundanoon
+* Nowra
+
+##### 🍽️ / ☕ Food stops
+
+* Yass - Kaffine (breakfast)
+* Red Robin Nursey (coffee)
+* Taralga - The Argyle Inn (lunch)
+* Gerringong - Sea Vista Cafe (brunch)
+* Cambewarra - The Lookout Cafe (coffee)
+* Nerriga - Nerriga Pub (lunch)
+* Collector - Bushranger Hotel (farewell drink)
