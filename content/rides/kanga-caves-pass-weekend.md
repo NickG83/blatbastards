@@ -27,12 +27,30 @@ This ride intends to integrate with the [Macquarie Pass loop](/top-roads/kangaro
 
 **Saturday**
 
-Kick off will be from Yass at Kaffine after breakfast, hitting the road at 1000. We're not doing a high km count day, so starting easy. We'll take backroads to Crookwell and across to Taralga. Original intent was to go to Wombeyan Caves then through to Bowral via the Wombeyan Caves Road. However the road is currently closed on the eastern side until at least mid 2026 due to collapse.\
-Instead, we'll run down to the caves and back to Taralga for lunch, then head down to Canyonleigh and across to Bundanoon for the night.\
-*(Approx. 300KMs)*
+*Yass → Crookwell → Taralga → Wombeyan Caves (out-and-back) → Taralga → Canyonleigh → Bundanoon*
+
+*Approx. 300 km*
+
+We’ll kick off from Kaffine in Yass after breakfast, with stands up at 1000.
+
+Saturday is intentionally a lighter day on the kilometres, so we’ll ease into the weekend with a scenic backroads run through Crookwell and across to Taralga.
+
+The original plan was to continue via Wombeyan Caves and then through to Bowral via Wombeyan Caves Road, but the eastern side remains closed (currently expected until at least mid-2026) due to road collapse.
+
+Instead, we’ll do a run down to Wombeyan Caves and return to Taralga for lunch, then continue south through Canyonleigh and across to Bundanoon for the night.
+
+**Overnight stop: Bundanoon**
 
 **Sunday**
 
-Sunday morning we'll do the Macquarie Pass loop clockwise, intent being to have brunch at Gerringong before heading back toward Kangaroo Valley for a coffee hit, before double back a few KMs and making a right, heading south to Nowra and then on to Nerriga for a later lunch. \
-From there, we'll run through to Tarago and out to the flats around Lake George up to Collector for a final beer at the Bushranger Hotel and the backroad down to Gundaroo, before going our separate ways.\
-*(Approx. 400KMs)*
+*Bundanoon → Macquarie Pass Loop (clockwise) → Gerringong → Kangaroo Valley → Nowra → Nerriga → Tarago → Lake George flats → Collector → Gundaroo*
+
+*Approx. 400 km*
+
+Sunday starts with the Macquarie Pass loop ridden clockwise, with the aim of stopping in Gerringong for brunch.
+
+From there, we’ll head back toward Kangaroo Valley for a coffee stop, then double back a few kilometres and take the right turn to head south toward Nowra, before continuing through to Nerriga for a later lunch.
+
+After lunch, we’ll continue through Tarago, then ride out across the Lake George flats and up to Collector for a final beer at the Bushranger Hotel.
+
+We’ll finish with the backroad run down to Gundaroo, where the ride wraps up and everyone can head off their separate ways.
