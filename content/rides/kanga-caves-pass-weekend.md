@@ -27,7 +27,7 @@ This ride intends to integrate with the [Macquarie Pass loop](/top-roads/kangaro
 
 **Saturday**
 
-*Yass → Crookwell → Taralga → Wombeyan Caves (out-and-back) → Taralga → Canyonleigh → Bundanoon*\
+Yass → Crookwell → Taralga → Wombeyan Caves (out-and-back) → Taralga → Canyonleigh → Bundanoon\
 *(Approx. 300 km)*
 
 We’ll kick off from Kaffine in Yass after breakfast, with stands up at 1000.\
@@ -39,7 +39,7 @@ Overnight stop: Bundanoon
 
 **Sunday**
 
-*Bundanoon → Macquarie Pass Loop (clockwise) → Gerringong → Kangaroo Valley → Nowra → Nerriga → Tarago → Lake George flats → Collector → Gundaroo*\
+Bundanoon → Macquarie Pass Loop (clockwise) → Gerringong → Kangaroo Valley → Nowra → Nerriga → Tarago → Lake George flats → Collector → Gundaroo\
 *(Approx. 400 km)*
 
 Sunday starts with the Macquarie Pass loop ridden clockwise, with the aim of stopping in Gerringong for brunch.\
