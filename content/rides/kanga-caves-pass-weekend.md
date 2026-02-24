@@ -39,11 +39,11 @@ Overnight stop: Bundanoon
 
 **Sunday**
 
-Bundanoon → Macquarie Pass Loop (clockwise) → Gerringong → Kangaroo Valley → Nowra → Nerriga → Tarago → Lake George flats → Collector → Gundaroo\
+Bundanoon → Macquarie Pass Loop (clockwise) → Gerringong → Kangaroo Valley → Camberwarra Lookout → Nowra → Nerriga → Tarago → Lake George flats → Collector → Gundaroo\
 *(Approx. 400 km)*
 
 Sunday starts with the Macquarie Pass loop ridden clockwise, with the aim of stopping in Gerringong for brunch.\
-From there, we’ll head back toward Kangaroo Valley for a coffee stop, then double back a few kilometers and take the right turn to head south toward Nowra, before continuing through to Nerriga for a later lunch.\
+From there, we’ll head back toward Kangaroo Valley, get the obligatory photo at the Hampden Bridge, then double back a few kilometers and take the right turn to head south for coffee at Camberwarra Lookout before continuing through to Nerriga for a later lunch.\
 After lunch, we’ll continue through Tarago, then ride out across the Lake George flats and up to Collector for a final beer at the Bushranger Hotel.\
 We’ll finish with the backroad run down to Gundaroo, where the ride wraps up and everyone can head off their separate ways.
 
