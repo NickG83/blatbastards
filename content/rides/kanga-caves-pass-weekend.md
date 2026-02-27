@@ -44,8 +44,7 @@ Bundanoon → Macquarie Pass Loop (clockwise) → Gerringong → Kangaroo Valley
 
 Sunday starts with the Macquarie Pass loop ridden clockwise, with the aim of stopping in Gerringong for brunch.\
 From there, we’ll head back toward Kangaroo Valley, get the obligatory photo at the Hampden Bridge, then double back a few kilometers and take the right turn to head south for coffee at Camberwarra Lookout before continuing through to Nerriga for a later lunch.\
-After lunch, we’ll continue through Tarago, then ride out across the Lake George flats and up to Collector for a final beer at the Bushranger Hotel.\
-We’ll finish with the backroad run down to Gundaroo, where the ride wraps up and everyone can head off their separate ways.
+After lunch, we’ll continue through Tarago, then ride out across the Lake George flats and up to Collector, before taking the backroad down to Gundaroo, where the ride wraps up and everyone can head off their separate ways.
 
 ### Key Notes
 
@@ -62,7 +61,8 @@ We’ll finish with the backroad run down to Gundaroo, where the ride wraps up a
 * Yass - Kaffine (breakfast)
 * Red Robin Nursey (coffee)
 * Taralga - The Argyle Inn (lunch)
+* Robinson - Famous Pie Shop (breakfast snack)
 * Gerringong - Sea Vista Cafe (brunch)
 * Cambewarra - The Lookout Cafe (coffee)
 * Nerriga - Nerriga Pub (lunch)
-* Collector - Bushranger Hotel (farewell drink)
+* Gundaroo - Gundaroo Pub (farewell drink)
