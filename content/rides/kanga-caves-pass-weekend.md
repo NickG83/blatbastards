@@ -11,6 +11,17 @@ departure_time: "1000"
 route_file: https://files.blatbastards.com/GPX/Cave_n_Misbehave.gpx
 map_embed: https://www.google.com/maps/d/u/0/embed?mid=1CmphMm20uuHKblhBmgxN-IHGpZveeT4&ehbc=2E312F
 hero_image: /uploads/kangaroo-valley.jpg
+gallery:
+  - image: /uploads/ncg01481.jpg
+    caption: Wombeyan Caves
+  - image: /uploads/sptrail.jpg
+    caption: Not as bad as anticipated, despite the torrential rain....
+  - image: /uploads/fitzroyfalls.jpg
+    caption: Fitzroy Falls in the fog
+  - image: /uploads/ncg01482.jpg
+    caption: Fitzroy Falls
+  - image: /uploads/ncg01499.jpg
+    caption: Headland @ Gerrigong
 intro: Early Autumn run to Kangaroo Valley, the loop around Macquarie Pass,
   including Wombeyan Caves.
 attendees:
