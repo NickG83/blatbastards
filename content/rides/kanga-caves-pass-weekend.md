@@ -22,6 +22,8 @@ gallery:
     caption: Fitzroy Falls
   - image: /uploads/ncg01499.jpg
     caption: Headland @ Gerrigong
+  - image: /uploads/ncg01477.jpg
+    caption: Jerrara Rd regroup
 intro: Early Autumn run to Kangaroo Valley, the loop around Macquarie Pass,
   including Wombeyan Caves.
 attendees:
