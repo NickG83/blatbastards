@@ -21,10 +21,16 @@
     <!-- Menu (right) -->
     <div class="collapse navbar-collapse" id="bb-navbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ "/rides/" | relURL }}">Rides</a></li>
-        <li><a href="{{ "/logistics/" | relURL }}">Logistics</a></li>
-        <li><a href="{{ "/top-roads/" | relURL }}">Top Roads</a></li>
-
+        {{ with site.Params.addtional_menus }}
+          {{ range . }}
+            <li><a href="{{ .href | relURL }}">{{ .title }}</a></li>
+          {{ end }}
+        {{ else }}
+          <li><a href="{{ "/rides/" | relURL }}">Rides</a></li>
+          <li><a href="{{ "/other-adventures/" | relURL }}">Off-Bike</a></li>
+          <li><a href="{{ "/logistics/" | relURL }}">Logistics</a></li>
+          <li><a href="{{ "/top-roads/" | relURL }}">Top Roads</a></li>
+        {{ end }}
       </ul>
     </div>
 
