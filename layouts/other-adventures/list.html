@@ -1,0 +1,73 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="
+      col-lg-8 col-lg-offset-2
+      col-md-10 col-md-offset-1
+      post-container">
+
+      <h1 class="bb-page-title">Other Adventures</h1>
+
+      {{ with .Content }}
+        <div class="post-content">
+          {{ . }}
+        </div>
+      {{ end }}
+
+      <div class="rides-list">
+        {{ $items := slice }}
+
+        {{ range .Pages }}
+          {{ $sortDate := .Date.Format "2006-01-02" }}
+          {{ with .Params.adventureDate }}
+            {{ $sortDate = (time.AsTime .).Format "2006-01-02" }}
+          {{ end }}
+          {{ $items = $items | append (dict "sortDate" $sortDate "p" .) }}
+        {{ end }}
+
+        {{ if gt (len $items) 0 }}
+          <div class="rides-grid">
+            {{ range sort $items "sortDate" "desc" }}
+              {{ $p := .p }}
+              {{ $meta := slice }}
+
+              {{ with $p.Params.activity }}
+                {{ $meta = $meta | append . }}
+              {{ end }}
+
+              {{ with $p.Params.region }}
+                {{ $meta = $meta | append . }}
+              {{ end }}
+
+              {{ with $p.Params.distance }}
+                {{ $meta = $meta | append (printf "~%v km" .) }}
+              {{ end }}
+
+              {{ with $p.Params.adventureDate }}
+                {{ $meta = $meta | append ((time.AsTime .).Format "2 Jan 2006") }}
+              {{ else }}
+                {{ $meta = $meta | append ($p.Date.Format "2 Jan 2006") }}
+              {{ end }}
+
+              <article class="ride-item ride-card">
+                <h3><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+
+                {{ if gt (len $meta) 0 }}
+                  <p class="ride-meta">{{ delimit $meta " • " }}</p>
+                {{ end }}
+
+                {{ with $p.Params.intro }}
+                  <p>{{ . }}</p>
+                {{ end }}
+              </article>
+            {{ end }}
+          </div>
+        {{ else }}
+          <p>No adventures published yet. Check back soon.</p>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</div>
+{{ end }}

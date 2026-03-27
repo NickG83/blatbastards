@@ -1,0 +1,152 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="
+      col-lg-8 col-lg-offset-2
+      col-md-10 col-md-offset-1
+      post-container">
+
+      <h1 class="bb-page-title">{{ .Title }}</h1>
+
+      <h3 class="bb-fast-facts-title">
+        <span class="bb-emoji" aria-hidden="true">🧭</span>
+        Fast Facts
+      </h3>
+
+      <div class="ride-detail-meta">
+        <ul>
+          {{ with .Params.intro }}
+            <li class="ride-intro">{{ . }}<br><br></li>
+          {{ end }}
+
+          {{ with .Params.adventureDate }}
+            <li><strong>Adventure date:</strong> {{ (time.AsTime .).Format "2 Jan 2006" }}</li>
+          {{ end }}
+
+          {{ with .Params.activity }}
+            <li><strong>Activity:</strong> {{ . }}</li>
+          {{ end }}
+
+          {{ with .Params.region }}
+            <li><strong>Region:</strong> {{ . }}</li>
+          {{ end }}
+
+          {{ with .Params.distance }}
+            <li><strong>Distance:</strong> ~{{ . }} km</li>
+          {{ end }}
+
+          {{ with .Params.duration }}
+            <li><strong>Duration:</strong> {{ . }}</li>
+          {{ end }}
+
+          {{ with .Params.meeting_point }}
+            <li><strong>Meeting point / base:</strong> {{ . }}</li>
+          {{ end }}
+
+          {{ with .Params.departure_time }}
+            <li><strong>Departure time:</strong> {{ . }}</li>
+          {{ end }}
+        </ul>
+
+        {{ with .Params.route_file }}
+          <p class="ride-download-btn">
+            <a class="btn btn-sm btn-primary ride-download-btn" href="{{ . }}" target="_blank" rel="noopener">
+              Download file
+            </a>
+          </p>
+        {{ end }}
+      </div>
+
+      {{ with .Params.hero_image }}
+        <p>
+          <img class="img-responsive" src="{{ . }}" alt="{{ $.Title }}">
+        </p>
+      {{ end }}
+
+      {{ with .Params.map_embed }}
+        <div class="ride-map-embed">
+          <h3>🗺️ Adventure map</h3>
+          <iframe
+            src="{{ . }}"
+            width="640"
+            height="480"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+      {{ end }}
+
+      <div class="ride-detail-content">
+        <h3>ℹ️ Adventure Details</h3>
+        {{ if .Content }}
+          {{ .Content }}
+        {{ else }}
+          {{ with .Params.body }}
+            {{ . | markdownify }}
+          {{ end }}
+        {{ end }}
+      </div>
+
+      {{ with .Params.attendees }}
+        <h3>👥 Attendees</h3>
+        <ul>
+          {{ range . }}
+            {{ $p := site.GetPage (printf "people/%s" .) }}
+            {{ if $p }}
+              {{ $real := $p.Params.name | default $p.Title }}
+              {{ with $p.Params.nickname }}
+                <li>{{ $real }} "{{ . }}"</li>
+              {{ else }}
+                <li>{{ $real }}</li>
+              {{ end }}
+            {{ else }}
+              <li>{{ . }}</li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      {{ end }}
+
+      {{ with .Params.youtube_embed }}
+        <div class="ride-video">
+          <h3>🎥 Adventure video</h3>
+          <div class="ride-video-wrapper">
+            <iframe
+              src="{{ . }}"
+              width="100%"
+              height="360"
+              style="border:0;"
+              title="{{ $.Title }} adventure video"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      {{ end }}
+
+      {{ with .Params.gallery }}
+        <div class="ride-detail-gallery">
+          {{ range . }}
+            {{ $t := printf "%T" . }}
+            {{ if eq $t "string" }}
+              <figure class="ride-gallery-item">
+                <img class="ride-gallery-img" src="{{ . | relURL }}" alt="{{ $.Title }}">
+              </figure>
+            {{ else }}
+              <figure class="ride-gallery-item">
+                <img class="ride-gallery-img" src="{{ .image | relURL }}" alt="{{ .caption | default $.Title }}">
+                {{ with .caption }}
+                  <figcaption class="ride-gallery-caption">{{ . }}</figcaption>
+                {{ end }}
+              </figure>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>
+{{ end }}

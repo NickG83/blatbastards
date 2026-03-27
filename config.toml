@@ -18,6 +18,10 @@ SEOTitle = "Blat Bastards"
     href  = "/rides/"
 
   [[params.addtional_menus]]
+    title = "OTHER ADVENTURES"
+    href  = "/other-adventures/"
+
+  [[params.addtional_menus]]
     title = "LOGISTICS"
     href  = "/logistics/"
 

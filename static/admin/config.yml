@@ -193,6 +193,138 @@ collections:
         hint: "YouTube embed URL (the https://www.youtube.com/embed/... link)."
 
   # ------------------------
+  # OTHER ADVENTURES
+  # ------------------------
+  - name: "other_adventures"
+    label: "Other Adventures"
+    label_singular: "Adventure"
+    description: "Camping, hiking, 4WD trips, fishing and other non-motorcycle adventures."
+    folder: "content/other-adventures"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    sortable_fields: ["adventureDate", "title", "activity"]
+    summary: "{{adventureDate}} — {{title}}"
+
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+        required: true
+        default: "{{now}}"
+        hint: "Controls publishing. Keep this today or earlier so the page appears on the site."
+
+      - label: "Adventure Date"
+        name: "adventureDate"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+        required: false
+        hint: "The actual date of the adventure. Used for sorting and display."
+
+      - label: "Activity"
+        name: "activity"
+        widget: "string"
+        required: false
+        hint: "e.g. Camping, Hiking, 4WD, Fishing, Exploring"
+
+      - label: "Region"
+        name: "region"
+        widget: "string"
+        required: false
+        hint: "e.g. Southern Highlands, Snowies, South Coast"
+
+      - label: "Distance (km)"
+        name: "distance"
+        widget: "number"
+        value_type: "int"
+        required: false
+
+      - label: "Duration"
+        name: "duration"
+        widget: "select"
+        options: ["Half-Day", "Day", "Weekend", "Longer"]
+        default: "Day"
+        required: false
+
+      - label: "Meeting Point / Base"
+        name: "meeting_point"
+        widget: "string"
+        required: false
+
+      - label: "Departure Time"
+        name: "departure_time"
+        widget: "string"
+        required: false
+        hint: "e.g. 07:30 from Yass"
+
+      - label: "Download File"
+        name: "route_file"
+        widget: "file"
+        required: false
+        hint: "Optional file download for GPX, PDF, route notes or similar."
+
+      - label: "Map Embed URL"
+        name: "map_embed"
+        widget: "string"
+        required: false
+        hint: "Google My Maps embed URL or similar."
+
+      - label: "Hero Image"
+        name: "hero_image"
+        widget: "image"
+        required: false
+        hint: "Main image for the adventure page."
+
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        required: false
+        summary: "{{fields.image}}"
+        fields:
+          - label: "Image"
+            name: "image"
+            widget: "image"
+          - label: "Caption"
+            name: "caption"
+            widget: "string"
+            required: false
+
+      - label: "Short Intro"
+        name: "intro"
+        widget: "text"
+        required: false
+        hint: "One or two sentences for previews and the top of the page."
+
+      - label: "Adventure Notes (full write-up)"
+        name: "body"
+        widget: "markdown"
+        hint: "Full trip write-up, notes, locations, highlights, lessons learned, etc."
+
+      - label: "Attendees"
+        name: "attendees"
+        widget: "relation"
+        collection: "people"
+        search_fields: ["name", "nickname", "id"]
+        display_fields: ["{{name}}", "{{nickname}}", "{{id}}"]
+        value_field: "{{slug}}"
+        multiple: true
+        required: false
+
+      - label: "YouTube Embed URL"
+        name: "youtube_embed"
+        widget: "string"
+        required: false
+        hint: "YouTube embed URL (the https://www.youtube.com/embed/... link)."
+
+  # ------------------------
   # TOP ROADS
   # ------------------------
   - name: "top_roads"
