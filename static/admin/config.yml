@@ -195,11 +195,12 @@ collections:
   # ------------------------
   # OTHER ADVENTURES
   # ------------------------
-  - name: "other_adventures"
-    label: "Other Adventures"
+  - name: "alt_adv"
+    label: "Alt ADV"
     label_singular: "Adventure"
+    folder: "content/alt-adv"
     description: "Camping, hiking, 4WD trips, fishing and other non-motorcycle adventures."
-    folder: "content/other-adventures"
+    folder: "content/alt-adv"
     create: true
     slug: "{{slug}}"
     format: "frontmatter"

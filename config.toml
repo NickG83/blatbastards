@@ -19,7 +19,7 @@ SEOTitle = "Blat Bastards"
 
   [[params.addtional_menus]]
     title = "ALT ADV"
-    href  = "/other-adventures/"
+    href  = "/alt-adv/"
 
   [[params.addtional_menus]]
     title = "LOGISTICS"
