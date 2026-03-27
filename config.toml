@@ -18,7 +18,7 @@ SEOTitle = "Blat Bastards"
     href  = "/rides/"
 
   [[params.addtional_menus]]
-    title = "OFF-BIKE"
+    title = "ALT ADV"
     href  = "/other-adventures/"
 
   [[params.addtional_menus]]
