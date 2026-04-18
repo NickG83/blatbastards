@@ -29,7 +29,11 @@ From Katoomba, we'll head out of the mountains and across toward the Hawkesbury,
 
 We’ll go from mountain and valley country into the river sections (where it's hopefyully warmer!) work through the ferry area, then stretch the legs properly on one of the state’s better-known bike roads. Much of this route is covered in these two "Top Roads" posts:
 
-* ### [Wisemans Ferry + St Albans Loop](https://www.blatbastards.com/top-roads/wisemans-ferry-st-albans-loop/)
-* ### [Putty Road](https://www.blatbastards.com/top-roads/putty-road/)
+* ##### [Wisemans Ferry + St Albans Loop](https://www.blatbastards.com/top-roads/wisemans-ferry-st-albans-loop/)
+* [Putty Road](https://www.blatbastards.com/top-roads/putty-road/)
 
-Saturday night is still to be confirmed, so I’m leaving that flexible for now.
+Saturday night is still to be confirmed, so I’m leaving that flexible for now. Could be local to Sydney, or we might make a break for the coast to be ready for Sunday.
+
+#### Sunday — Back to Canberra via Macquarie Pass, Kangaroo Valley and Cambewarra
+
+Rather than just pointing the bikes back toward Canberra and grinding out kilometers on the highway, we'll attempt to finish the Sunday of the last ride that was deivated due to weather: Macquarie Pass, Kangaroo Valley and Cambewarra.
