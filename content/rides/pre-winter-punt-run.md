@@ -30,7 +30,7 @@ attendees:
 Canberra → Tarago → Goulburn → Taralga → Mount Victoria→ Katoomba
 *(Approx. 350 km)*
 
-This is the opener, so the idea is to get clear of Canberra, settle into the ride properly and enjoy the run without turning day one into a marathon. We’ll be implementing the usual "avoid highways" mantra and going backroads where possible. While the current 'stands up' time is 1200 Friday, we may look to move sooner so as to take in the sights of the Blue Mountains before it gets dark.  
+This is the opener, so the idea is to get clear of Canberra, settle into the ride properly and enjoy the run without turning Saturday into a marathon. We’ll be implementing the usual "avoid highways" mantra and going backroads where possible. While the current 'stands up' time is 1200 Friday, we may look to move sooner so as to take in the sights of the Blue Mountains before it gets dark.  
 
 #### Saturday — Blue Mountains, Putty Road to Wisemans Ferry
 
@@ -44,7 +44,7 @@ Much of this route is covered in these two "Top Roads" posts:
 * ##### [Wisemans Ferry + St Albans Loop](https://www.blatbastards.com/top-roads/wisemans-ferry-st-albans-loop/)
 * ##### [Putty Road](https://www.blatbastards.com/top-roads/putty-road/)
 
-Overnight is yet to be determined, but thinking closer to Royal National Park for the Sunday run home would be best. Current have Cronulla earmarked, but it could be anywhere in this area.
+Overnight is yet to be determined, but thinking closer to Royal National Park for the Sunday run home would be best. Currently we have Cronulla earmarked, but it could be anywhere in this area.
 
 #### Sunday — Back to Canberra via Macquarie Pass, Kangaroo Valley and Cambewarra
 
