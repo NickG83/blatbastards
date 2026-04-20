@@ -32,7 +32,7 @@ Katoomba → Upper Colo → Putty → Broke → St Albans → Wisemans Ferry →
 
 From Katoomba, we'll head out of the mountains and across toward the Upper Colo and jump onto the Putty Road, through to Broke (hopefully the Boys in Blue haven't sent us Broke by then!). From there, we'll head south into the Hawkesbury to St Albans, then through Wisemans Ferry. 
 
-We’ll go from mountain and valley country into the river sections (where it's hopefully warmer!) work through the ferry area, then stretch the legs properly on one of the state’s better-known bike roads. Much of this route is covered in these two "Top Roads" posts:
+Much of this route is covered in these two "Top Roads" posts:
 
 * ##### [Wisemans Ferry + St Albans Loop](https://www.blatbastards.com/top-roads/wisemans-ferry-st-albans-loop/)
 * ##### [Putty Road](https://www.blatbastards.com/top-roads/putty-road/)
