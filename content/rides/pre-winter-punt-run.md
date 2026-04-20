@@ -10,6 +10,9 @@ meeting_point: TBD
 departure_time: "1200"
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=11sSKLGYyNhPeEuCF_EbBnZD2_5UWywY&ehbc=2E312F
 hero_image: /uploads/katoomba.jpg
+gallery:
+  - image: /uploads/seacliffbridge.jpg
+    caption: Sea Cliff Bridge
 intro: The whole point of this one is to make the most of that late-autumn
   window where it’s cool enough to feel like a proper ride, but not yet so
   bloody cold that everyone is questioning their life choices by the first fuel
