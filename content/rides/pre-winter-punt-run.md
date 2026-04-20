@@ -25,7 +25,10 @@ Canberra → Tarago → Goulburn → Taralga → Mount Victoria→ Katoomba
 
 This is the opener, so the idea is to get clear of Canberra, settle into the ride properly and enjoy the run without turning day one into a marathon. We’ll be implementing the usual "avoid highways" mantra and going backroads where possible. While the current 'stands up' time is 1200 Friday, we may look to move sooner so as to take in the sights of the Blue Mountains before it gets dark.  
 
-#### Saturday — Blue Mountains to Wisemans Ferry, then Putty Road
+#### Saturday — Blue Mountains, Putty Road to Wisemans Ferry
+
+Canberra → Tarago → Goulburn → Taralga → Mount Victoria→ Katoomba\
+*(Approx. 350 km)*
 
 From Katoomba, we'll head out of the mountains and across toward the Hawkesbury, then through Wisemans Ferry country and out toward Putty Road. 
 
