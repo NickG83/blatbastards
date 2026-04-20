@@ -3,7 +3,7 @@ title: Pre-Hibernation Punt Run
 date: 2026-04-18
 rideDate: 2026-05-22
 region: Blue Mountains / Hawkesbury
-distance: 1000
+distance: 1200
 duration: Weekend
 surface: Mixed
 meeting_point: TBD
@@ -44,4 +44,6 @@ Overnight is yet to be determined, but thinking closer to Royal National Park fo
 Cronulla? → Royal National Park → Sea Cliff Bridge → Macquarie Pass → Kangaroo Valley → Cambewarra → Nerriga → Braidwood → Captains Flat → Canberra
 *(Approx. 425 km)*
 
-Planning to run through Royal National Park and out to the Sea Cliff Bridge near Wollongong. From there, we'll head across to Macquarie Pass, Kangaroo Valley and Cambewarra; attempting to finish the route from the previous ride that got deviated due to poor weather. Once we get to Nerriga, it'll be a discussion point; south to Braidwood and around through to Captains Flat and home (as currently mapped), or straight through to Tarago, Bungendore and home. Ultimately it'll depend on weather and how tired people are feeling.
+Planning to run through the Royal National Park and out to the Sea Cliff Bridge near Wollongong. From there, we'll head up to Macquarie Pass, Kangaroo Valley and Cambewarra; attempting to finish the route from the previous ride that got deviated due to poor weather. 
+
+Once we get to Nerriga, it'll be a discussion point; south to Braidwood and around through to Captains Flat and home (as mapped), or straight through to Tarago, Bungendore and home. Ultimately it'll depend on weather and how tired people are feeling.
