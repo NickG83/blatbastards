@@ -3,13 +3,20 @@ title: Pre-Hibernation Punt Run
 date: 2026-04-18
 rideDate: 2026-05-22
 region: Blue Mountains / Hawkesbury
-distance: 1000
+distance: 1200
 duration: Weekend
 surface: Mixed
 meeting_point: TBD
 departure_time: "1200"
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=11sSKLGYyNhPeEuCF_EbBnZD2_5UWywY&ehbc=2E312F
 hero_image: /uploads/katoomba.jpg
+gallery:
+  - image: /uploads/seacliffbridge.jpg
+    caption: Sea Cliff Bridge
+  - image: /uploads/kangavalley.jpg
+    caption: Kangaroo Valley
+  - image: /uploads/settlersarms.jpg
+    caption: Settlers Arms - St Albans
 intro: The whole point of this one is to make the most of that late-autumn
   window where it’s cool enough to feel like a proper ride, but not yet so
   bloody cold that everyone is questioning their life choices by the first fuel
@@ -20,19 +27,30 @@ attendees:
 ---
 #### Friday — Canberra to Katoomba
 
-This is the opener, so the idea is to get clear of home, settle into the ride properly and enjoy the run without turning day one into a marathon. We’ll be trading the familiar run out of Canberra for mountain country by the end of the day, and Katoomba gives us a solid base to kick off from. Plenty of accommodation, easy food options, and a good place to pull up for the night before the ride really gets into its stride.
+Canberra → Tarago → Goulburn → Taralga → Mount Victoria→ Katoomba
+*(Approx. 350 km)*
 
-#### Saturday — Blue Mountains to Wisemans Ferry, then Putty Road
+This is the opener, so the idea is to get clear of Canberra, settle into the ride properly and enjoy the run without turning day one into a marathon. We’ll be implementing the usual "avoid highways" mantra and going backroads where possible. While the current 'stands up' time is 1200 Friday, we may look to move sooner so as to take in the sights of the Blue Mountains before it gets dark.  
 
-From Katoomba, we'll head out of the mountains and across toward the Hawkesbury, then through Wisemans Ferry country and out toward Putty Road. 
+#### Saturday — Blue Mountains, Putty Road to Wisemans Ferry
 
-We’ll go from mountain and valley country into the river sections (where it's hopefully warmer!) work through the ferry area, then stretch the legs properly on one of the state’s better-known bike roads. Much of this route is covered in these two "Top Roads" posts:
+Katoomba → Upper Colo → Putty → Broke → St Albans → Wisemans Ferry → Cronulla?\
+*(Approx. 425 km)*
+
+From Katoomba, we'll head out of the mountains and across to the Upper Colo and jump onto the Putty Road, through to Broke (hopefully the Boys in Blue haven't sent us Broke by then!). From there, we'll head south into the Hawkesbury to St Albans, then through Wisemans Ferry. 
+
+Much of this route is covered in these two "Top Roads" posts:
 
 * ##### [Wisemans Ferry + St Albans Loop](https://www.blatbastards.com/top-roads/wisemans-ferry-st-albans-loop/)
 * ##### [Putty Road](https://www.blatbastards.com/top-roads/putty-road/)
 
-Saturday night location is still to be confirmed, so I’m leaving that flexible for now. Could be local to Sydney, or we might make a break for the coast to be ready for Sunday.
+Overnight is yet to be determined, but thinking closer to Royal National Park for the Sunday run home would be best. Current have Cronulla earmarked, but it could be anywhere in this area.
 
 #### Sunday — Back to Canberra via Macquarie Pass, Kangaroo Valley and Cambewarra
 
-Rather than just pointing the bikes back toward Canberra and grinding out kilometers on the highway, we'll attempt to finish the Sunday of the last ride that was deviated due to weather: Macquarie Pass, Kangaroo Valley and Cambewarra.
+Cronulla? → Royal National Park → Sea Cliff Bridge → Macquarie Pass → Kangaroo Valley → Cambewarra → Nerriga → Braidwood → Captains Flat → Canberra
+*(Approx. 425 km)*
+
+Planning to run through the Royal National Park and out to the Sea Cliff Bridge near Wollongong. From there, we'll head up to Macquarie Pass, Kangaroo Valley and Cambewarra; attempting to finish the route from the previous ride that got deviated due to poor weather. 
+
+Once we get to Nerriga, it'll be a discussion point; south to Braidwood and around through to Captains Flat and home (as mapped), or straight through to Tarago, Bungendore and home. Ultimately it'll depend on weather and how tired people are feeling.
