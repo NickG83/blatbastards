@@ -23,7 +23,7 @@ attendees:
 Canberra → Tarago → Goulburn → Taralga → Mount Victoria→ Katoomba
 *(Approx. 350 km)*
 
-This is the opener, so the idea is to get clear of home, settle into the ride properly and enjoy the run without turning day one into a marathon. We’ll be trading the familiar run out of Canberra for mountain country by the end of the day, and Katoomba gives us a solid base to kick off from. Plenty of accommodation, easy food options, and a good place to pull up for the night before the ride really gets into its stride.
+This is the opener, so the idea is to get clear of Canberra, settle into the ride properly and enjoy the run without turning day one into a marathon. We’ll be implementing the usual "avoid highways" mantra and going backroads where possible. While the current 'stands up' time is 1200 Friday, we may look to move sooner so as to take in the sights of the Blue Mountains before it gets dark.  
 
 #### Saturday — Blue Mountains to Wisemans Ferry, then Putty Road
 
