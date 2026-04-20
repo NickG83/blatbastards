@@ -37,7 +37,7 @@ We’ll go from mountain and valley country into the river sections (where it's 
 * ##### [Wisemans Ferry + St Albans Loop](https://www.blatbastards.com/top-roads/wisemans-ferry-st-albans-loop/)
 * ##### [Putty Road](https://www.blatbastards.com/top-roads/putty-road/)
 
-Saturday night location is still to be confirmed, so I’m leaving that flexible for now. Could be local to Sydney, or we might make a break for the coast to be ready for Sunday.
+Overnight is yet to be determined, but thinking closer to Royal National Park for the Sunday run home would be best. Current have Cronulla earmarked, but it could be anywhere in this area.
 
 #### Sunday — Back to Canberra via Macquarie Pass, Kangaroo Valley and Cambewarra
 
