@@ -30,7 +30,7 @@ This is the opener, so the idea is to get clear of Canberra, settle into the rid
 Katoomba → Upper Colo → Putty → Broke → St Albans → Wisemans Ferry → Cronulla?\
 *(Approx. 425 km)*
 
-From Katoomba, we'll head out of the mountains and across toward the Upper Colo and jump onto the Putty Road, through to Broke (hopefully the Boys in Blue haven't sent us Broke by then!). From there, we'll head south into the Hawkesbury to St Albans, then through Wisemans Ferry. 
+From Katoomba, we'll head out of the mountains and across to the Upper Colo and jump onto the Putty Road, through to Broke (hopefully the Boys in Blue haven't sent us Broke by then!). From there, we'll head south into the Hawkesbury to St Albans, then through Wisemans Ferry. 
 
 Much of this route is covered in these two "Top Roads" posts:
 
@@ -41,4 +41,7 @@ Overnight is yet to be determined, but thinking closer to Royal National Park fo
 
 #### Sunday — Back to Canberra via Macquarie Pass, Kangaroo Valley and Cambewarra
 
-Rather than just pointing the bikes back toward Canberra and grinding out kilometers on the highway, we'll attempt to finish the Sunday of the last ride that was deviated due to weather: Macquarie Pass, Kangaroo Valley and Cambewarra.
+Cronulla? → Royal National Park → Sea Cliff Bridge → Macquarie Pass → Kangaroo Valley → Cambewarra → Nerriga → Braidwood → Captains Flat → Canberra
+*(Approx. 425 km)*
+
+Planning to run through Royal National Park and out to the Sea Cliff Bridge near Wollongong. From there, we'll head across to Macquarie Pass, Kangaroo Valley and Cambewarra; attempting to finish the route from the previous ride that got deviated due to poor weather. Once we get to Nerriga, it'll be a discussion point; south to Braidwood and around through to Captains Flat and home (as currently mapped), or straight through to Tarago, Bungendore and home. Ultimately it'll depend on weather and how tired people are feeling.
