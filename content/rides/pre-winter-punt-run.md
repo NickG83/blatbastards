@@ -27,10 +27,10 @@ This is the opener, so the idea is to get clear of Canberra, settle into the rid
 
 #### Saturday — Blue Mountains, Putty Road to Wisemans Ferry
 
-Canberra → Tarago → Goulburn → Taralga → Mount Victoria→ Katoomba\
-*(Approx. 350 km)*
+Katoomba → Upper Colo → Putty → Broke → St Albans → Wisemans Ferry → Cronulla?\
+*(Approx. 425 km)*
 
-From Katoomba, we'll head out of the mountains and across toward the Hawkesbury, then through Wisemans Ferry country and out toward Putty Road. 
+From Katoomba, we'll head out of the mountains and across toward the Upper Colo and jump onto the Putty Road, through to Broke (hopefully the Boys in Blue haven't sent us Broke by then!). From there, we'll head south into the Hawkesbury to St Albans, then through Wisemans Ferry. 
 
 We’ll go from mountain and valley country into the river sections (where it's hopefully warmer!) work through the ferry area, then stretch the legs properly on one of the state’s better-known bike roads. Much of this route is covered in these two "Top Roads" posts:
 
