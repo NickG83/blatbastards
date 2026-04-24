@@ -24,6 +24,10 @@ intro: The whole point of this one is to make the most of that late-autumn
   to feel like we’ve actually gone somewhere.
 attendees:
   - nickg
+  - adrian
+  - brian
+  - nickc
+  - gav
 ---
 #### Friday — Canberra to Katoomba
 
