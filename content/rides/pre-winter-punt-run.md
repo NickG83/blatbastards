@@ -28,6 +28,9 @@ attendees:
   - brian
   - nickc
   - gav
+  - evanw
+  - johng
+  - ross
 ---
 #### Friday — Canberra to Katoomba
 
