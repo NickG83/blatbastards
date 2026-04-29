@@ -31,6 +31,8 @@ attendees:
   - evanw
   - johng
   - ross
+  - moe
+  - richard
 ---
 #### Friday — Canberra to Katoomba
 
