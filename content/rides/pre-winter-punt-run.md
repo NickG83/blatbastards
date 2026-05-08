@@ -33,6 +33,7 @@ attendees:
   - ross
   - moe
   - richard
+  - graham
 ---
 #### Friday — Canberra to Katoomba
 
