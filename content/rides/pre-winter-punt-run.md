@@ -44,7 +44,7 @@ This is the opener, so the idea is to get clear of Canberra, settle into the rid
 
 #### Saturday — Blue Mountains, Putty Road to Wisemans Ferry
 
-Katoomba → Upper Colo → Putty → Broke → St Albans → Wisemans Ferry → Cronulla?\
+Katoomba → Upper Colo → Putty → Broke → St Albans → Wisemans Ferry → North Shore\
 *(Approx. 425 km)*
 
 From Katoomba, we'll head out of the mountains and across to the Upper Colo and jump onto the Putty Road, through to Broke (hopefully the Boys in Blue haven't sent us Broke by then!). From there, we'll head south into the Hawkesbury to St Albans, then through Wisemans Ferry. 
