@@ -8,6 +8,7 @@ duration: Weekend
 surface: Mixed
 meeting_point: Eagle Hawk Hotel
 departure_time: "1200"
+route_file: https://files.blatbastards.com/GPX/Punt_Run.gpx
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=11sSKLGYyNhPeEuCF_EbBnZD2_5UWywY&ehbc=2E312F
 hero_image: /uploads/katoomba.jpg
 gallery:
