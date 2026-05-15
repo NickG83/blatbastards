@@ -8,6 +8,7 @@ duration: Weekend
 surface: Mixed
 meeting_point: Eagle Hawk Hotel
 departure_time: "1200"
+route_file: https://files.blatbastards.com/GPX/Punt_Run.gpx
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=11sSKLGYyNhPeEuCF_EbBnZD2_5UWywY&ehbc=2E312F
 hero_image: /uploads/katoomba.jpg
 gallery:
@@ -42,11 +43,9 @@ Canberra → Tarago → Goulburn → Taralga → Mount Victoria→ Katoomba
 
 This is the opener, so the idea is to get clear of Canberra, settle into the ride properly and enjoy the run without turning Saturday into a marathon. We’ll be implementing the usual "avoid highways" mantra and going backroads where possible. While the current 'stands up' time is 1200 Friday, we may look to move sooner so as to take in the sights of the Blue Mountains before it gets dark.  
 
-
-
 #### Saturday — Blue Mountains, Putty Road to Wisemans Ferry
 
-Katoomba → Upper Colo → Putty → Broke → St Albans → Wisemans Ferry → North Shore\
+Katoomba → Upper Colo → Putty → Broke → St Albans → Wisemans Ferry → St Leonards\
 *(Approx. 425 km)*
 
 From Katoomba, we'll head out of the mountains and across to the Upper Colo and jump onto the Putty Road, through to Broke (hopefully the Boys in Blue haven't sent us Broke by then!). From there, we'll head south into the Hawkesbury to St Albans, then through Wisemans Ferry. 
@@ -56,11 +55,11 @@ Much of this route is covered in these two "Top Roads" posts:
 * ##### [Wisemans Ferry + St Albans Loop](https://www.blatbastards.com/top-roads/wisemans-ferry-st-albans-loop/)
 * ##### [Putty Road](https://www.blatbastards.com/top-roads/putty-road/)
 
-Overnight is yet to be determined, but thinking closer to Royal National Park for the Sunday run home would be best. Currently we have Cronulla earmarked, but it could be anywhere in this area.
+Overnight will be in St Leonards.
 
 #### Sunday — Back to Canberra via Macquarie Pass, Kangaroo Valley and Cambewarra
 
-Cronulla? → Royal National Park → Sea Cliff Bridge → Macquarie Pass → Kangaroo Valley → Cambewarra → Nerriga → Braidwood → Captains Flat → Canberra
+St Leonards → Royal National Park → Sea Cliff Bridge → Macquarie Pass → Kangaroo Valley → Cambewarra → Nerriga → Braidwood → Captains Flat → Canberra
 *(Approx. 425 km)*
 
 Planning to run through the Royal National Park and out to the Sea Cliff Bridge near Wollongong. From there, we'll head up to Macquarie Pass, Kangaroo Valley and Cambewarra; attempting to finish the route from the previous ride that got deviated due to poor weather. 
