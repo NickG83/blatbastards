@@ -66,8 +66,7 @@ Planning to run through the Royal National Park and out to the Sea Cliff Bridge 
 
 Once we get to Nerriga, it'll be a discussion point; south to Braidwood and around through to Captains Flat and home (as mapped), or straight through to Tarago, Bungendore and home. Ultimately it'll depend on weather and how tired people are feeling.
 
-⛽ Fuel stops
-
+⛽ **Fuel stops**\
 EagleHawk\
 Goulburn (splash & dash if needed)\
 Katoomba\
@@ -75,7 +74,7 @@ Broke (splash & dash if needed)\
 Sydney\
 Nowra (splash & dash if needed)
 
-🍽️☕ Food stops\
+🍽️☕ **Food stops**\
 Taralga - The Coffee Palette (arvo snack)\
 Katoomba -  Station Woodfired Pizza (dinner)\
 Katoomba - The Hatters Cafe (breakfast)\
