@@ -65,3 +65,24 @@ St Leonards → Royal National Park → Sea Cliff Bridge → Macquarie Pass → 
 Planning to run through the Royal National Park and out to the Sea Cliff Bridge near Wollongong. From there, we'll head up to Macquarie Pass, Kangaroo Valley and Cambewarra; attempting to finish the route from the previous ride that got deviated due to poor weather. 
 
 Once we get to Nerriga, it'll be a discussion point; south to Braidwood and around through to Captains Flat and home (as mapped), or straight through to Tarago, Bungendore and home. Ultimately it'll depend on weather and how tired people are feeling.
+
+⛽ Fuel stops
+
+EagleHawk\
+Goulburn (splash & dash if needed)\
+Katoomba\
+Broke (splash & dash if needed)\
+Sydney\
+Nowra (splash & dash if needed)
+
+🍽️☕ Food stops\
+Taralga - The Coffee Palette (arvo snack)\
+Katoomba -  Station Woodfired Pizza (dinner)\
+Katoomba - The Hatters Cafe (breakfast)\
+Putty - Grey Gum Cafe (coffee)\
+St Albans - Settlers Arms (late lunch)\
+St Leondards - TBA (dinner)\
+St Leondards - TBA (coffee)\
+Coledale - Earth Walker Cafe (brunch)\
+Cambewarra - The Lookout Cafe (coffee)\
+Braidwood - Trappers Cafe (arvo snack)
