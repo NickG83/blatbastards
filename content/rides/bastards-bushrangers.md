@@ -14,9 +14,9 @@ Canberra → Yass → Gundagai → Holbrook → Howlong → Corowa
 
 Friday is primarily the convergence day, with riders making their way in from Canberra and Melbourne before converging on (in if your Gav!) the Murray River.
 
-The Canberra group will take the direct run through Yass, Gundagai and Holbrook, before leaving the Hume at Howlong and continuing into Corowa. If the weather is clear and everyone can get away early, there is the option to take the longer and more scenic route through Tumbarumba, Jingellic and Walwa.
+We'll take the run through the Brindabellas to Tumut, Tumbarumba, Jingellic and Walwa.
 
-We’ll aim to have everyone assembled by late afternoon at the John Foord Bridge, which crosses the Murray between Corowa and Wahgunyah. This will be the first proper group photo opportunity, with the bridge, river and red gums providing an appropriately Australian backdrop.
+Aim is to have everyone assembled by late afternoon at the John Foord Bridge, which crosses the Murray between Corowa and Wahgunyah. This will be the first proper group photo opportunity, with the bridge, river and red gums providing an appropriately Australian backdrop.
 
 Anyone arriving early can take a short run past All Saints Estate or visit the Corowa Distilling Co. in the restored flour mill. Any whisky tasting should wait until the bikes have been parked for the evening.
 
