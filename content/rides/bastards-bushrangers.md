@@ -34,15 +34,10 @@ Once everyone is checked in, we’ll head out for dinner and the official openin
 
 Saturday is intentionally lighter on kilometres, allowing enough time to explore the goldfields and Kelly Country stops without turning the day into a rushed sequence of quick snaps and fuel stops.\
 We’ll leave Mulwala after breakfast and make the short run through to Rutherglen; where we can take a happy snap in front of the oversized Rutherglen Wine Bottle.\
-From Rutherglen we’ll continue through to Chiltern, stopping for coffee and a to check out the the historic goldrush-era town.\
-The route then turns toward Eldorado, where we’ll visit the massive Eldorado Dredge.
-
-We’ll then continue through the valley to Woolshed Falls. This area combines gold-rush history with some of the region’s best scenery and provides a good chance to stretch the legs and check out the falls before continuing on to Beechworth.
-
-Beechworth will be the main stop of the day, despite coming back tomorrow night. We’ll park the bikes in the historic centre and visit check out the Old Beechworth Gaol and courthouse. If we can get in at the right time, we might be able to grab a scheduled tour of the gaol.
-
-Figure on lunch at Bridge Road Brewers; decent pizzas and local brew, just remember we've got a few more hours in the saddle! After lunch, we’ll leave Beechworth and ride through Tarrawingee into the Milawa region and depending on timing, we may stop briefly for coffee, cheese or takeaway supplies before continuing through Oxley and Moyhu.
-
+From Rutherglen we’ll continue through to Chiltern, stopping for coffee and a to check out the the historic goldrush-era town. The route then turns toward Eldorado, where we’ll visit the massive Eldorado Dredge.\
+We’ll then continue through the valley to Woolshed Falls. This area combines gold-rush history with some of the region’s best scenery and provides a good chance to stretch the legs and check out the falls before continuing on to Beechworth.\
+Beechworth will be the main stop of the day, despite coming back tomorrow night. We’ll park the bikes in the historic centre and visit check out the Old Beechworth Gaol and courthouse. If we can get in at the right time, we might be able to grab a scheduled tour of the gaol.\
+Figure on lunch at Bridge Road Brewers; decent pizzas and local brew, just remember we've got a few more hours in the saddle! After lunch, we’ll leave Beechworth and ride through Tarrawingee into the Milawa region and depending on timing, we may stop briefly for coffee, cheese or takeaway supplies before continuing through Oxley and Moyhu.\
 The final section into Whitfield follows the King Valley, we'll also stop at Powers Lookup which overlooks the entire region - good opportunity for a drone shot or two. Once done at Powers, we'll continue on to Mansfield where the road comes out of the King Valley through forest and farmland, with a mixture of tight corners, faster sweepers and mountain views.
 
 **Overnight stop:** Mansfield
