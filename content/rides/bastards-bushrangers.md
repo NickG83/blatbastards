@@ -17,8 +17,7 @@ intro: Four days of big bikes, backroads, bushranger history.
 ---
 ### Friday
 
-**Canberra riders:**
-Canberra → Yass → Gundagai → Holbrook → Howlong → Corowa → Mulwala
+**Canberra → Yass → Gundagai → Holbrook → Howlong → Corowa → Mulwala**
 
 **(Approx. 420 km)**
 
@@ -28,6 +27,8 @@ Aim is to have everyone meet up in Corowa (at the Distilling Co?), then cruise d
 
 Once everyone is checked in, we’ll head out for dinner and the official opening of the ride.\
 **Overnight stop:** Mulwala
+
+
 
 ### Saturday
 
