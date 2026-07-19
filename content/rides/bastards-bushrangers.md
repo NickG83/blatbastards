@@ -48,21 +48,15 @@ The final section into Whitfield follows the King Valley, we'll also stop at Pow
 
 ### Sunday
 
-**Whitfield → Cheshunt → Powers Lookout → Mansfield → Tolmie → Stringybark Creek → Tatong → Greta → Glenrowan → Beechworth**
+**Mansfield → Tolmie → Stringybark Creek → Tatong → Greta → Glenrowan → Beechworth**
 
-**(Approx. 280–330 km)**
+**(Approx. 200 km)**
 
-Saturday is the main riding and bushranger day of the trip.
+Sunday is the main riding and bushranger day of the trip; again the KMs are pretty easy to take in the scenery and history elements of the ride.
 
-Before lunch, we’ll stop briefly at the Mansfield Police Memorial. The memorial recognises Sergeant Michael Kennedy and Constables Michael Scanlan and Thomas Lonigan, who were killed at Stringybark Creek in 1878. It is an important part of the story and will be treated as a respectful stop rather than part of the Kelly-themed entertainment.
+After breakfast, we’ll stop briefly at the Mansfield Police Memorial. The memorial recognises the officers who were killed at Stringybark Creek in 1878. It is a pretty key part of the story and worth taking in for completeness.
 
-We’ll refuel every bike in Mansfield and have an early lunch at one of the central pubs before making the decision on the afternoon route.
-
-If conditions are dry and the roads are confirmed open, we’ll continue through Tolmie and take the forest roads into Stringybark Creek. The dirt should be suitable for the large adventure bikes in good weather, but it will be treated as optional rather than compulsory.
-
-Stringybark Creek is the most historically significant location on the ride and we’ll allow time to walk around the visitor area, read the interpretive material and take some photographs of the forest setting.
-
-If the road is wet, muddy, badly rutted or closed, we’ll abandon the dirt section and use the sealed route through Swanpool and Benalla. Nobody is expected to wrestle a fully loaded 250-kilogram motorcycle through wet Victorian clay merely to meet an arbitrary dirt-road target.
+If conditions are dry and the roads are confirmed open, we’ll continue through Tolmie and take the forest roads into Stringybark Creek. If the road is wet, muddy, chopped up or closed, we’ll ditch the dirt section and use the sealed route through Swanpool and Benalla. 
 
 From Stringybark Creek, the planned route continues through Tatong and the Greta district. We may make a short stop near Greta, where the Kelly family lived and where Ned Kelly was eventually reinterred, before continuing into Glenrowan.
 
