@@ -42,25 +42,17 @@ Beechworth will be the main stop of the day, despite coming back tomorrow night.
 
 Figure on lunch at Bridge Road Brewers; decent pizzas and local brew, just remember we've got a few more hours in the saddle! After lunch, we’ll leave Beechworth and ride through Tarrawingee into the Milawa region and depending on timing, we may stop briefly for coffee, cheese or takeaway supplies before continuing through Oxley and Moyhu.
 
-The final section into Whitfield follows the King Valley, we'll also stop at Powers Lookup which overlooks the entire region - good opportunity for a drone shot or two. Once done at Powers, we'll continue on to Mansfield where the road climbs out of the King Valley through forest and farmland, with a mixture of tight corners, faster sweepers and mountain views.
+The final section into Whitfield follows the King Valley, we'll also stop at Powers Lookup which overlooks the entire region - good opportunity for a drone shot or two. Once done at Powers, we'll continue on to Mansfield where the road comes out of the King Valley through forest and farmland, with a mixture of tight corners, faster sweepers and mountain views.
 
 **Overnight stop:** Mansfield
 
-### Saturday
+### Sunday
 
 **Whitfield → Cheshunt → Powers Lookout → Mansfield → Tolmie → Stringybark Creek → Tatong → Greta → Glenrowan → Beechworth**
 
 **(Approx. 280–330 km)**
 
 Saturday is the main riding and bushranger day of the trip.
-
-We’ll leave Whitfield early and make a short run toward Cheshunt and the upper King Valley before returning to the Mansfield–Whitfield Road.
-
-This section is expected to be the riding highlight of the weekend. The road climbs out of the King Valley through forest and farmland, with a mixture of tight corners, faster sweepers and mountain views.
-
-Our first major stop will be Powers Lookout, once used by bushranger Harry Power. The lookout provides panoramic views across the King Valley and will be the location for the official **Such Is Life: Bastards & Bushrangers** group photograph.
-
-From Powers Lookout, we’ll continue over the range and descend into Mansfield.
 
 Before lunch, we’ll stop briefly at the Mansfield Police Memorial. The memorial recognises Sergeant Michael Kennedy and Constables Michael Scanlan and Thomas Lonigan, who were killed at Stringybark Creek in 1878. It is an important part of the story and will be treated as a respectful stop rather than part of the Kelly-themed entertainment.
 
