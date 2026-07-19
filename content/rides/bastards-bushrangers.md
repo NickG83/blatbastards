@@ -17,9 +17,7 @@ intro: Four days of big bikes, backroads, bushranger history.
 ---
 ### Friday
 
-**Canberra → Yass → Gundagai → Holbrook → Howlong → Corowa → Mulwala**
-
-**(Approx. 420 km)**
+**Canberra → Yass → Gundagai → Holbrook → Howlong → Corowa → Mulwala | (Approx. 420 km)**
 
 Friday is primarily the convergence day, with riders making their way in from Canberra and Melbourne before converging on the Murray River.\
 We'll take the run through the Brindabellas to Tumut, Tumbarumba, Jingellic and Walwa.\
@@ -32,16 +30,11 @@ Once everyone is checked in, we’ll head out for dinner and the official openin
 
 ### Saturday
 
-**Mulwala → Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield → Oxley**
+**Mulwala → Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield → Oxley | (Approx. 250 km)**
 
-**(Approx. 250 km)**
-
-Saturday is intentionally lighter on kilometres, allowing enough time to explore the goldfields and Kelly Country stops without turning the day into a rushed sequence of quick snaps and fuel stops.
-
-We’ll leave Mulwala after breakfast and make the short run through to Rutherglen; where we can take a happy snap in front of the oversized Rutherglen Wine Bottle.
-
-From Rutherglen we’ll continue through to Chiltern, stopping for coffee and a to check out the the historic goldrush-era town.
-
+Saturday is intentionally lighter on kilometres, allowing enough time to explore the goldfields and Kelly Country stops without turning the day into a rushed sequence of quick snaps and fuel stops.\
+We’ll leave Mulwala after breakfast and make the short run through to Rutherglen; where we can take a happy snap in front of the oversized Rutherglen Wine Bottle.\
+From Rutherglen we’ll continue through to Chiltern, stopping for coffee and a to check out the the historic goldrush-era town.\
 The route then turns toward Eldorado, where we’ll visit the massive Eldorado Dredge.
 
 We’ll then continue through the valley to Woolshed Falls. This area combines gold-rush history with some of the region’s best scenery and provides a good chance to stretch the legs and check out the falls before continuing on to Beechworth.
