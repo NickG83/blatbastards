@@ -26,7 +26,7 @@ Once everyone is checked in, we’ll head out for dinner and the official openin
 
 **Mulwala → Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield → Oxley**
 
-**(Approx. 250–280 km)**
+**(Approx. 250 km)**
 
 Saturday is intentionally lighter on kilometres, allowing enough time to explore the goldfields and Kelly Country stops without turning the day into a rushed sequence of quick snaps and fuel stops.
 
