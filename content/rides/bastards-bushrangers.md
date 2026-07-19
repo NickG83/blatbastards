@@ -58,13 +58,11 @@ After breakfast, we’ll stop briefly at the Mansfield Police Memorial. The memo
 
 If conditions are dry and the roads are confirmed open, we’ll continue through Tolmie and take the forest roads into Stringybark Creek. If the road is wet, muddy, chopped up or closed, we’ll ditch the dirt section and use the sealed route through Swanpool and Benalla. 
 
-From Stringybark Creek, the planned route continues through Tatong and the Greta district. We may make a short stop near Greta, where the Kelly family lived and where Ned Kelly was eventually reinterred, before continuing into Glenrowan.
+From Stringybark Creek, the planned route continues through Tatong and the Greta district. We may make a short stop near Greta, where the Kelly family lived before continuing into Glenrowan.
 
 Glenrowan will be the final major history stop of the ride. We’ll visit the siege precinct, walk around the railway area and get the obligatory group photograph beneath the giant Ned Kelly statue.
 
-The final run of the day will take us from Glenrowan back into Beechworth, where the motorcycles will be parked for the evening.
-
-Dinner will be at Tanswell’s Hotel, a historic Beechworth pub with links to bushranger Harry Power. Once the bikes are safely put away, the group will be free to investigate the local beer, wine, whisky and general quality of decision-making.
+The final run of the day will take us from Glenrowan back into Beechworth. Dinner, we're thinking of being at Tanswell’s Hotel, a historic Beechworth pub with links to bushranger Harry Power (Power's Lookout).
 
 **Overnight stop:** Beechworth
 
