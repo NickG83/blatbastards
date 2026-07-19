@@ -2,7 +2,7 @@
 title: "Such Is Life: Bastards & Bushrangers"
 date: 2026-07-13
 rideDate: 2026-10-23
-region: TBA
+region: Kelly Country
 distance: 1250
 duration: Longer
 surface: Mixed
