@@ -66,29 +66,17 @@ The final run of the day will take us from Glenrowan back into Beechworth. Dinne
 
 **Overnight stop:** Beechworth
 
-### Sunday
+### Monday
 
-**Beechworth → Stanley → Yackandandah → Wodonga**
+**Beechworth → Tallangatta → Walwa  → Tooma → Elliot Way → Adaminaby → Tharwa**
 
-**Canberra riders:**
-Wodonga → Holbrook → Gundagai → Yass → Canberra
+**(Approx. 400 km to Tharwa)**
 
-**Melbourne riders:**
-Wodonga → Wangaratta → Euroa → Melbourne
+Sunday will begin with breakfast in central Beechworth. We'll then head up to Lake Hume and Tallangatta before putting the lake in the rear-view and heading toward the mountains and the Murray River again at Walwa. 
 
-**(Approx. 420–450 km to Canberra / 350–380 km to Melbourne)**
+We'll follow the Murray along to Tooma and Paddys River before the next epic session of twisties on the Elliot Way. Being a Monday, hopefully the road is quiet and we can use the bikes for what they're made for!
 
-Sunday will begin with breakfast in central Beechworth, followed by an optional early photograph around the historic courthouse precinct or Lake Sambell.
-
-We’ll leave Beechworth and ride through the green hills and orchard country around Stanley before continuing into Yackandandah.
-
-Yackandandah will be the final social stop of the ride. We’ll grab a coffee, take one last group photograph in the historic main street and conduct the traditional process of everyone claiming they will definitely organise the next trip.
-
-From Yackandandah we’ll continue together to Wodonga, where all motorcycles will be refuelled before the Canberra and Melbourne groups separate.
-
-The Canberra riders will return via Holbrook, Gundagai and Yass, while the Melbourne riders will head south through Wangaratta and Euroa.
-
-The ride officially concludes at Wodonga, leaving both groups with a straightforward run home and a reasonable chance of arriving before dark.
+With the Elliot Way done and our rear tyres begging for mercy, we'll turn right onto Snowy Mountains Highway and on to Adaminaby, before taking Bobeyan Road to Tharwa.
 
 # Key Notes
 
