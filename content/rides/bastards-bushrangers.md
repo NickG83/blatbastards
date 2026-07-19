@@ -78,12 +78,17 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 
 ## 🍽️☕ Food and drink stops
 
-* Corowa Distilling Co. — arrival-day visit or takeaway bottle purchase
+* Tumut - Friday Brunch
+* Corowa Distilling Co. — Takeaway bottle purchase?
+* Mulwala ?? - Friday Dinner
+* ?? - Saturday Breakfast
 * Bridge Road Brewers, Beechworth — Saturday lunch
-* Milawa — optional afternoon coffee or produce stop
+* Milawa — Saturday afternoon coffee or produce stop (Cheese Factory?)
 * Mansfield ?— Saturday Dinner
+* Mansfield ? - Sunday Breakfast
+* Glenrowan ? - Sunday Lunch
 * Tanswell’s Hotel, Beechworth — Sunday dinner
-* Central Beechworth café — Monday breakfast
+* ? — Monday breakfast
 
 ## 📸 Potential photo-stop locations
 
