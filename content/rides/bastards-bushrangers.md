@@ -24,7 +24,7 @@ Once everyone is checked in, we’ll head out for dinner and the official openin
 
 ### Saturday
 
-**Mulwala → Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield**
+**Mulwala → Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield → Oxley**
 
 **(Approx. 250–280 km)**
 
