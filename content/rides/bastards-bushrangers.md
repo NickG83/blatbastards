@@ -42,22 +42,17 @@ The final section into Whitfield follows the King Valley, we'll also stop at Pow
 
 **Overnight stop:** Mansfield
 
+
+
 ### Sunday
 
-**Mansfield → Tolmie → Stringybark Creek → Tatong → Greta → Glenrowan → Beechworth**
+**Mansfield → Tolmie → Stringybark Creek → Tatong → Greta → Glenrowan → Beechworth | (Approx. 200 km)**
 
-**(Approx. 200 km)**
-
-Sunday is the main riding and bushranger day of the trip; again the KMs are pretty easy to take in the scenery and history elements of the ride.
-
-After breakfast, we’ll stop briefly at the Mansfield Police Memorial. The memorial recognises the officers who were killed at Stringybark Creek in 1878. It is a pretty key part of the story and worth taking in for completeness.
-
-If conditions are dry and the roads are confirmed open, we’ll continue through Tolmie and take the forest roads into Stringybark Creek. If the road is wet, muddy, chopped up or closed, we’ll ditch the dirt section and use the sealed route through Swanpool and Benalla. 
-
-From Stringybark Creek, the planned route continues through Tatong and the Greta district. We may make a short stop near Greta, where the Kelly family lived before continuing into Glenrowan.
-
-Glenrowan will be the final major history stop of the ride. We’ll visit the siege precinct, walk around the railway area and get the obligatory group photograph beneath the giant Ned Kelly statue.
-
+Sunday is the main riding and bushranger day of the trip; again the KMs are pretty easy to take in the scenery and history elements of the ride.\
+After breakfast, we’ll stop briefly at the Mansfield Police Memorial. The memorial recognises the officers who were killed at Stringybark Creek in 1878. It is a pretty key part of the story and worth taking in for completeness.\
+If conditions are dry and the roads are confirmed open, we’ll continue through Tolmie and take the forest roads into Stringybark Creek. If the road is wet, muddy, chopped up or closed, we’ll ditch the dirt section and use the sealed route through Swanpool and Benalla. \
+From Stringybark Creek, the planned route continues through Tatong and the Greta district. We may make a short stop near Greta, where the Kelly family lived before continuing into Glenrowan.\
+Glenrowan will be the final major history stop of the ride. We’ll visit the siege precinct, walk around the railway area and get the obligatory group photograph beneath the giant Ned Kelly statue.\
 The final run of the day will take us from Glenrowan back into Beechworth. Dinner, we're thinking of being at Tanswell’s Hotel, a historic Beechworth pub with links to bushranger Harry Power (Power's Lookout).
 
 **Overnight stop:** Beechworth
