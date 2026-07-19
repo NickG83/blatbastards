@@ -110,45 +110,16 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 * Stringybark Creek
 * Big Ned Kelly statue at Glenrowan
 
-## 🛏️ Accommodation options
+## 🛏️ Accommodation
 
-### Corowa–Wahgunyah
+### Mulwala
 
-* Corowa motel with a block of twin rooms
-* Adjacent Murray River cabins
-* Large holiday house in Wahgunyah
-* Central Rutherglen accommodation if dining is the priority
+* TBA
 
-### Whitfield
+### Mansfield
 
-* Mountain View Hotel
-* Lusso KV
-* Nearby King Valley cottages or guesthouses for overflow rooms
+* TBA
 
 ### Beechworth
 
-* Armour Motor Inn
-* Tanswell’s Hotel rooms
-* Lake Sambell caravan park cabins
-* Linaker Motel
-* Central holiday house for smaller groups
-
-## 🛣️ Dirt and road conditions
-
-The primary optional dirt section is around Tolmie and Stringybark Creek.
-
-Additional easy gravel may be incorporated around Chiltern, Eldorado or the Woolshed Valley, but only where the roads are public, legally open and suitable for large adventure motorcycles.
-
-The final route will depend on October rainfall, seasonal road closures and conditions immediately before the ride.
-
-If the dirt is wet, heavily rutted or questionable, the sealed alternative will be used. The objective is a relaxed and enjoyable group trip—not returning home tired, injured or with several expensive motorcycles requiring agricultural recovery equipment.
-
-## 🏍️ Riding format
-
-* Lead rider and designated sweep
-* Corner-marking system where required
-* Regroup after towns, major turns and surface changes
-* Conservative spacing on gravel
-* Pace set for the least experienced rider
-* No pressure to complete an optional dirt section
-* Motorcycles parked before any serious tasting begins
+* TBA (Crack head hotel manager again?)
