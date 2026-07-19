@@ -22,14 +22,11 @@ Canberra → Yass → Gundagai → Holbrook → Howlong → Corowa → Mulwala
 
 **(Approx. 420 km)**
 
-Friday is primarily the convergence day, with riders making their way in from Canberra and Melbourne before converging on the Murray River.
-
-We'll take the run through the Brindabellas to Tumut, Tumbarumba, Jingellic and Walwa.
-
+Friday is primarily the convergence day, with riders making their way in from Canberra and Melbourne before converging on the Murray River.\
+We'll take the run through the Brindabellas to Tumut, Tumbarumba, Jingellic and Walwa.\
 Aim is to have everyone meet up in Corowa (at the Distilling Co?), then cruise down to Mulwala for the night.
 
-Once everyone is checked in, we’ll head out for dinner and the official opening of the **Such Is Life: Bastards & Bushrangers** ride.
-
+Once everyone is checked in, we’ll head out for dinner and the official opening of the ride.\
 **Overnight stop:** Mulwala
 
 ### Saturday
