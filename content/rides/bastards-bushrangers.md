@@ -92,7 +92,7 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 
 ## 📸 Potential photo-stop locations
 
-* John Foord Bridge and the Murray River
+* Murray River / Crossing
 * Rutherglen Wine Bottle
 * Eldorado Dredge
 * Woolshed Falls
