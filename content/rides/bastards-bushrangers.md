@@ -92,30 +92,23 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 ## 🍽️☕ Food and drink stops
 
 * Corowa Distilling Co. — arrival-day visit or takeaway bottle purchase
-* The Victoria, Rutherglen — premium Thursday dinner option
-* Chiltern — Friday morning coffee
-* Bridge Road Brewers, Beechworth — Friday lunch
+* Bridge Road Brewers, Beechworth — Saturday lunch
 * Milawa — optional afternoon coffee or produce stop
-* Mountain View Hotel, Whitfield — Friday dinner
-* Mansfield pub — Saturday lunch
-* Tanswell’s Hotel, Beechworth — Saturday dinner
-* Central Beechworth café — Sunday breakfast
-* Yackandandah — farewell coffee
+* Mansfield ?— Saturday Dinner
+* Tanswell’s Hotel, Beechworth — Sunday dinner
+* Central Beechworth café — Monday breakfast
 
-## 📸 Must-stop photo locations
+## 📸 Potential photo-stop locations
 
 * John Foord Bridge and the Murray River
-* All Saints Estate
 * Rutherglen Wine Bottle
 * Eldorado Dredge
 * Woolshed Falls
-* Beechworth Old Gaol and courthouse precinct
+* Beechworth Old Gaol
 * Powers Lookout
 * Mansfield Police Memorial
 * Stringybark Creek
 * Big Ned Kelly statue at Glenrowan
-* Beechworth historic centre
-* Yackandandah main street
 
 ## 🛏️ Accommodation options
 
