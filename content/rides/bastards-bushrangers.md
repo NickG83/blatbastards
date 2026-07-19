@@ -4,6 +4,7 @@ date: 2026-07-13
 region: TBA
 duration: Longer
 surface: Mixed
+map_embed: https://www.google.com/maps/d/u/1/embed?mid=1sR7NQOTP2baQLrOZ0k8XiSPQwyedlqM&ehbc=2E312F
 intro: Four days of big bikes, backroads, bushranger history.
 ---
 ### Friday
