@@ -22,33 +22,29 @@ Once everyone is checked in, we’ll head out for dinner and the official openin
 
 **Overnight stop:** Mulwala
 
-### Friday
+### Saturday
 
-**Corowa → Wahgunyah → Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Moyhu → Whitfield**
+**Mulwala → Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield**
 
 **(Approx. 250–280 km)**
 
-Friday is intentionally lighter on kilometres, allowing enough time to explore the goldfields and Kelly Country stops without turning the day into a rushed sequence of photographs and fuel stops.
+Saturday is intentionally lighter on kilometres, allowing enough time to explore the goldfields and Kelly Country stops without turning the day into a rushed sequence of quick snaps and fuel stops.
 
-We’ll leave Corowa after breakfast and make the short run through Wahgunyah into Rutherglen. Our first stop will be the oversized Rutherglen Wine Bottle, where the group can pose respectfully in front of one of regional Victoria’s finest examples of giant roadside architecture.
+We’ll leave Mulwala after breakfast and make the short run through to Rutherglen; where we can take a happy snap in front of the oversized Rutherglen Wine Bottle.
 
-From Rutherglen we’ll continue through to Chiltern, stopping for coffee and a short walk through the historic gold-era streetscape.
+From Rutherglen we’ll continue through to Chiltern, stopping for coffee and a to check out the the historic goldrush-era town.
 
-The route then turns toward Eldorado, where we’ll visit the enormous Eldorado Dredge. The dredge provides one of the ride’s best industrial photo opportunities, particularly with the bikes lined up beneath it.
+The route then turns toward Eldorado, where we’ll visit the massive Eldorado Dredge.
 
-We’ll then continue through the Woolshed Valley to Woolshed Falls. This area combines gold-rush history with some of the region’s best scenery and provides a good chance to stretch the legs before continuing into Beechworth.
+We’ll then continue through the valley to Woolshed Falls. This area combines gold-rush history with some of the region’s best scenery and provides a good chance to stretch the legs and check out the falls before continuing on to Beechworth.
 
-Beechworth will be the main stop of the day. We’ll park the bikes in the historic centre and visit either the Old Beechworth Gaol or the courthouse and Kelly Trials precinct. The gaol is the preferred option, provided we can align the ride with one of the scheduled tours.
+Beechworth will be the main stop of the day, despite coming back tomorrow night. We’ll park the bikes in the historic centre and visit check out the Old Beechworth Gaol and courthouse. If we can get in at the right time, we might be able to grab a scheduled tour of the gaol.
 
-Lunch will be at Bridge Road Brewers, located in a historic gold-rush coach house. It offers an easy group lunch of pizza and brewery food, although everyone is expected to remember that we still have another couple of hours on the motorcycles.
+Figure on lunch at Bridge Road Brewers; decent pizzas and local brew, just remember we've got a few more hours in the saddle! After lunch, we’ll leave Beechworth and ride through Tarrawingee into the Milawa region and depending on timing, we may stop briefly for coffee, cheese or takeaway supplies before continuing through Oxley and Moyhu.
 
-After lunch, we’ll leave Beechworth and ride through Tarrawingee into the Milawa gourmet region. Depending on timing, we may stop briefly in Milawa for coffee, cheese or takeaway supplies before continuing through Oxley and Moyhu.
+The final section into Whitfield follows the King Valley, we'll also stop at Powers Lookup which overlooks the entire region - good opportunity for a drone shot or two. Once done at Powers, we'll continue on to Mansfield where the road climbs out of the King Valley through forest and farmland, with a mixture of tight corners, faster sweepers and mountain views.
 
-The final section into Whitfield follows the King Valley, with flowing bends, vineyards and increasingly steep hills forming around the road.
-
-Once in Whitfield, we’ll park the bikes and settle in for dinner at the Mountain View Hotel.
-
-**Overnight stop:** Whitfield
+**Overnight stop:** Mansfield
 
 ### Saturday
 
