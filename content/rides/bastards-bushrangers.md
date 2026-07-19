@@ -57,28 +57,24 @@ The final run of the day will take us from Glenrowan back into Beechworth. Dinne
 
 **Overnight stop:** Beechworth
 
+
+
 ### Monday
 
-**Beechworth → Tallangatta → Walwa  → Tooma → Elliot Way → Adaminaby → Tharwa**
+**Beechworth → Tallangatta → Walwa  → Tooma → Elliot Way → Adaminaby → Tharwa | (Approx. 400 km to Tharwa)**
 
-**(Approx. 400 km to Tharwa)**
-
-Sunday will begin with breakfast in central Beechworth. We'll then head up to Lake Hume and Tallangatta before putting the lake in the rear-view and heading toward the mountains and the Murray River again at Walwa. 
-
+Sunday will begin with breakfast in central Beechworth. We'll then head up to Lake Hume and Tallangatta before putting the lake in the rear-view and heading toward the mountains and the Murray River again at Walwa. \
 We'll follow the Murray along to Tooma and Paddys River before the next epic session of twisties on the Elliot Way. Being a Monday, hopefully the road is quiet and we can use the bikes for what they're made for!
 
-With the Elliot Way done and our rear tyres begging for mercy, we'll turn right onto Snowy Mountains Highway and on to Adaminaby, before taking Bobeyan Road to Tharwa.
+With the Elliot Way done and our rear tyres begging for mercy, we'll turn right onto Snowy Mountains Highway and on to Adaminaby, before taking Bobeyan Road to Tharwa and home.
+
+
 
 # Key Notes
 
 ## ⛽ Fuel stops
 
-* Corowa on arrival
-* Corowa or Rutherglen before departing Friday
-* Milawa or Wangaratta if required
-* Mansfield — compulsory group fuel stop
-* Beechworth before departure if required
-* Wodonga before the groups separate
+* TBA
 
 ## 🍽️☕ Food and drink stops
 
