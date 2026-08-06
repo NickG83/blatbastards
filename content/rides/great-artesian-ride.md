@@ -5,5 +5,6 @@ region: Outback NSW
 distance: 2750
 duration: Longer
 surface: Mixed
+hero_image: /uploads/gar_hero.jpg
 ---
 TBA
