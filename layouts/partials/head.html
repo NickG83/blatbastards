@@ -7,42 +7,54 @@
   <meta property="og:site_name" content="{{ .Site.Title }}">
   <meta property="og:type" content="article">
 
-  {{ if .Params.thumbnail }}
-    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}">
-    <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}" />
-  {{ else if .Params.image}}
-    <meta property="og:image" content="{{ .Params.image }}">
-    <meta property="twitter:image" content="{{ .Params.image }}" />
-  {{ else }}
-    <meta property="og:image" content="{{ .Site.BaseURL }}/{{ .Site.Params.header_image }}">
-    <meta property="twitter:image" content="{{ .Site.BaseURL }}/{{ .Site.Params.header_image }}" />
+  {{ $socialImage := .Site.Params.social_image }}
+  {{ $socialImageAlt := "Blat Bastards — Great Roads. Better Rides." }}
+  {{ $isDefaultSocialImage := true }}
+  {{ if .Params.hero_image }}
+    {{ $socialImage = .Params.hero_image }}
+    {{ $socialImageAlt = .Title }}
+    {{ $isDefaultSocialImage = false }}
+  {{ else if .Params.thumbnail }}
+    {{ $socialImage = .Params.thumbnail }}
+    {{ $socialImageAlt = .Title }}
+    {{ $isDefaultSocialImage = false }}
+  {{ else if .Params.image }}
+    {{ $socialImage = .Params.image }}
+    {{ $socialImageAlt = .Title }}
+    {{ $isDefaultSocialImage = false }}
   {{ end }}
+  {{ $socialImageURL := $socialImage | absURL }}
+  <meta property="og:image" content="{{ $socialImageURL }}">
+  {{ if $isDefaultSocialImage }}
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+  {{ end }}
+  <meta property="og:image:alt" content="{{ $socialImageAlt }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ $socialImageURL }}">
+  <meta name="twitter:image:alt" content="{{ $socialImageAlt }}">
 
   {{ if .Params.title }}
     <meta name="title" content="{{ .Params.title }}" />
     <meta property="og:title" content="{{ .Params.title }}" />
-    <meta property="twitter:title" content="{{ .Params.title }}" />
+    <meta name="twitter:title" content="{{ .Params.title }}" />
   {{ else }}
     <meta name="title" content="{{ .Site.Params.title }}" />
     <meta property="og:title" content="{{ .Site.Params.title }}" />
-    <meta property="twitter:title" content="{{ .Site.Params.title }}" />
+    <meta name="twitter:title" content="{{ .Site.Params.title }}" />
   {{ end }}
 
   {{ if .Params.description }}
     <meta name="description" content="{{ .Params.description }}">
     <meta property="og:description" content="{{ .Params.description }}" />
-    <meta property="twitter:description" content="{{ .Params.description }}" />
+    <meta name="twitter:description" content="{{ .Params.description }}" />
   {{ else }}
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta property="og:description" content="{{ .Site.Params.description }}" />
-    <meta property="twitter:description" content="{{ .Site.Params.description }}" />
+    <meta name="twitter:description" content="{{ .Site.Params.description }}" />
   {{ end }}
 
-  {{ if .Params.summary }}
-    <meta property="twitter:card" content="{{ .Params.summary }}" />
-  {{ else }}
-    <meta property="twitter:card" content="summary" />
-  {{ end }}
   <!-- end ogp -->
 
   <meta name="keyword" content="{{ .Site.Params.keyword }}">
@@ -57,7 +69,7 @@
     {{- end -}}
     </title>
 
-  <link rel="canonical" href="{{ .RelPermalink }}">
+  <link rel="canonical" href="{{ .Permalink }}">
 
   {{ if .Site.Params.disqus_proxy }}
     <link rel="stylesheet" href="{{ "css/iDisqus.min.css" | relURL }}"/>

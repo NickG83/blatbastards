@@ -9,6 +9,8 @@ SEOTitle = "Blat Bastards"
   # Load our extra CSS
   custom_css = ["css/custom.css"]
 
+  social_image = "/img/social-preview.jpg"
+
   # Don't auto-show categories in the nav; we'll define our own items
   omit_categories = true
 
