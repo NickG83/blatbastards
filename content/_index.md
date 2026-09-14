@@ -1,4 +1,4 @@
 ---
 title: "Home"
-description: "Blat Bastards – Adventure rides, stories & more"
+description: "Australian adventure motorcycle rides, memorable roads, trip planning and stories from the Blat Bastards."
 ---
