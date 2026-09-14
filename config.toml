@@ -1,5 +1,5 @@
 baseURL = 'https://www.blatbastards.com/'
-languageCode = 'en-us'
+languageCode = 'en-AU'
 title = 'Blat Bastards'
 theme = "hugo-theme-cleanwhite"
 SEOTitle = "Blat Bastards"
@@ -7,6 +7,8 @@ disableKinds = ["taxonomy", "term"]
 # theme = "ananke"
 
 [params]
+  description = "Australian adventure motorcycle rides, memorable roads, trip planning and stories from the Blat Bastards."
+
   # Load our extra CSS
   custom_css = ["css/custom.css"]
 

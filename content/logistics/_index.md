@@ -1,5 +1,6 @@
 ---
 title: "Logistics"
+description: "Adventure motorcycle trip planning resources, including packing lists and route-planning guides."
 ---
 
 <h1 class="bb-page-title">Logistics</h1>
