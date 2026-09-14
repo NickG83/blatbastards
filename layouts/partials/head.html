@@ -3,9 +3,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  {{ $siteTitle := .Site.Title }}
+  {{ $pageTitle := .Title | strings.TrimSpace }}
+  {{ $metadataTitle := $siteTitle }}
+  {{ if .IsHome }}
+    {{ $metadataTitle = "Blat Bastards | Great Roads. Better Rides" }}
+  {{ else if and $pageTitle (not (strings.Contains (lower $pageTitle) (lower $siteTitle))) }}
+    {{ $metadataTitle = printf "%s | %s" $pageTitle $siteTitle }}
+  {{ else if $pageTitle }}
+    {{ $metadataTitle = $pageTitle }}
+  {{ end }}
+
+  {{ $description := "" }}
+  {{ with .Params.description }}
+    {{ $description = . | plainify | htmlUnescape | strings.TrimSpace }}
+  {{ end }}
+  {{ if not $description }}
+    {{ with .Params.intro }}
+      {{ $description = . | plainify | htmlUnescape | strings.TrimSpace }}
+    {{ end }}
+  {{ end }}
+  {{ if not $description }}
+    {{ with .Summary }}
+      {{ $description = . | plainify | htmlUnescape | strings.TrimSpace }}
+    {{ end }}
+  {{ end }}
+  {{ if not $description }}
+    {{ with .Site.Params.description }}
+      {{ $description = . | plainify | htmlUnescape | strings.TrimSpace }}
+    {{ end }}
+  {{ end }}
+
+  {{ $ogType := "website" }}
+  {{ if .IsPage }}
+    {{ $ogType = "article" }}
+  {{ end }}
+
   <!-- start ogp -->
-  <meta property="og:site_name" content="{{ .Site.Title }}">
-  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="{{ $siteTitle }}">
+  <meta property="og:type" content="{{ $ogType }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:locale" content="en_AU">
 
   {{ $socialImage := .Site.Params.social_image }}
   {{ $socialImageAlt := "Blat Bastards — Great Roads. Better Rides." }}
@@ -35,39 +73,21 @@
   <meta name="twitter:image" content="{{ $socialImageURL }}">
   <meta name="twitter:image:alt" content="{{ $socialImageAlt }}">
 
-  {{ if .Params.title }}
-    <meta name="title" content="{{ .Params.title }}" />
-    <meta property="og:title" content="{{ .Params.title }}" />
-    <meta name="twitter:title" content="{{ .Params.title }}" />
-  {{ else }}
-    <meta name="title" content="{{ .Site.Params.title }}" />
-    <meta property="og:title" content="{{ .Site.Params.title }}" />
-    <meta name="twitter:title" content="{{ .Site.Params.title }}" />
-  {{ end }}
+  <meta name="title" content="{{ $metadataTitle }}">
+  <meta property="og:title" content="{{ $metadataTitle }}">
+  <meta name="twitter:title" content="{{ $metadataTitle }}">
 
-  {{ if .Params.description }}
-    <meta name="description" content="{{ .Params.description }}">
-    <meta property="og:description" content="{{ .Params.description }}" />
-    <meta name="twitter:description" content="{{ .Params.description }}" />
-  {{ else }}
-    <meta name="description" content="{{ .Site.Params.description }}">
-    <meta property="og:description" content="{{ .Site.Params.description }}" />
-    <meta name="twitter:description" content="{{ .Site.Params.description }}" />
+  {{ with $description }}
+    <meta name="description" content="{{ . }}">
+    <meta property="og:description" content="{{ . }}">
+    <meta name="twitter:description" content="{{ . }}">
   {{ end }}
 
   <!-- end ogp -->
 
-  <meta name="keyword" content="{{ .Site.Params.keyword }}">
   <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}">
 
-  <!-- *** CHANGED LINE: site name first *** -->
-    <title>
-    {{- if .Title -}}
-        {{ .Site.Title }} | {{ .Title }}
-    {{- else -}}
-        {{ .Site.Title }}
-    {{- end -}}
-    </title>
+  <title>{{ $metadataTitle }}</title>
 
   <link rel="canonical" href="{{ .Permalink }}">
 
