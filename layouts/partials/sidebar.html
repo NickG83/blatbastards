@@ -20,21 +20,4 @@
     </ul>
   </section>
 
-  <!-- Tags (only if we have any) -->
-  {{ $tags := .Site.Taxonomies.tags }}
-  {{ if gt (len $tags) 0 }}
-    <section class="sidebar-box bb-sidebar-tags">
-      <h3>Tags</h3>
-      <ul>
-        {{ range $name, $taxonomy := $tags }}
-          <li>
-            <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/">
-              {{ $name }} ({{ len $taxonomy.Pages }})
-            </a>
-          </li>
-        {{ end }}
-      </ul>
-    </section>
-  {{ end }}
-
 </aside>

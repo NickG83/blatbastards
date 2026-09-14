@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Blat Bastards'
 theme = "hugo-theme-cleanwhite"
 SEOTitle = "Blat Bastards"
+disableKinds = ["taxonomy", "term"]
 # theme = "ananke"
 
 [params]
