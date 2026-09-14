@@ -1,0 +1,5 @@
+/admin/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+https://blatbastards.pages.dev/*
+  X-Robots-Tag: noindex
