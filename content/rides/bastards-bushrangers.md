@@ -17,7 +17,7 @@ intro: Four days of big bikes, backroads, bushranger history.
 ---
 ### Friday
 
-**Canberra → Yass → Gundagai → Holbrook → Howlong → Corowa → Mulwala | (Approx. 420 km)**
+**Canberra → Tumut → Jingellic → Albury → Corowa → Mulwala | (Approx. 420 km)**
 
 Friday is primarily the convergence day, with riders making their way in from Canberra and Melbourne before converging on the Murray River.\
 We'll take the run through the Brindabellas to Tumut, Tumbarumba, Jingellic and Walwa.\
