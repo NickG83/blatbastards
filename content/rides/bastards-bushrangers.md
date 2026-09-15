@@ -92,7 +92,7 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 * Max’s on the Lake - Saturday Breakfast
 * [Bridge Road Brewers, Beechworth](https://bridgeroadbrewers.com.au/pages/take-away-pizza-bottle-shop) — Saturday lunch
 * [Milawa Cheese Co.](https://www.milawacheese.com.au/) — Saturday afternoon coffee or produce stop
-* Mansfield ?— Saturday Dinner
+* [Anvil Brewing Co Mansfield](https://anvilbrewingco.com.au/) - Saturday Dinner
 * Mansfield ? - Sunday Breakfast
 * Glenrowan ? - Sunday Lunch
 * Tanswell’s Hotel, Beechworth — Sunday dinner
