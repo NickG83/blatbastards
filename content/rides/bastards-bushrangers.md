@@ -14,6 +14,11 @@ gallery:
   - image: /uploads/ned-kelly-statue.jpg
     caption: Glenrowan
 intro: Four days of big bikes, backroads, bushranger history.
+attendees:
+  - adrian
+  - nickg
+  - gav
+  - moe
 ---
 ### Friday
 
