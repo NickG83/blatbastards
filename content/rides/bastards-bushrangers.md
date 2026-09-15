@@ -80,7 +80,9 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 
 ## ⛽ Fuel stops
 
-* TBA
+* Friday - Tumut, Albury, Mulwala
+* Saturday - 
+*
 
 ## 🍽️☕ Food and drink stops
 
