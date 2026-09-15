@@ -7,7 +7,7 @@ distance: 1250
 duration: Longer
 surface: Mixed
 meeting_point: Uriarra / Brindabella Road
-departure_time: "0900"
+departure_time: "0830"
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=1sR7NQOTP2baQLrOZ0k8XiSPQwyedlqM&ehbc=2E312F
 hero_image: /uploads/bnbride_hero.jpg
 gallery:
