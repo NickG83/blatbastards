@@ -20,7 +20,7 @@ intro: Four days of big bikes, backroads, bushranger history.
 **Canberra → Tumut → Jingellic → Albury → Corowa → Mulwala | (Approx. 420 km)**
 
 Friday is primarily the convergence day, with riders making their way in from Canberra and Melbourne before converging on the Murray River.\
-We'll take the run through the Brindabellas to Tumut, Tumbarumba, Jingellic and Walwa.\
+Meetup will be at the intersection of Brindabella Road & Uriarra Road, before heading into the Brindabellas to Tumut for brunch. Then on to Tumbarumba, Jingellic and Albury.\
 \
 Aim is to have everyone meet up in Corowa (at the Distilling Co?), then cruise down to Mulwala for the night.\
 Once everyone is checked in, we’ll head out for dinner and the official opening of the ride.\
