@@ -91,7 +91,7 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 * [Blacksmith Provedore Lake Mulwala ](https://blacksmithprovedore.com/)- Friday Dinner
 * Max’s on the Lake - Saturday Breakfast
 * [Bridge Road Brewers, Beechworth](https://bridgeroadbrewers.com.au/pages/take-away-pizza-bottle-shop) — Saturday lunch
-* Milawa — Saturday afternoon coffee or produce stop (Cheese Factory?)
+* [Milawa Cheese Co.](https://www.milawacheese.com.au/) — Saturday afternoon coffee or produce stop
 * Mansfield ?— Saturday Dinner
 * Mansfield ? - Sunday Breakfast
 * Glenrowan ? - Sunday Lunch
