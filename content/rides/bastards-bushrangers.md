@@ -87,10 +87,10 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 ## 🍽️☕ Food and drink stops
 
 * Tumut - Friday Brunch
-* Corowa Distilling Co. — sneaky pannier addition.
-* Blacksmith Provedore Lake Mulwala ?? - Friday Dinner
+* [Corowa Distilling Co](https://corowadistilling.com.au/). - sneaky pannier addition.
+* [Blacksmith Provedore Lake Mulwala ](https://blacksmithprovedore.com/)- Friday Dinner
 * Max’s on the Lake - Saturday Breakfast
-* Bridge Road Brewers, Beechworth — Saturday lunch
+* [Bridge Road Brewers, Beechworth](https://bridgeroadbrewers.com.au/pages/take-away-pizza-bottle-shop) — Saturday lunch
 * Milawa — Saturday afternoon coffee or produce stop (Cheese Factory?)
 * Mansfield ?— Saturday Dinner
 * Mansfield ? - Sunday Breakfast
