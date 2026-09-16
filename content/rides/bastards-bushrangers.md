@@ -86,8 +86,9 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 ## ⛽ Fuel stops
 
 * Friday - Tumut, Albury, Mulwala
-* Saturday - 
-*
+* Saturday - Beechworth & Mansfield
+* Sunday - Beechworth
+* Monday - Adaminaby
 
 ## 🍽️☕ Food and drink stops
 
@@ -98,9 +99,9 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 * [Bridge Road Brewers, Beechworth](https://bridgeroadbrewers.com.au/pages/take-away-pizza-bottle-shop) — Saturday lunch
 * [Milawa Cheese Co.](https://www.milawacheese.com.au/) — Saturday afternoon coffee or produce stop
 * [Anvil Brewing Co Mansfield](https://anvilbrewingco.com.au/) - Saturday Dinner
-* Mansfield ? - Sunday Breakfast
-* Glenrowan ? - Sunday Lunch
-* Tanswell’s Hotel, Beechworth — Sunday dinner
+* [Mansfield Coffee Merchant](https://www.mansfieldcoffeemerchant.com.au/) - Sunday Breakfast
+* Glenrowan Hotel - Sunday Lunch
+* [Tanswell’s Hotel, Beechworth](https://www.tanswellshotel.com.au/) — Sunday dinner
 * ? — Monday breakfast
 
 ## 📸 Potential photo-stop locations
