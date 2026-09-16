@@ -20,6 +20,9 @@ attendees:
   - gav
   - moe
   - nickc
+  - evanw
+  - ross
+  - johnr
 ---
 ### Friday
 
