@@ -49,6 +49,8 @@ Figure on lunch at Bridge Road Brewers; decent pizzas and local brew, just remem
 \
 The final section into Whitfield follows the King Valley, we'll also stop at Powers Lookup which overlooks the entire region - good opportunity for a drone shot or two. Once done at Powers, we'll continue on to Mansfield where the road comes out of the King Valley through forest and farmland, with a mixture of tight corners, faster sweepers and mountain views.
 
+Dinner is intended to be at Anvil Brewing Co. 
+
 **Overnight stop:** Mansfield
 
 ### Sunday
