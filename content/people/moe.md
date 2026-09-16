@@ -1,5 +1,5 @@
 ---
 id: moe
 name: Moe
-nickname: mothrottle
+nickname: Mothrottle
 ---
