@@ -26,10 +26,10 @@ attendees:
 **Canberra → Tumut → Jingellic → Albury → Corowa → Mulwala | (Approx. 420 km)**
 
 Friday is primarily the convergence day, with riders making their way in from Canberra and Melbourne before converging on the Murray River.\
-Meetup will be at the intersection of Brindabella Road & Uriarra Road, before heading into the Brindabellas to Tumut for brunch. Then on to Tumbarumba, Jingellic and Albury.\
+Meetup in the morning will be at the intersection of Brindabella Road & Uriarra Road, with stands up by 0830. We'll heade into the Brindabellas to Tumut for brunch at the usual Coffee Pedaler. Then on to Tumbarumba, Jingellic and Albury.\
 \
-Aim is to have everyone meet up in Corowa (at the Distilling Co?), then cruise down to Mulwala for the night.\
-Once everyone is checked in, we’ll head out for dinner and the official opening of the ride.\
+Aim is to have everyone meet up in Corowa at the Distilling Co; potentially throw a sample or two into the panniers, then cruise down to Mulwala for the night.\
+Once everyone is checked in, we’ll head out for dinner by the lake at Blacksmith Provedore. \
 \
 **Overnight stop:** Mulwala
 
