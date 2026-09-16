@@ -7,7 +7,7 @@ distance: 1250
 duration: Longer
 surface: Mixed
 meeting_point: Uriarra / Brindabella Road
-departure_time: "0900"
+departure_time: "0830"
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=1sR7NQOTP2baQLrOZ0k8XiSPQwyedlqM&ehbc=2E312F
 hero_image: /uploads/bnbride_hero.jpg
 gallery:
@@ -26,10 +26,10 @@ attendees:
 **Canberra → Tumut → Jingellic → Albury → Corowa → Mulwala | (Approx. 420 km)**
 
 Friday is primarily the convergence day, with riders making their way in from Canberra and Melbourne before converging on the Murray River.\
-Meetup will be at the intersection of Brindabella Road & Uriarra Road, before heading into the Brindabellas to Tumut for brunch. Then on to Tumbarumba, Jingellic and Albury.\
+Meetup in the morning will be at the intersection of Brindabella Road & Uriarra Road, with stands up by 0830. We'll heade into the Brindabellas to Tumut for brunch at the usual Coffee Pedaler. Then on to Tumbarumba, Jingellic and Albury.\
 \
-Aim is to have everyone meet up in Corowa (at the Distilling Co?), then cruise down to Mulwala for the night.\
-Once everyone is checked in, we’ll head out for dinner and the official opening of the ride.\
+Aim is to have everyone meet up in Corowa at the Distilling Co; potentially throw a sample or two into the panniers, then cruise down to Mulwala for the night.\
+Once everyone is checked in, we’ll head out for dinner by the lake at Blacksmith Provedore. \
 \
 **Overnight stop:** Mulwala
 
@@ -37,17 +37,19 @@ Once everyone is checked in, we’ll head out for dinner and the official openin
 
 **Mulwala → Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield → Oxley | (Approx. 250 km)**
 
-Saturday is intentionally lighter on kilometres, allowing enough time to explore the goldfields and Kelly Country stops without turning the day into a rushed sequence of quick snaps and fuel stops.\
+Saturday is intentionally lighter on kilometres, allowing enough time to explore the goldfields and Kelly Country stops without turning the day into a rushed sequence of "quick; take a photo, fill the bike (or your face) and onto the next".\
 \
 We’ll leave Mulwala after breakfast and make the short run through to Rutherglen; where we can take a happy snap in front of the oversized Rutherglen Wine Bottle.\
 \
-From Rutherglen we’ll continue through to Chiltern, stopping for coffee and a to check out the the historic goldrush-era town. The route then turns toward Eldorado, where we’ll visit the massive Eldorado Dredge.\
+From Rutherglen we’ll continue through to Chiltern, stopping for coffee and to check out the the old goldrush-era town. The route then turns toward Eldorado, where we’ll visit the massive Eldorado Dredge.\
 We’ll then continue through the valley to Woolshed Falls. This area combines gold-rush history with some of the region’s best scenery and provides a good chance to stretch the legs and check out the falls before continuing on to Beechworth.\
 \
-Beechworth will be the main stop of the day, despite coming back tomorrow night. We’ll park the bikes in the historic centre and visit check out the Old Beechworth Gaol and courthouse. If we can get in at the right time, we might be able to grab a scheduled tour of the gaol.\
+Beechworth will be the main stop of the day, despite coming back tomorrow night. We’ll check out the Old Beechworth Gaol and courthouse. If we can get in at the right time, we might be able to grab a scheduled tour of the gaol (maybe leave someone there overnight...).\
 Figure on lunch at Bridge Road Brewers; decent pizzas and local brew, just remember we've got a few more hours in the saddle! After lunch, we’ll leave Beechworth and ride through Tarrawingee into the Milawa region and depending on timing, we may stop briefly for coffee, cheese and/or takeaway supplies before continuing through Oxley and Moyhu.\
 \
 The final section into Whitfield follows the King Valley, we'll also stop at Powers Lookup which overlooks the entire region - good opportunity for a drone shot or two. Once done at Powers, we'll continue on to Mansfield where the road comes out of the King Valley through forest and farmland, with a mixture of tight corners, faster sweepers and mountain views.
+
+Dinner is intended to be at Anvil Brewing Co. 
 
 **Overnight stop:** Mansfield
 
@@ -57,7 +59,7 @@ The final section into Whitfield follows the King Valley, we'll also stop at Pow
 
 Sunday is the main riding and bushranger day of the trip; again the KMs are pretty easy to take in the scenery and history elements of the ride.\
 \
-After breakfast, we’ll stop briefly at the Mansfield Police Memorial. The memorial recognises the officers who were killed at Stringybark Creek in 1878. It is a pretty key part of the story and worth taking in for completeness.\
+After breakfast, we’ll stop briefly at the Mansfield Police Memorial. The memorial recognises the officers who were killed at Stringybark Creek in 1878. It is a pretty key part and worth checking out for the completeness of the Kelly story. \
 If conditions are dry and the roads are confirmed open, we’ll continue through Tolmie and take the forest roads into Stringybark Creek. If the road is wet, muddy, chopped up or closed, we’ll ditch the dirt section and use the sealed route through Swanpool and Benalla. \
 \
 From Stringybark Creek, the planned route continues through Tatong and the Greta district. We may make a short stop near Greta, where the Kelly family lived before continuing into Glenrowan.\
@@ -80,17 +82,19 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 
 ## ⛽ Fuel stops
 
-* TBA
+* Friday - Tumut, Albury, Mulwala
+* Saturday - 
+*
 
 ## 🍽️☕ Food and drink stops
 
-* Tumut - Friday Brunch
-* Corowa Distilling Co. — Takeaway bottle purchase?
-* Mulwala ?? - Friday Dinner
-* ?? - Saturday Breakfast
-* Bridge Road Brewers, Beechworth — Saturday lunch
-* Milawa — Saturday afternoon coffee or produce stop (Cheese Factory?)
-* Mansfield ?— Saturday Dinner
+* [Coffee Pedaler Tumut](https://www.pedaler.coffee/) - Friday Brunch
+* [Corowa Distilling Co](https://corowadistilling.com.au/). - sneaky pannier addition.
+* [Blacksmith Provedore Lake Mulwala ](https://blacksmithprovedore.com/)- Friday Dinner
+* Max’s on the Lake - Saturday Breakfast
+* [Bridge Road Brewers, Beechworth](https://bridgeroadbrewers.com.au/pages/take-away-pizza-bottle-shop) — Saturday lunch
+* [Milawa Cheese Co.](https://www.milawacheese.com.au/) — Saturday afternoon coffee or produce stop
+* [Anvil Brewing Co Mansfield](https://anvilbrewingco.com.au/) - Saturday Dinner
 * Mansfield ? - Sunday Breakfast
 * Glenrowan ? - Sunday Lunch
 * Tanswell’s Hotel, Beechworth — Sunday dinner
