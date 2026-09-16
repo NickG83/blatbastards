@@ -20,6 +20,9 @@ attendees:
   - gav
   - moe
   - nickc
+  - evanw
+  - ross
+  - johnr
 ---
 ### Friday
 
@@ -73,7 +76,7 @@ The final run of the day will take us from Glenrowan back into Beechworth. Dinne
 
 **Beechworth → Tallangatta → Walwa  → Tooma → Elliot Way → Adaminaby → Tharwa | (Approx. 400 km to Tharwa)**
 
-Sunday will begin with breakfast in central Beechworth. We'll then head up to Lake Hume and Tallangatta before putting the lake in the rear-view and heading toward the mountains and the Murray River again at Walwa. \
+Monday will begin with breakfast in central Beechworth. We'll then head up to Lake Hume and Tallangatta before putting the lake in the rear-view and heading toward the mountains and the Murray River again at Walwa. \
 We'll follow the Murray along to Tooma and Paddys River before the next epic session of twisties on the Elliot Way. Being a Monday, hopefully the road is quiet and we can use the bikes for what they're made for!
 
 With the Elliot Way done and our rear tyres begging for mercy, we'll turn right onto Snowy Mountains Highway and on to Adaminaby, before taking Bobeyan Road to Tharwa and home.
@@ -83,8 +86,9 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 ## ⛽ Fuel stops
 
 * Friday - Tumut, Albury, Mulwala
-* Saturday - 
-*
+* Saturday - Beechworth & Mansfield
+* Sunday - Beechworth
+* Monday - Adaminaby
 
 ## 🍽️☕ Food and drink stops
 
@@ -95,9 +99,9 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 * [Bridge Road Brewers, Beechworth](https://bridgeroadbrewers.com.au/pages/take-away-pizza-bottle-shop) — Saturday lunch
 * [Milawa Cheese Co.](https://www.milawacheese.com.au/) — Saturday afternoon coffee or produce stop
 * [Anvil Brewing Co Mansfield](https://anvilbrewingco.com.au/) - Saturday Dinner
-* Mansfield ? - Sunday Breakfast
-* Glenrowan ? - Sunday Lunch
-* Tanswell’s Hotel, Beechworth — Sunday dinner
+* [Mansfield Coffee Merchant](https://www.mansfieldcoffeemerchant.com.au/) - Sunday Breakfast
+* Glenrowan Hotel - Sunday Lunch
+* [Tanswell’s Hotel, Beechworth](https://www.tanswellshotel.com.au/) — Sunday dinner
 * ? — Monday breakfast
 
 ## 📸 Potential photo-stop locations
