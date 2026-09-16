@@ -9,4 +9,6 @@ cascade:
       list: never
       publishResources: false
       render: never
+id: richd
+name: Richmond
 ---
