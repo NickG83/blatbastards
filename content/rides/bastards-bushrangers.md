@@ -23,6 +23,9 @@ attendees:
   - evanw
   - ross
   - johnr
+  - _index
+  - beny
+  - nickp
 ---
 ### Friday
 
