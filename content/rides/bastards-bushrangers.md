@@ -26,6 +26,7 @@ attendees:
   - _index
   - beny
   - nickp
+  - brian
 ---
 ### Friday
 
