@@ -30,19 +30,19 @@ attendees:
 ---
 ### Friday
 
-**Canberra → Tumut → Jingellic → Albury → Corowa → Mulwala | (Approx. 420 km)**
+**Canberra → Tumut → Jingellic → Albury → Corowa → Yarrawonga | (Approx. 420 km)**
 
 Friday is primarily the convergence day, with riders making their way in from Canberra and Melbourne before converging on the Murray River.\
 Meetup in the morning will be at the intersection of Brindabella Road & Uriarra Road, with stands up by 0830. We'll heade into the Brindabellas to Tumut for brunch at the usual Coffee Pedaler. Then on to Tumbarumba, Jingellic and Albury.\
 \
-Aim is to have everyone meet up in Corowa at the Distilling Co; potentially throw a sample or two into the panniers, then cruise down to Mulwala for the night.\
+Aim is to have everyone meet up in Corowa at the Distilling Co; potentially throw a sample or two into the panniers, then cruise down to Yarrawonga for the night.\
 Once everyone is checked in, we’ll head out for dinner by the lake at Blacksmith Provedore. \
 \
 **Overnight stop:** Mulwala
 
 ### Saturday
 
-**Mulwala → Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield → Oxley | (Approx. 250 km)**
+**Yarrawonga** **→ Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield → Oxley | (Approx. 250 km)**
 
 Saturday is intentionally lighter on kilometres, allowing enough time to explore the goldfields and Kelly Country stops without turning the day into a rushed sequence of "quick; take a photo, fill the bike (or your face) and onto the next".\
 \
@@ -122,13 +122,13 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 
 ## 🛏️ Accommodation
 
-### Mulwala
+### Yarrawonga
 
-* TBA
+* [Lakeview Motel](https://www.lakeview-motel.com.au/)
 
 ### Mansfield
 
-* TBA
+* [The Delatite Hotel](https://www.thedelatitehotel.com.au/)
 
 ### Beechworth
 
