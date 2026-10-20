@@ -116,7 +116,7 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 
 ## ⛽ Fuel stops
 
-* Friday - Tumut, Albury, Mulwala
+* Friday - Tumut, Albury, Yarrawonga
 * Saturday - Beechworth & Mansfield
 * Sunday - Beechworth
 * Monday - Adaminaby
