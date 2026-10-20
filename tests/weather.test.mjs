@@ -20,6 +20,7 @@ async function request(points = [point()], options = {}) {
 }
 
 test("single point: normalises daily values and requests only metric daily best-match data", async context => {
+  const warning = context.mock.method(console, "warn", () => {});
   const fetchMock = context.mock.method(globalThis, "fetch", async url => {
     assert.equal(url.origin, "https://api.open-meteo.com");
     assert.equal(url.searchParams.get("forecast_days"), "16");
@@ -31,6 +32,7 @@ test("single point: normalises daily values and requests only metric daily best-
   });
   const { response, body } = await request();
   assert.equal(response.status, 200);
+  assert.equal(response.headers.get("X-BBB-Weather-Diagnostic"), "ok");
   assert.equal(fetchMock.mock.callCount(), 1);
   assert.deepEqual(body.forecasts[0], {
     id: "0", date: shift(2), status: "forecast", condition: "partly-cloudy", conditionLabel: "Partly cloudy",
@@ -39,6 +41,7 @@ test("single point: normalises daily values and requests only metric daily best-
   assert.equal(body.source, "Open-Meteo");
   assert.equal(body.horizonDays, 16);
   assert.ok(!JSON.stringify(body).includes("temperature_2m"));
+  assert.equal(warning.mock.callCount(), 0);
 });
 
 test("multiple points use one upstream batch and deterministic input indexes", async context => {
@@ -97,32 +100,52 @@ test("today and last supported day are forecastable", async context => {
   assert.deepEqual(body.forecasts.map(forecast => forecast.status), ["forecast", "forecast"]);
 });
 
-for (const [label, upstream] of [
-  ["HTTP failure", () => new Response("Failed", { status: 503 })],
-  ["malformed JSON", () => new Response("not JSON")],
-  ["malformed shape", () => Response.json({ error: true })],
-  ["oversized response", () => new Response("x".repeat(131073))],
-  ["network/abort failure", () => { throw new DOMException("Aborted", "AbortError"); }],
+for (const [label, upstream, diagnostic, upstreamStatus] of [
+  ["HTTP failure", () => new Response("Failed", { status: 503 }), "upstream-http-503", 503],
+  ["HTTP rate limit", () => Response.json({ error: true, reason: "Rate limit exceeded" }, { status: 429 }), "upstream-http-429", 429],
+  ["HTTP forbidden", () => new Response("Provider denied this request", { status: 403 }), "upstream-http-403", 403],
+  ["malformed JSON", () => new Response("not JSON"), "upstream-json", 200],
+  ["malformed shape", () => Response.json({ error: true }), "upstream-data", 200],
+  ["oversized response", () => new Response("x".repeat(131073)), "upstream-data", 200],
+  ["network/abort failure", () => { throw new DOMException("Aborted", "AbortError"); }, "upstream-timeout"],
+  ["network failure", () => { throw new Error("Internal connection details"); }, "upstream-network"],
 ]) test(label, async context => {
   context.mock.method(globalThis, "fetch", async () => upstream());
+  const warning = context.mock.method(console, "warn", () => {});
   const { response, body } = await request();
   assert.equal(response.status, 200);
   assert.equal(body.forecasts[0].status, "unavailable");
   assert.equal(response.headers.get("Cache-Control"), "no-store");
+  assert.equal(response.headers.get("X-BBB-Weather-Diagnostic"), diagnostic);
+  assert.deepEqual(Object.keys(body).sort(), ["forecasts", "generatedAt", "horizonDays", "source", "timeZone", "today"]);
+  assert.deepEqual(body.forecasts, [{ id: "0", date: shift(2), status: "unavailable" }]);
+  assert.equal(warning.mock.callCount(), 1);
+  const logged = JSON.parse(warning.mock.calls[0].arguments[0]);
+  assert.equal(logged.event, "WEATHER_UPSTREAM_FAILED");
+  assert.equal(logged.category, diagnostic);
+  assert.equal(logged.pointCount, 1);
+  assert.equal(logged.upstreamStatus, upstreamStatus);
+  assert.ok(!JSON.stringify(logged).includes("Internal connection details"));
+  if (label === "HTTP rate limit") assert.equal(logged.reason, "Rate limit exceeded");
 });
 
 test("partial locations retain successes, missing metrics stay null rather than zero", async context => {
   context.mock.method(globalThis, "fetch", async () => Response.json([
     provider({ precipitation_probability_max: [null], wind_gusts_10m_max: [] }), {},
   ]));
-  const { body } = await request([point(), point()]);
+  const warning = context.mock.method(console, "warn", () => {});
+  const { response, body } = await request([point(), point()]);
   assert.equal(body.forecasts[0].status, "forecast");
   assert.equal(body.forecasts[0].precipitationProbability, null);
   assert.equal(body.forecasts[0].gustMaxKmh, null);
   assert.equal(body.forecasts[1].status, "unavailable");
+  assert.equal(response.headers.get("X-BBB-Weather-Diagnostic"), "upstream-data");
+  assert.equal(warning.mock.callCount(), 1);
+  assert.equal(JSON.parse(warning.mock.calls[0].arguments[0]).pointCount, 2);
 });
 
 test("missing dates/core values and unknown weather codes are unavailable", async context => {
+  context.mock.method(console, "warn", () => {});
   for (const changes of [{ time: [] }, { weather_code: [123] }, { temperature_2m_max: [null] }]) {
     const fetchMock = context.mock.method(globalThis, "fetch", async () => Response.json(provider(changes)));
     assert.equal((await request()).body.forecasts[0].status, "unavailable");
@@ -141,6 +164,8 @@ test("successful responses reuse canonical Cloudflare cache keys for 30 minutes"
   const first = await request();
   const second = await request();
   assert.equal(first.response.headers.get("Cache-Control"), "public, max-age=1800");
+  assert.equal(first.response.headers.get("X-BBB-Weather-Diagnostic"), "ok");
+  assert.equal(second.response.headers.get("X-BBB-Weather-Diagnostic"), "ok");
   assert.deepEqual(first.body, second.body);
   assert.equal(fetchMock.mock.callCount(), 1);
   assert.equal(stored.size, 1);
@@ -158,11 +183,32 @@ test("cache failure cannot prevent a forecast", async context => {
 
 test("upstream timeout aborts the request after eight seconds", async context => {
   context.mock.timers.enable({ apis: ["setTimeout"] });
+  context.mock.method(console, "warn", () => {});
   context.mock.method(globalThis, "fetch", async (url, options) => new Promise((resolve, reject) => {
     options.signal.addEventListener("abort", () => reject(new DOMException("Aborted", "AbortError")));
     context.mock.timers.tick(8000);
   }));
-  assert.equal((await request()).body.forecasts[0].status, "unavailable");
+  const { response, body } = await request();
+  assert.equal(body.forecasts[0].status, "unavailable");
+  assert.equal(response.headers.get("X-BBB-Weather-Diagnostic"), "upstream-timeout");
+});
+
+test("provider error reasons are bounded and sanitised in logs, never sent to the browser", async context => {
+  const reason = `Rate limit\n\u0000 for -37.052,146.088 at https://api.example/private?token=secret ${"detail ".repeat(100)}`;
+  context.mock.method(globalThis, "fetch", async () => Response.json({ error: true, reason, extra: "PRIVATE BODY" }, { status: 429 }));
+  const warning = context.mock.method(console, "warn", () => {});
+  const { response, body } = await request();
+  assert.equal(response.headers.get("X-BBB-Weather-Diagnostic"), "upstream-http-429");
+  assert.deepEqual(body.forecasts, [{ id: "0", date: shift(2), status: "unavailable" }]);
+  const logged = JSON.parse(warning.mock.calls[0].arguments[0]);
+  assert.deepEqual(Object.keys(logged).sort(), ["category", "event", "pointCount", "reason", "upstreamStatus"]);
+  assert.ok(logged.reason.length <= 160);
+  assert.match(logged.reason, /^[\x20-\x7e]+$/);
+  assert.ok(!logged.reason.includes("-37.052"));
+  assert.ok(!logged.reason.includes("146.088"));
+  assert.ok(!logged.reason.includes("secret"));
+  assert.ok(!JSON.stringify(logged).includes("PRIVATE BODY"));
+  assert.ok(!JSON.stringify(body).includes("Rate limit"));
 });
 
 test("ten points and coordinate boundary values are accepted", async context => {

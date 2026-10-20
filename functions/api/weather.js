@@ -65,6 +65,14 @@ function normalise(point, result) {
   };
 }
 
+function providerReason(data) {
+  if (data?.error !== true || typeof data.reason !== "string") return undefined;
+  return data.reason.slice(0, 512)
+    .replace(/https?:\/\/\S+/gi, "[url]")
+    .replace(/[-+]?\d+(?:\.\d+)?/g, "[number]")
+    .replace(/[^\x20-\x7e]/g, " ").replace(/\s+/g, " ").trim().slice(0, 160) || undefined;
+}
+
 async function fetchForecasts(points) {
   const url = new URL("https://api.open-meteo.com/v1/forecast");
   url.search = new URLSearchParams({
@@ -75,9 +83,17 @@ async function fetchForecasts(points) {
   });
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 8000);
+  let diagnostic = "upstream-network";
+  let upstreamStatus;
+  let reason;
   try {
     const response = await fetch(url, { signal: controller.signal, redirect: "error" });
-    if (!response.ok || !response.body) throw new Error("Forecast unavailable");
+    upstreamStatus = response.status;
+    if (!response.ok) diagnostic = `upstream-http-${response.status}`;
+    if (!response.body) {
+      if (response.ok) diagnostic = "upstream-data";
+      throw new Error("Forecast unavailable");
+    }
     const reader = response.body.getReader();
     const chunks = [];
     let size = 0;
@@ -86,14 +102,33 @@ async function fetchForecasts(points) {
       if (done) break;
       size += value.byteLength;
       if (size > 131072) {
+        if (response.ok) diagnostic = "upstream-data";
         await reader.cancel();
         throw new Error("Forecast too large");
       }
       chunks.push(value);
     }
-    const data = JSON.parse(await new Blob(chunks).text());
+    let data;
+    try {
+      data = JSON.parse(await new Blob(chunks).text());
+    } catch (error) {
+      if (response.ok) diagnostic = "upstream-json";
+      throw error;
+    }
+    reason = providerReason(data);
+    if (!response.ok) throw new Error("Forecast unavailable");
+    diagnostic = "upstream-data";
     const results = Array.isArray(data) ? data : [data];
-    return points.map((point, index) => normalise(point, results[index]));
+    const forecasts = points.map((point, index) => normalise(point, results[index]));
+    if (forecasts.every(forecast => forecast.status === "forecast")) return { forecasts, diagnostic: "ok" };
+    console.warn(JSON.stringify({ event: "WEATHER_UPSTREAM_FAILED", category: diagnostic,
+      upstreamStatus, pointCount: points.length, reason }));
+    return { forecasts, diagnostic };
+  } catch (error) {
+    if (controller.signal.aborted || error?.name === "AbortError" || error?.name === "TimeoutError") diagnostic = "upstream-timeout";
+    console.warn(JSON.stringify({ event: "WEATHER_UPSTREAM_FAILED", category: diagnostic,
+      upstreamStatus, pointCount: points.length, reason }));
+    return { forecasts: [], diagnostic };
   } finally {
     clearTimeout(timer);
   }
@@ -118,7 +153,7 @@ export async function onRequest(context) {
   const horizonEnd = shiftDate(today, FORECAST_DAYS - 1);
   // A new trip day must not reuse yesterday's lifecycle decisions.
   const cacheURL = new URL("/api/weather", url.origin);
-  cacheURL.search = new URLSearchParams({ v: "1", day: today, points: JSON.stringify(points) });
+  cacheURL.search = new URLSearchParams({ v: "2", day: today, points: JSON.stringify(points) });
   const cacheKey = new Request(cacheURL);
   const cache = globalThis.caches?.default;
   try {
@@ -126,23 +161,20 @@ export async function onRequest(context) {
     if (cached) return cached;
   } catch {}
   const active = points.filter(point => point.date >= today && point.date <= horizonEnd);
-  let available = [];
-  try {
-    if (active.length) available = await fetchForecasts(active);
-  } catch {}
+  const upstream = active.length ? await fetchForecasts(active) : { forecasts: [], diagnostic: "ok" };
   const forecasts = points.map(point => {
     const base = { id: point.id, date: point.date };
     if (point.date < today) return { ...base, status: "past" };
     if (point.date > horizonEnd) return {
       ...base, status: "not-yet-available", availableFrom: shiftDate(point.date, -(FORECAST_DAYS - 1)),
     };
-    return available.find(forecast => forecast.id === point.id) || { ...base, status: "unavailable" };
+    return upstream.forecasts.find(forecast => forecast.id === point.id) || { ...base, status: "unavailable" };
   });
   const failed = forecasts.some(forecast => forecast.status === "unavailable");
   const response = json({
     generatedAt: new Date().toISOString(), source: "Open-Meteo", timeZone: TIME_ZONE,
     today, horizonDays: FORECAST_DAYS, forecasts,
-  }, 200, failed ? "no-store" : "public, max-age=1800");
+  }, 200, failed ? "no-store" : "public, max-age=1800", { "X-BBB-Weather-Diagnostic": upstream.diagnostic });
   if (cache && !failed) context.waitUntil(cache.put(cacheKey, response.clone()).catch(() => {}));
   return response;
 }

@@ -130,6 +130,23 @@ abort after 12 seconds. HTTP/network/timeout/JSON failures show "Forecast
 temporarily unavailable." No automatic retries, per-card calls or visitor
 geocoding occur. No safety classifications or recommendations are made.
 
+Validated responses include `X-BBB-Weather-Diagnostic`: `ok`,
+`upstream-http-<status>` (including 429/403), `upstream-timeout`,
+`upstream-network`, `upstream-json`, or `upstream-data`. The diagnostic describes
+the overall upstream operation; partial/missing core forecasts use `upstream-data`
+while retaining successful points. No-upstream past/beyond-horizon responses use
+`ok`. The JSON contract and public UI do not consume or expose diagnostic details.
+Failures emit one structured `console.warn` event, `WEATHER_UPSTREAM_FAILED`,
+with category, point count, HTTP status when available, and an optional explicitly
+returned provider error reason. Reasons are bounded to 160 printable ASCII
+characters with URLs/numbers redacted. No stack traces, headers, coordinates or
+internal exception messages are logged or returned. Raw provider bodies and
+reasons never enter response headers/JSON. Inspect the coarse header with
+`curl -i`; Pages Function logs supply only the sanitised reason when present.
+The deployed Open-Meteo failure remains undiagnosed until a preview containing
+these diagnostics is deployed and tested. No egress workaround or manual
+`CF-Worker` header is used.
+
 ## Validation and preview
 
 No package manifest, lint command or CI existed before this feature. Unit tests
@@ -147,9 +164,12 @@ hugo --baseURL http://localhost:8788/
 wrangler pages dev public --port 8788 --compatibility-date 2026-08-08
 ```
 
-The local base URL is important: existing CSS links use `absURL` and would
-otherwise load production CSS. August 8 is the latest date supported by the
-installed local workerd used for validation; this is not a deployment setting.
+Repository-local custom CSS uses `relURL`, so a normal build emits
+`/css/custom.css` and production, branch previews and local preview load their
+own stylesheet. Explicit absolute external custom stylesheet URLs are preserved.
+The local base URL override is optional for stylesheet loading. August 8 is the
+latest date supported by the installed local workerd used for validation; this
+is not a deployment setting.
 
 Focused browser checks require Playwright and its browser/system dependencies,
 but add no site/runtime dependency. With Playwright already installed elsewhere:
