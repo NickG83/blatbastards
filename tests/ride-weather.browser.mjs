@@ -84,7 +84,7 @@ try {
     const second = await cards[1].boundingBox();
     assert.equal(first.y, second.y);
     assert.ok(first.x < second.x);
-    assert.ok(first.height < 220, "Forecast card is compact");
+    assert.ok(first.height < 160, "Single-row metrics further reduce forecast card height");
     assert.ok(loadingHeight < first.height, "Loading sizes naturally without a reserved forecast body");
     for (const card of cards) {
       const location = await card.locator(".ride-weather-location").boundingBox();
@@ -92,6 +92,24 @@ try {
       assert.ok(location.x < date.x, "Location is left of date");
       assert.ok(Math.max(location.y, date.y) < Math.min(location.y + location.height, date.y + date.height), "Location and date share a desktop row");
       assert.equal(await card.locator(".ride-weather-body").evaluate(body => getComputedStyle(body).minHeight), "0px");
+      const metrics = card.locator("dl.ride-weather-metrics");
+      assert.equal(await metrics.count(), 1);
+      assert.equal(await metrics.isVisible(), true);
+      const groups = metrics.locator(".ride-weather-metric");
+      assert.equal(await groups.count(), 2);
+      assert.equal(await groups.nth(0).locator("dt").textContent(), "Rain");
+      assert.equal(await groups.nth(0).locator("dd").textContent(), "15% · 0.4 mm");
+      assert.equal(await groups.nth(1).locator("dt").textContent(), "Wind");
+      assert.equal(await groups.nth(1).locator("dd").textContent(), "18 km/h");
+      const rain = await groups.nth(0).boundingBox();
+      const wind = await groups.nth(1).boundingBox();
+      const row = await metrics.boundingBox();
+      assert.equal(rain.y, wind.y, "Rain and Wind share one desktop metrics row");
+      assert.equal(row.height, rain.height, "No second visible metrics row");
+      assert.ok(Math.abs(rain.x - row.x) < 1, "Rain aligns left");
+      assert.ok(Math.abs(wind.x + wind.width - row.x - row.width) < 1, "Wind aligns right");
+      assert.equal(await groups.nth(0).locator("dt").evaluate(label => getComputedStyle(label).fontWeight), "700");
+      assert.equal(await groups.nth(0).locator("dd").evaluate(value => getComputedStyle(value).fontWeight), "400");
     }
     console.log(`Card height: loading ${loadingHeight}px, forecast ${first.height}px`);
     await page.locator(".ride-weather").screenshot({ path: "/tmp/bbb-weather-desktop.png" });
@@ -100,12 +118,20 @@ try {
     assert.ok((await cards[1].boundingBox()).y > (await cards[0].boundingBox()).y);
     const overflow = await page.locator(".ride-weather").evaluate(section => section.scrollWidth > section.clientWidth);
     assert.equal(overflow, false);
+    const mobileGroups = cards[0].locator(".ride-weather-metric");
+    assert.equal((await mobileGroups.nth(0).boundingBox()).y, (await mobileGroups.nth(1).boundingBox()).y);
     await page.locator(".ride-weather").screenshot({ path: "/tmp/bbb-weather-mobile.png" });
     await page.setViewportSize({ width: 320, height: 740 });
     assert.ok((await cards[1].boundingBox()).y > (await cards[0].boundingBox()).y);
     assert.equal(await page.locator(".ride-weather-today").isVisible(), true);
     assert.equal(await page.locator(".ride-weather").evaluate(section => section.scrollWidth > section.clientWidth), false);
     assert.equal(await cards[0].evaluate(card => card.scrollWidth > card.clientWidth), false);
+    for (const card of cards) {
+      const metrics = card.locator(".ride-weather-metrics");
+      assert.equal(await metrics.evaluate(row => row.scrollWidth > row.clientWidth), false);
+      assert.equal(await metrics.locator("dd").nth(0).textContent(), "15% · 0.4 mm");
+      assert.equal(await metrics.locator("dd").nth(1).textContent(), "18 km/h");
+    }
     await page.locator(".ride-weather").screenshot({ path: "/tmp/bbb-weather-narrow.png" });
   });
 

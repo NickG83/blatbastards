@@ -347,9 +347,11 @@ body { padding-top: 70px; }
 .ride-weather-icon { font-size: 2.8rem; line-height: 1.2; }
 .ride-weather .ride-weather-temperatures { font-size: 2rem; font-weight: 700; color: var(--bb-primary); margin: 0; }
 .ride-weather .ride-weather-condition { margin: 0; font-size: 1.3rem; }
-.ride-weather-metrics { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 12px; margin: 0; }
-.ride-weather-metrics dt { color: var(--bb-primary); }
-.ride-weather-metrics dd { margin: 0; text-align: right; }
+.ride-weather-metrics { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; margin: 0; }
+.ride-weather-metric { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 6px; min-width: 0; max-width: 100%; }
+.ride-weather-metric:last-child { margin-left: auto; }
+.ride-weather-metrics dt { color: var(--bb-primary); font-weight: 700; }
+.ride-weather-metrics dd { margin: 0; font-weight: 400; }
 .ride-weather .ride-weather-message { margin: 8px 0; text-align: center; font-weight: 700; }
 .ride-weather .ride-weather-detail { margin: 0; text-align: center; font-size: 1.3rem; }
 .ride-weather .ride-weather-attribution { margin: 8px 0 0; font-size: 1.2rem; }

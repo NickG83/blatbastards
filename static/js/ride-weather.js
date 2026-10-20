@@ -67,7 +67,11 @@
     for (const [label, value] of [
       ["Rain", `${metric(forecast.precipitationProbability, "%")} \u00b7 ${metric(forecast.precipitationMm, " mm", 1)}`],
       ["Wind", metric(forecast.windMaxKmh, " km/h")],
-    ]) metrics.append(element("dt", "", label), element("dd", "", value));
+    ]) {
+      const group = element("div", "ride-weather-metric");
+      group.append(element("dt", "", label), element("dd", "", value));
+      metrics.append(group);
+    }
     card.body.replaceChildren(summary, metrics);
   }
 
