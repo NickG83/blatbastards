@@ -14,6 +14,21 @@ weather:
     region: Victoria
     latitude: -36.01923
     longitude: 145.99973
+  - date: 2026-10-24
+    location: Mansfield
+    region: Victoria
+    latitude: -37.052
+    longitude: 146.08846
+  - date: 2026-10-25
+    location: Beechworth
+    region: Victoria
+    latitude: -36.35828
+    longitude: 146.68584
+  - date: 2026-10-26
+    location: Canberra
+    region: Australian Capital Territory
+    latitude: -35.28346
+    longitude: 149.12807
 distance: 1250
 duration: Longer
 surface: Mixed
