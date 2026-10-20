@@ -15,11 +15,26 @@ weather:
     latitude: -36.01923
     longitude: 145.99973
   - date: 2026-10-24
+    location: Yarrawonga
+    region: Victoria
+    latitude: -36.01923
+    longitude: 145.99973
+  - date: 2026-10-24
     location: Mansfield
     region: Victoria
     latitude: -37.052
     longitude: 146.08846
   - date: 2026-10-25
+    location: Mansfield
+    region: Victoria
+    latitude: -37.052
+    longitude: 146.08846
+  - date: 2026-10-25
+    location: Beechworth
+    region: Victoria
+    latitude: -36.35828
+    longitude: 146.68584
+  - date: 2026-10-26
     location: Beechworth
     region: Victoria
     latitude: -36.35828
