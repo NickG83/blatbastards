@@ -48,9 +48,49 @@ test("manual coordinates require no search and support Immutable Decap values", 
   assert.equal(control.props.value.location, "Forest camp");
 });
 
+test("Decap YAML Date values normalise to ISO strings before validation or update", () => {
+  const control = widget(() => { throw new Error("Must not search"); });
+  control.props.value = { toJS: () => ({
+    date: new Date("2026-10-24T00:00:00.000Z"),
+    location: "Mansfield",
+    region: "Victoria",
+    latitude: -37.052,
+    longitude: 146.08846,
+  }) };
+
+  assert.equal(control.point().date, "2026-10-24");
+  assert.equal(control.isValid(), true);
+
+  // An unrelated change must not turn the round-tripped date into an invalid value.
+  control.update("region", "Victoria");
+  assert.equal(control.props.value.date, "2026-10-24");
+  assert.equal(control.props.value.location, "Mansfield");
+  assert.equal(control.props.value.latitude, -37.052);
+  assert.equal(control.props.value.longitude, 146.08846);
+});
+
+test("four existing weather points remain valid after a YAML date round-trip", () => {
+  const existing = [
+    { date: "2026-10-23", location: "Yarrawonga", region: "Victoria", latitude: -36.01923, longitude: 145.99973 },
+    { date: "2026-10-24", location: "Mansfield", region: "Victoria", latitude: -37.052, longitude: 146.08846 },
+    { date: "2026-10-25", location: "Beechworth", region: "Victoria", latitude: -36.35828, longitude: 146.68584 },
+    { date: "2026-10-26", location: "Canberra", region: "Australian Capital Territory", latitude: -35.28346, longitude: 149.12807 },
+  ];
+
+  const saved = existing.map(point => {
+    const control = widget(() => { throw new Error("Must not search"); });
+    control.props.value = { toJS: () => ({ ...point, date: new Date(`${point.date}T00:00:00.000Z`) }) };
+    assert.equal(control.isValid(), true, point.location);
+    control.update("location", point.location);
+    return control.props.value;
+  });
+
+  assert.equal(JSON.stringify(saved), JSON.stringify(existing));
+});
+
 test("widget validates required fields and calendar dates", () => {
   const control = widget();
-  for (const changes of [{ date: "2026-02-30" }, { latitude: null }, { longitude: 181 }, { location: " " }]) {
+  for (const changes of [{ date: "2026-02-30" }, { date: new Date("invalid") }, { latitude: null }, { longitude: 181 }, { location: " " }]) {
     control.props.value = { date: "2026-10-24", location: "Camp", latitude: -37, longitude: 146, ...changes };
     assert.notEqual(control.isValid(), true);
   }
