@@ -62,14 +62,13 @@
     const temperatures = element("p", "ride-weather-temperatures",
       `${metric(forecast.temperatureMaxC, "\u00b0C")} / ${metric(forecast.temperatureMinC, "\u00b0C")}`);
     temperatures.setAttribute("aria-label", `Maximum ${metric(forecast.temperatureMaxC, " degrees Celsius")}, minimum ${metric(forecast.temperatureMinC, " degrees Celsius")}`);
-    summary.append(icon, temperatures);
+    summary.append(icon, temperatures, element("p", "ride-weather-condition", forecast.conditionLabel || "Condition unavailable"));
     const metrics = element("dl", "ride-weather-metrics");
     for (const [label, value] of [
       ["Rain", `${metric(forecast.precipitationProbability, "%")} \u00b7 ${metric(forecast.precipitationMm, " mm", 1)}`],
       ["Wind", metric(forecast.windMaxKmh, " km/h")],
-      ["Gusts", metric(forecast.gustMaxKmh, " km/h")],
     ]) metrics.append(element("dt", "", label), element("dd", "", value));
-    card.body.replaceChildren(summary, element("p", "ride-weather-condition", forecast.conditionLabel || "Condition unavailable"), metrics);
+    card.body.replaceChildren(summary, metrics);
   }
 
   async function load() {
@@ -84,14 +83,16 @@
 
     const cards = points.map(point => {
       const article = element("article", "ride-weather-card");
-      const header = element("div", "ride-weather-date-row");
+      const header = element("div", "ride-weather-header");
+      const dateRow = element("div", "ride-weather-date-row");
       const date = element("time", "ride-weather-date", dateFormatter.format(new Date(`${point.date}T00:00:00Z`)));
       date.dateTime = point.date;
-      header.append(date);
-      if (point.date === today) header.append(element("span", "ride-weather-today", "TODAY"));
+      dateRow.append(date);
+      if (point.date === today) dateRow.append(element("span", "ride-weather-today", "TODAY"));
+      header.append(element("h4", "ride-weather-location", point.location), dateRow);
       const body = element("div", "ride-weather-body");
       showState(body, "Loading forecast\u2026");
-      article.append(header, element("h4", "ride-weather-location", point.location));
+      article.append(header);
       if (typeof point.region === "string" && point.region) article.append(element("p", "ride-weather-region", point.region));
       article.append(body);
       grid.append(article);

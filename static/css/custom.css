@@ -312,11 +312,12 @@ body { padding-top: 70px; }
 .ride-weather-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 16px;
 }
 .ride-weather-card {
   min-width: 0;
-  padding: 18px;
+  padding: 14px;
   border: 1px solid var(--bb-primary-light);
   border-radius: 6px;
   background: #f7fafc;
@@ -324,8 +325,9 @@ body { padding-top: 70px; }
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
-.ride-weather-date-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.ride-weather-date { color: var(--bb-primary); font-size: 1.3rem; text-transform: uppercase; }
+.ride-weather-header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 10px; }
+.ride-weather-date-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-left: auto; max-width: 100%; }
+.ride-weather-date { color: var(--bb-primary); font-size: 1.1rem; text-transform: uppercase; }
 .ride-weather-today {
   color: var(--bb-dark);
   border-bottom: 3px solid var(--bb-accent-orange);
@@ -334,21 +336,21 @@ body { padding-top: 70px; }
 }
 .ride-weather .ride-weather-location {
   color: var(--bb-primary);
-  margin: 10px 0 2px;
+  margin: 0;
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 0;
 }
-.ride-weather .ride-weather-region { margin: 0 0 8px; font-size: 1.3rem; }
-.ride-weather-body { min-height: 190px; display: flex; flex-direction: column; justify-content: center; }
-.ride-weather-summary { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-.ride-weather-icon { font-size: 3.2rem; line-height: 1.2; }
-.ride-weather .ride-weather-temperatures { font-size: 2.2rem; font-weight: 700; color: var(--bb-primary); margin: 10px 0; }
-.ride-weather .ride-weather-condition { text-align: center; margin: 0 0 16px; }
-.ride-weather-metrics { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 5px 12px; margin: 0; }
+.ride-weather .ride-weather-region { margin: 4px 0 0; font-size: 1.3rem; }
+.ride-weather-body { margin-top: 8px; }
+.ride-weather-summary { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.ride-weather-icon { font-size: 2.8rem; line-height: 1.2; }
+.ride-weather .ride-weather-temperatures { font-size: 2rem; font-weight: 700; color: var(--bb-primary); margin: 0; }
+.ride-weather .ride-weather-condition { margin: 0; font-size: 1.3rem; }
+.ride-weather-metrics { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 12px; margin: 0; }
 .ride-weather-metrics dt { color: var(--bb-primary); }
 .ride-weather-metrics dd { margin: 0; text-align: right; }
-.ride-weather .ride-weather-message { margin: 12px 0; text-align: center; font-weight: 700; }
+.ride-weather .ride-weather-message { margin: 8px 0; text-align: center; font-weight: 700; }
 .ride-weather .ride-weather-detail { margin: 0; text-align: center; font-size: 1.3rem; }
 .ride-weather .ride-weather-attribution { margin: 8px 0 0; font-size: 1.2rem; }
 .ride-weather-attribution a { color: var(--bb-primary); }

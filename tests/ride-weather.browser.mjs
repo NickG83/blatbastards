@@ -62,14 +62,20 @@ try {
     await page.goto(rideURL, { waitUntil: "domcontentloaded" });
     await page.getByText("Loading forecast…", { exact: true }).first().waitFor();
     assert.equal(await page.locator(".ride-weather-card").count(), 4);
-    const before = await page.locator(".ride-weather").boundingBox();
+    const loadingHeight = (await page.locator(".ride-weather-card").first().boundingBox()).height;
     release();
     await page.locator('.ride-weather-grid[aria-busy="false"]').waitFor();
     assert.equal(count, 1);
     assert.equal(await page.locator(".ride-weather-today").count(), 1);
+    assert.equal(await page.locator(".ride-weather-today").isVisible(), true);
     assert.equal(await page.getByText("24°C / 10°C", { exact: true }).count(), 4);
     const after = await page.locator(".ride-weather").boundingBox();
-    assert.ok(Math.abs(before.height - after.height) <= 2, "Loading reserves forecast height");
+    assert.equal(await page.locator(".ride-weather-metrics").getByText("Gusts", { exact: true }).count(), 0);
+    assert.deepEqual(await page.locator(".ride-weather-card").first().locator("dt").allTextContents(), ["Rain", "Wind"]);
+    assert.equal(await page.locator('.ride-weather-header > .ride-weather-location').count(), 4);
+    assert.equal(await page.locator('.ride-weather-header > .ride-weather-date-row > time[datetime]').count(), 4);
+    assert.equal(await page.locator('.ride-weather-temperatures[aria-label="Maximum 24 degrees Celsius, minimum 10 degrees Celsius"]').count(), 4);
+    assert.equal(await page.locator(".ride-weather-summary > .ride-weather-condition").count(), 4);
     const facts = await page.locator(".ride-detail-meta").boundingBox();
     const hero = await page.locator('img[src="/uploads/bnbride_hero.jpg"]').boundingBox();
     assert.ok(facts.y < after.y && after.y < hero.y);
@@ -77,6 +83,17 @@ try {
     const first = await cards[0].boundingBox();
     const second = await cards[1].boundingBox();
     assert.equal(first.y, second.y);
+    assert.ok(first.x < second.x);
+    assert.ok(first.height < 220, "Forecast card is compact");
+    assert.ok(loadingHeight < first.height, "Loading sizes naturally without a reserved forecast body");
+    for (const card of cards) {
+      const location = await card.locator(".ride-weather-location").boundingBox();
+      const date = await card.locator(".ride-weather-date").boundingBox();
+      assert.ok(location.x < date.x, "Location is left of date");
+      assert.ok(Math.max(location.y, date.y) < Math.min(location.y + location.height, date.y + date.height), "Location and date share a desktop row");
+      assert.equal(await card.locator(".ride-weather-body").evaluate(body => getComputedStyle(body).minHeight), "0px");
+    }
+    console.log(`Card height: loading ${loadingHeight}px, forecast ${first.height}px`);
     await page.locator(".ride-weather").screenshot({ path: "/tmp/bbb-weather-desktop.png" });
     assert.equal(await page.locator('img[src="/uploads/bnbride_hero.jpg"]').evaluate(image => image.complete && image.naturalWidth > 0), true);
     await page.setViewportSize({ width: 390, height: 844 });
@@ -84,6 +101,12 @@ try {
     const overflow = await page.locator(".ride-weather").evaluate(section => section.scrollWidth > section.clientWidth);
     assert.equal(overflow, false);
     await page.locator(".ride-weather").screenshot({ path: "/tmp/bbb-weather-mobile.png" });
+    await page.setViewportSize({ width: 320, height: 740 });
+    assert.ok((await cards[1].boundingBox()).y > (await cards[0].boundingBox()).y);
+    assert.equal(await page.locator(".ride-weather-today").isVisible(), true);
+    assert.equal(await page.locator(".ride-weather").evaluate(section => section.scrollWidth > section.clientWidth), false);
+    assert.equal(await cards[0].evaluate(card => card.scrollWidth > card.clientWidth), false);
+    await page.locator(".ride-weather").screenshot({ path: "/tmp/bbb-weather-narrow.png" });
   });
 
   await scenario("past point disappears; today and later points use one request", async page => {
@@ -135,7 +158,7 @@ try {
 
   await scenario("partial response keeps good forecasts and missing metrics are not zero", async page => {
     await mockWeather(page, forecasts => [
-      { ...forecasts[0], gustMaxKmh: null }, { ...forecasts[1], status: "unavailable" }, forecasts[2], forecasts[3],
+      { ...forecasts[0], windMaxKmh: null }, { ...forecasts[1], status: "unavailable" }, forecasts[2], forecasts[3],
     ]);
     await ready(page);
     assert.equal(await page.getByText("24°C / 10°C", { exact: true }).count(), 3);
