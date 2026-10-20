@@ -306,6 +306,57 @@ body { padding-top: 70px; }
   margin: 18px 0 10px;
 }
 
+.ride-weather { margin-bottom: 25px; color: var(--bb-body-text); }
+.ride-weather[hidden] { display: none; }
+.ride-weather h3 { color: var(--bb-primary); }
+.ride-weather-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+}
+.ride-weather-card {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--bb-primary-light);
+  border-radius: 6px;
+  background: #f7fafc;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.ride-weather-header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 10px; }
+.ride-weather-date-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-left: auto; max-width: 100%; }
+.ride-weather-date { color: var(--bb-primary); font-size: 1.1rem; text-transform: uppercase; }
+.ride-weather-today {
+  color: var(--bb-dark);
+  border-bottom: 3px solid var(--bb-accent-orange);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.ride-weather .ride-weather-location {
+  color: var(--bb-primary);
+  margin: 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+.ride-weather .ride-weather-region { margin: 4px 0 0; font-size: 1.3rem; }
+.ride-weather-body { margin-top: 8px; }
+.ride-weather-summary { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.ride-weather-icon { font-size: 2.8rem; line-height: 1.2; }
+.ride-weather .ride-weather-temperatures { font-size: 2rem; font-weight: 700; color: var(--bb-primary); margin: 0; }
+.ride-weather .ride-weather-condition { margin: 0; font-size: 1.3rem; }
+.ride-weather-metrics { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; margin: 0; }
+.ride-weather-metric { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 6px; min-width: 0; max-width: 100%; }
+.ride-weather-metric:last-child { margin-left: auto; }
+.ride-weather-metrics dt { color: var(--bb-primary); font-weight: 700; }
+.ride-weather-metrics dd { margin: 0; font-weight: 400; }
+.ride-weather .ride-weather-message { margin: 8px 0; text-align: center; font-weight: 700; }
+.ride-weather .ride-weather-detail { margin: 0; text-align: center; font-size: 1.3rem; }
+.ride-weather .ride-weather-attribution { margin: 8px 0 0; font-size: 1.2rem; }
+.ride-weather-attribution a { color: var(--bb-primary); }
+
 
 /* =========================================================
    LOGISTICS PAGE ONLY
@@ -363,6 +414,7 @@ body { padding-top: 70px; }
 
   /* RIDE DETAIL PAGES ONLY */
   .bb-hw-grid { grid-template-columns: 1fr; }
+  .ride-weather-grid { grid-template-columns: 1fr; }
 
   /* LOGISTICS PAGE ONLY */
   .logistics-row { flex-direction: column; }

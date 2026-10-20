@@ -104,6 +104,21 @@ collections:
         widget: "string"
         hint: "e.g. Brindabellas, Wee Jasper, Crookwell loop"
 
+      - label: "Weather Forecast Locations"
+        name: "weather"
+        widget: "list"
+        required: false
+        default: []
+        min: 0
+        max: 10
+        label_singular: "Weather Forecast Location"
+        summary: "{{fields.point.date}} — {{fields.point.location}}"
+        hint: "Add the key location for each riding day where a forecast is useful, typically an overnight destination or primary riding area. Dates use the Australia/Sydney trip clock."
+        field:
+          label: "Forecast Point"
+          name: "point"
+          widget: "weather-point"
+
       - label: "Distance (km)"
         name: "distance"
         widget: "number"

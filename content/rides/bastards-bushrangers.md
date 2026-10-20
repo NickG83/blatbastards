@@ -8,6 +8,27 @@ duration: Longer
 surface: Mixed
 meeting_point: Uriarra / Brindabella Road
 departure_time: "0830"
+weather:
+  - date: 2026-10-23
+    location: Mulwala
+    region: New South Wales
+    latitude: -35.98536
+    longitude: 146.00534
+  - date: 2026-10-24
+    location: Mansfield
+    region: Victoria
+    latitude: -37.052
+    longitude: 146.08846
+  - date: 2026-10-25
+    location: Beechworth
+    region: Victoria
+    latitude: -36.35828
+    longitude: 146.68584
+  - date: 2026-10-26
+    location: Yass
+    region: New South Wales
+    latitude: -34.84036
+    longitude: 148.90987
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=1sR7NQOTP2baQLrOZ0k8XiSPQwyedlqM&ehbc=2E312F
 hero_image: /uploads/bnbride_hero.jpg
 gallery:

@@ -1,0 +1,9 @@
+{{ with .Params.weather }}
+<section class="ride-weather" aria-labelledby="ride-weather-title" data-weather="{{ . | jsonify }}" hidden>
+  <h3 id="ride-weather-title"><span aria-hidden="true">🌦️</span> Trip Weather</h3>
+  <p class="sr-only ride-weather-status" role="status"></p>
+  <div class="ride-weather-grid" aria-busy="true"></div>
+  <p class="ride-weather-attribution">Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> · Location data: <a href="https://www.geonames.org/" target="_blank" rel="noopener">GeoNames</a> · CC BY 4.0</p>
+</section>
+<script src="{{ "js/ride-weather.js" | relURL }}" defer></script>
+{{ end }}
