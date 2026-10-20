@@ -109,9 +109,9 @@ Past points are removed in the browser before requesting weather. All-past Rides
 hide the whole section. The section is hidden by default, so disabled or failed
 JavaScript leaves existing Ride features intact. Invalid individual coordinates
 show an unavailable card without preventing the valid points' single API request.
-Invalid/missing dates or names are skipped. Loading reserves space for daily
-forecast content. Desktop uses two columns; the existing 768px breakpoint stacks
-them. Attribution remains visible whenever the section is displayed:
+Invalid/missing dates or names are skipped. Loading states size naturally with the
+card content. Desktop uses two columns; the existing 768px breakpoint stacks them.
+Attribution remains visible whenever the section is displayed:
 "Weather data: Open-Meteo · Location data: GeoNames · CC BY 4.0".
 Open-Meteo links to https://open-meteo.com/; GeoNames links to
 https://www.geonames.org/ and credits the location data underlying Open-Meteo
@@ -146,7 +146,8 @@ reasons never enter response headers/JSON. Inspect the coarse header with
 `curl -i`; Pages Function logs supply only the sanitised reason when present.
 The deployed `upstream-network` failure was caused by `redirect: "error"`, which
 Workers rejects with a `TypeError` before sending a request. The subrequest now
-uses `redirect: "manual"`; deployed recovery still requires a preview smoke test.
+uses `redirect: "manual"`; a subsequent Pages preview smoke test confirmed live
+Open-Meteo retrieval with `X-BBB-Weather-Diagnostic: ok`.
 No egress workaround or manual `CF-Worker` header is used.
 
 ## Validation and preview
@@ -185,21 +186,24 @@ single weather response, fix the clock, and replace the Decap backend in-browser
 with its in-memory test backend. They do not modify GitHub content or auth code.
 Screenshots are written to `/tmp/bbb-weather-{desktop,mobile,cms}.png`.
 
-Implementation validation: 30 Node tests and 12 focused Chromium scenarios passed;
+Implementation validation: 38 Node tests and 12 focused Chromium scenarios passed;
 Hugo v0.154.5+extended built 34 pages. Browser coverage includes card placement,
-loading height, assets, responsive layout, today/past/all-past states, outside
-horizon, one request, HTTP/network/malformed/partial failure, invalid points,
-safe names, no-weather Ride, disabled JavaScript, and actual Decap search/select/
-manual override/pre-save serialization. Live Open-Meteo four-coordinate data was
-also passed through the normalizer without saving forecast data to the repository.
+compact responsive layout, today/past/all-past states, outside horizon, one request,
+HTTP/network/malformed/partial failure, invalid points, safe names, no-weather Ride,
+disabled JavaScript, and actual Decap search/select/manual override/pre-save
+serialization. Live Open-Meteo four-coordinate data was also passed through the
+normalizer without saving forecast data to the repository.
 
-The NUC's local workerd upstream connection timed out during the live endpoint
-check and correctly returned unavailable; curl could fetch live provider data.
-Production edge connectivity/cache reuse still needs a Pages preview smoke test.
-The local Cache API contract is unit-tested; it does not prove production hit rate.
-Real workerd smoke checks returned 200 plus the expected 1800-second cache header
-for an outside-horizon point, 405 for POST and 400 for invalid coordinates.
-No production deployment, authenticated GitHub CMS save, or full auth flow was run.
+The NUC's local workerd upstream connection timed out during the initial live
+endpoint check and correctly returned unavailable; direct curl could fetch provider
+data. A subsequent Cloudflare Pages preview successfully retrieved and rendered
+live Open-Meteo forecasts. The deployed endpoint returned
+`X-BBB-Weather-Diagnostic: ok` and `Cache-Control: public, max-age=1800`.
+Repeated identical requests through the same SYD Cloudflare PoP returned the same
+`generatedAt` value, confirming real cache reuse. The matching Pages preview build
+and deployment completed successfully with Functions enabled. No production merge,
+authenticated GitHub CMS save, or full auth flow was run before this documentation
+update.
 
 The public free Open-Meteo service is for non-commercial use with published rate
 limits (including 10,000 calls/day). Confirm current provider terms before any
