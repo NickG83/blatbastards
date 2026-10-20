@@ -21,8 +21,9 @@ async function request(points = [point()], options = {}) {
 
 test("single point: normalises daily values and requests only metric daily best-match data", async context => {
   const warning = context.mock.method(console, "warn", () => {});
-  const fetchMock = context.mock.method(globalThis, "fetch", async url => {
+  const fetchMock = context.mock.method(globalThis, "fetch", async (url, options) => {
     assert.equal(url.origin, "https://api.open-meteo.com");
+    assert.equal(options.redirect, "manual");
     assert.equal(url.searchParams.get("forecast_days"), "16");
     assert.equal(url.searchParams.get("timezone"), "Australia/Sydney");
     assert.equal(url.searchParams.get("wind_speed_unit"), "kmh");
@@ -101,6 +102,9 @@ test("today and last supported day are forecastable", async context => {
 });
 
 for (const [label, upstream, diagnostic, upstreamStatus] of [
+  ["HTTP 301 redirect is not followed", () => Response.redirect("https://unexpected.example/", 301), "upstream-http-301", 301],
+  ["HTTP 302 redirect is not followed", () => Response.redirect("https://unexpected.example/", 302), "upstream-http-302", 302],
+  ["HTTP 307 redirect is not followed", () => Response.redirect("https://unexpected.example/", 307), "upstream-http-307", 307],
   ["HTTP failure", () => new Response("Failed", { status: 503 }), "upstream-http-503", 503],
   ["HTTP rate limit", () => Response.json({ error: true, reason: "Rate limit exceeded" }, { status: 429 }), "upstream-http-429", 429],
   ["HTTP forbidden", () => new Response("Provider denied this request", { status: 403 }), "upstream-http-403", 403],
@@ -110,9 +114,14 @@ for (const [label, upstream, diagnostic, upstreamStatus] of [
   ["network/abort failure", () => { throw new DOMException("Aborted", "AbortError"); }, "upstream-timeout"],
   ["network failure", () => { throw new Error("Internal connection details"); }, "upstream-network"],
 ]) test(label, async context => {
-  context.mock.method(globalThis, "fetch", async () => upstream());
+  const fetchMock = context.mock.method(globalThis, "fetch", async (url, options) => {
+    assert.equal(url.origin, "https://api.open-meteo.com");
+    assert.equal(options.redirect, "manual");
+    return upstream();
+  });
   const warning = context.mock.method(console, "warn", () => {});
   const { response, body } = await request();
+  assert.equal(fetchMock.mock.callCount(), 1);
   assert.equal(response.status, 200);
   assert.equal(body.forecasts[0].status, "unavailable");
   assert.equal(response.headers.get("Cache-Control"), "no-store");

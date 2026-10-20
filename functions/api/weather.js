@@ -87,7 +87,7 @@ async function fetchForecasts(points) {
   let upstreamStatus;
   let reason;
   try {
-    const response = await fetch(url, { signal: controller.signal, redirect: "error" });
+    const response = await fetch(url, { signal: controller.signal, redirect: "manual" });
     upstreamStatus = response.status;
     if (!response.ok) diagnostic = `upstream-http-${response.status}`;
     if (!response.body) {

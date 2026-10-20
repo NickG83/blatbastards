@@ -124,8 +124,9 @@ Cache API is data-center-local, best-effort and may evict entries. Cache failure
 do not suppress forecasts. Responses containing an unavailable point are not
 cached, allowing a later load to retry immediately.
 
-Upstream URLs/fields are constructed internally, redirects refused, the response
-body limited to 128 KiB and the request aborted after 8 seconds. Browser requests
+Upstream URLs/fields are constructed internally. Open-Meteo redirects are handled
+manually and are not followed; 3xx responses use `upstream-http-<status>`.
+The response body is limited to 128 KiB and the request aborted after 8 seconds. Browser requests
 abort after 12 seconds. HTTP/network/timeout/JSON failures show "Forecast
 temporarily unavailable." No automatic retries, per-card calls or visitor
 geocoding occur. No safety classifications or recommendations are made.
@@ -143,9 +144,10 @@ characters with URLs/numbers redacted. No stack traces, headers, coordinates or
 internal exception messages are logged or returned. Raw provider bodies and
 reasons never enter response headers/JSON. Inspect the coarse header with
 `curl -i`; Pages Function logs supply only the sanitised reason when present.
-The deployed Open-Meteo failure remains undiagnosed until a preview containing
-these diagnostics is deployed and tested. No egress workaround or manual
-`CF-Worker` header is used.
+The deployed `upstream-network` failure was caused by `redirect: "error"`, which
+Workers rejects with a `TypeError` before sending a request. The subrequest now
+uses `redirect: "manual"`; deployed recovery still requires a preview smoke test.
+No egress workaround or manual `CF-Worker` header is used.
 
 ## Validation and preview
 
