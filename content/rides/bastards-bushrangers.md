@@ -3,7 +3,17 @@ title: "Such Is Life: Bastards & Bushrangers"
 date: 2026-07-13
 rideDate: 2026-10-23
 region: Kelly Country
-weather: []
+weather:
+  - date: 2026-10-23
+    location: Canberra
+    region: Australian Capital Territory
+    latitude: -35.28346
+    longitude: 149.12807
+  - date: 2026-10-23
+    location: Yarrawonga
+    region: Victoria
+    latitude: -36.01923
+    longitude: 145.99973
 distance: 1250
 duration: Longer
 surface: Mixed
