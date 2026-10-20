@@ -59,15 +59,15 @@ Meetup in the morning will be at the intersection of Brindabella Road & Uriarra 
 Aim is to have everyone meet up in Corowa at the Distilling Co; potentially throw a sample or two into the panniers, then cruise down to Yarrawonga for the night.\
 Once everyone is checked in, we’ll head out for dinner by the lake at Blacksmith Provedore. \
 \
-**Overnight stop:** Mulwala
+**Overnight stop:** Yarrawonga
 
 ### Saturday
 
-**Yarrawonga** **→ Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield → Oxley | (Approx. 250 km)**
+**Yarrawonga** **→ Rutherglen → Chiltern → Eldorado → Woolshed Falls → Beechworth → Milawa → Oxley → Whitfield → Mansfield | (Approx. 250 km)**
 
 Saturday is intentionally lighter on kilometres, allowing enough time to explore the goldfields and Kelly Country stops without turning the day into a rushed sequence of "quick; take a photo, fill the bike (or your face) and onto the next".\
 \
-We’ll leave Mulwala after breakfast and make the short run through to Rutherglen; where we can take a happy snap in front of the oversized Rutherglen Wine Bottle.\
+We’ll leave Yarrawonga after breakfast and make the short run through to Rutherglen; where we can take a happy snap in front of the oversized Rutherglen Wine Bottle.\
 \
 From Rutherglen we’ll continue through to Chiltern, stopping for coffee and to check out the the old goldrush-era town. The route then turns toward Eldorado, where we’ll visit the massive Eldorado Dredge.\
 We’ll then continue through the valley to Woolshed Falls. This area combines gold-rush history with some of the region’s best scenery and provides a good chance to stretch the legs and check out the falls before continuing on to Beechworth.\
