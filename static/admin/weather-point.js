@@ -1,6 +1,17 @@
 (() => {
   "use strict";
   const { h, createClass, CMS } = window;
+
+  function normaliseDate(value) {
+    if (typeof value === "string") return value;
+    if (value && typeof value.toISOString === "function") {
+      try {
+        return value.toISOString().slice(0, 10);
+      } catch {}
+    }
+    return value;
+  }
+
   const WeatherPoint = createClass({
     getInitialState() {
       return { query: "", results: [], message: "", searching: false };
@@ -13,7 +24,9 @@
 
     point() {
       const value = this.props.value;
-      return value?.toJS ? value.toJS() : value || {};
+      const point = value?.toJS ? value.toJS() : value || {};
+      const date = normaliseDate(point.date);
+      return date === point.date ? point : { ...point, date };
     },
 
     update(field, value) {
