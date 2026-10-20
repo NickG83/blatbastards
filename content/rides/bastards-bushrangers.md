@@ -5,6 +5,11 @@ rideDate: 2026-10-23
 region: Kelly Country
 weather:
   - date: 2026-10-23
+    location: Canberra
+    region: Australian Capital Territory
+    latitude: -35.28346
+    longitude: 149.12807
+  - date: 2026-10-23
     location: Yarrawonga
     region: Victoria
     latitude: -36.01923
@@ -29,6 +34,7 @@ duration: Longer
 surface: Mixed
 meeting_point: Uriarra / Brindabella Road
 departure_time: "0830"
+route_file: https://files.blatbastards.com/GPX/Bastards_n_Bushrangers.gpx
 map_embed: https://www.google.com/maps/d/u/1/embed?mid=1sR7NQOTP2baQLrOZ0k8XiSPQwyedlqM&ehbc=2E312F
 hero_image: /uploads/bnbride_hero.jpg
 gallery:
@@ -54,7 +60,7 @@ attendees:
 **Canberra → Tumut → Jingellic → Albury → Corowa → Yarrawonga | (Approx. 420 km)**
 
 Friday is primarily the convergence day, with riders making their way in from Canberra and Melbourne before converging on the Murray River.\
-Meetup in the morning will be at the intersection of Brindabella Road & Uriarra Road, with stands up by 0830. We'll heade into the Brindabellas to Tumut for brunch at the usual Coffee Pedaler. Then on to Tumbarumba, Jingellic and Albury.\
+Meetup in the morning will be at the intersection of Brindabella Road & Uriarra Road, with stands up by 0830. We'll head into the Brindabellas to Tumut for brunch at the usual Coffee Pedaler. Then on to Tumbarumba, Jingellic and Albury.\
 \
 Aim is to have everyone meet up in Corowa at the Distilling Co; potentially throw a sample or two into the panniers, then cruise down to Yarrawonga for the night.\
 Once everyone is checked in, we’ll head out for dinner by the lake at Blacksmith Provedore. \
@@ -110,7 +116,7 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 
 ## ⛽ Fuel stops
 
-* Friday - Tumut, Albury, Mulwala
+* Friday - Tumut, Albury, Yarrawonga
 * Saturday - Beechworth & Mansfield
 * Sunday - Beechworth
 * Monday - Adaminaby
@@ -127,7 +133,6 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 * [Mansfield Coffee Merchant](https://www.mansfieldcoffeemerchant.com.au/) - Sunday Breakfast
 * Glenrowan Hotel - Sunday Lunch
 * [Tanswell’s Hotel, Beechworth](https://www.tanswellshotel.com.au/) — Sunday dinner
-* ? — Monday breakfast
 
 ## 📸 Potential photo-stop locations
 
@@ -153,4 +158,4 @@ With the Elliot Way done and our rear tyres begging for mercy, we'll turn right 
 
 ### Beechworth
 
-* TBA (Crack head hotel manager again?)
+* [Carriage Motor Inn](https://beechworthcarriagemotorinn.com.au/)
