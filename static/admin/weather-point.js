@@ -38,10 +38,11 @@
       const parsed = new Date(`${point.date}T00:00:00Z`);
       if (typeof point.date !== "string" || !/^[1-9]\d{3}-\d{2}-\d{2}$/.test(point.date) ||
           !Number.isFinite(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== point.date ||
+          !["morning", "noon", "afternoon"].includes(point.period) ||
           typeof point.location !== "string" || !point.location.trim() ||
           typeof point.latitude !== "number" || !Number.isFinite(point.latitude) || Math.abs(point.latitude) > 90 ||
           typeof point.longitude !== "number" || !Number.isFinite(point.longitude) || Math.abs(point.longitude) > 180) {
-        return { error: { message: "Enter a valid date, location, latitude (-90 to 90) and longitude (-180 to 180). Place search is optional." } };
+        return { error: { message: "Enter a valid date, period, location, latitude (-90 to 90) and longitude (-180 to 180). Place search is optional." } };
       }
       return true;
     },
@@ -102,6 +103,13 @@
         }));
       return h("div", { className: this.props.classNameWrapper },
         field("date", "Date", "date", { required: true }),
+        h("label", { htmlFor: `${prefix}-period`, style: { display: "block" } }, "Period"),
+        h("select", { id: `${prefix}-period`, value: point.period ?? "", required: true, style: inputStyle,
+          onChange: event => this.update("period", event.target.value) },
+          h("option", { value: "" }, "Select a period"),
+          h("option", { value: "morning" }, "Morning"),
+          h("option", { value: "noon" }, "Noon"),
+          h("option", { value: "afternoon" }, "Afternoon")),
         h("label", { htmlFor: prefix, style: { display: "block" } }, "Search Australian places",
           h("input", {
             id: prefix, type: "search", value: this.state.query, maxLength: 100, style: inputStyle,
@@ -132,4 +140,47 @@
     },
   });
   CMS.registerWidget("weather-point", WeatherPoint);
+
+  // Decap's single-field list unwraps Immutable Maps by the field name (`point`).
+  // Our Markdown deliberately stores flat points. Adapt only this list's values
+  // to plain objects so newly created and YAML-loaded entries take the same path.
+  const list = CMS.getWidget("list");
+  const WeatherPoints = createClass({
+    // Decap documents isValid() as the custom-widget validation hook:
+    // https://decapcms.org/docs/custom-widgets/#advanced-field-validation
+    isValid() {
+      const value = this.props.value;
+      const points = value?.toJS ? value.toJS() : value;
+      const seen = new Set();
+      for (const value of Array.isArray(points) ? points : []) {
+        const point = value?.toJS ? value.toJS() : value;
+        const date = normaliseDate(point?.date);
+        // Individual controls report missing/invalid dates and periods.
+        if (typeof date !== "string" || !["morning", "noon", "afternoon"].includes(point?.period)) continue;
+        const key = `${date}:${point.period}`;
+        if (seen.has(key)) return { error: { message:
+          `Duplicate weather period: ${date} ${point.period}. Choose each Morning, Noon or Afternoon only once per date.` } };
+        seen.add(key);
+      }
+      // Preserve the native list's size validation when validating this wrapper.
+      const sizeError = this.control?.validateSize?.()[0];
+      return sizeError ? { error: sizeError } : true;
+    },
+    validate() {
+      this.control?.validate();
+      // Native list validation visits children; also run this list's isValid().
+      this.props.validate();
+    },
+    focus(path) { this.control?.focus(path); },
+    render() {
+      const value = this.props.value;
+      return h(list.control, {
+        ...this.props,
+        value: value?.map ? value.map(point => point?.toJS ? point.toJS() : point) : value,
+        ref: control => { this.control = control; },
+      });
+    },
+  });
+  CMS.registerWidget({ name: "weather-points", controlComponent: WeatherPoints,
+    previewComponent: list.preview, schema: list.schema });
 })();
