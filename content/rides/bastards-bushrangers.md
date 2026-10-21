@@ -11,6 +11,12 @@ weather:
     latitude: -35.28346
     longitude: 149.12807
   - date: 2026-10-23
+    period: noon
+    location: Albury
+    region: New South Wales
+    latitude: -36.07482
+    longitude: 146.92401
+  - date: 2026-10-23
     period: afternoon
     location: Yarrawonga
     region: Victoria
@@ -22,6 +28,12 @@ weather:
     region: Victoria
     latitude: -36.01923
     longitude: 145.99973
+  - date: 2026-10-24
+    period: noon
+    location: Beechworth
+    region: Victoria
+    latitude: -36.35828
+    longitude: 146.68584
   - date: 2026-10-24
     period: afternoon
     location: Mansfield
@@ -34,6 +46,12 @@ weather:
     region: Victoria
     latitude: -37.052
     longitude: 146.08846
+  - date: 2026-10-25
+    period: noon
+    location: Glenrowan
+    region: Victoria
+    latitude: -36.46348
+    longitude: 146.22449
   - date: 2026-10-25
     period: afternoon
     location: Beechworth
@@ -46,6 +64,12 @@ weather:
     region: Victoria
     latitude: -36.35828
     longitude: 146.68584
+  - date: 2026-10-26
+    period: noon
+    location: Adaminaby
+    region: New South Wales
+    latitude: -35.99651
+    longitude: 148.77242
   - date: 2026-10-26
     period: afternoon
     location: Canberra
