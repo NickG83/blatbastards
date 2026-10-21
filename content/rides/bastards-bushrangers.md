@@ -40,6 +40,42 @@ weather:
     region: Victoria
     latitude: -37.052
     longitude: 146.08846
+  - date: 2026-10-25
+    period: morning
+    location: Mansfield
+    region: Victoria
+    latitude: -37.052
+    longitude: 146.08846
+  - date: 2026-10-25
+    period: noon
+    location: Glenrowan
+    region: Victoria
+    latitude: -36.46348
+    longitude: 146.22449
+  - date: 2026-10-25
+    period: afternoon
+    location: Beechworth
+    region: Victoria
+    latitude: -36.35828
+    longitude: 146.68584
+  - date: 2026-10-26
+    period: morning
+    location: Beechworth
+    region: Victoria
+    latitude: -36.35828
+    longitude: 146.68584
+  - date: 2026-10-26
+    period: noon
+    location: Adaminaby
+    region: New South Wales
+    latitude: -35.99651
+    longitude: 148.77242
+  - date: 2026-10-26
+    period: afternoon
+    location: Canberra
+    region: Australian Capital Territory
+    latitude: -35.28346
+    longitude: 149.12807
 distance: 1250
 duration: Longer
 surface: Mixed
