@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || "playwright");
@@ -8,12 +9,13 @@ const rideURL = `${baseURL}/rides/bastards-bushrangers/`;
 let passed = 0;
 
 function forecast(point, index) {
-  return { id: String(index), date: point.date, status: "forecast", condition: "partly-cloudy",
+  return { id: String(index), date: point.date, period: point.period, status: "forecast", localTimeZone: "Australia/Sydney", condition: "partly-cloudy",
     conditionLabel: "Partly cloudy", temperatureMaxC: 24, temperatureMinC: 10,
-    precipitationProbability: 15, precipitationMm: 0.4, windMaxKmh: 18, gustMaxKmh: 31 };
+    precipitationProbability: 15, precipitationMm: 0.4, windMaxKmh: 18, gustMaxKmh: 31, hazards: [] };
 }
 
 async function scenario(name, run) {
+  if (process.env.WEATHER_TEST_SCENARIO && !name.includes(process.env.WEATHER_TEST_SCENARIO)) return;
   const context = await browser.newContext();
   const page = await context.newPage();
   const errors = [];
@@ -21,7 +23,7 @@ async function scenario(name, run) {
   await page.clock.setFixedTime(new Date("2026-10-23T00:00:00Z"));
   await page.route(/maps\.google|www\.google\.com\/maps/, route => route.abort());
   try {
-    await run(page, context);
+    await run(page, context, errors);
     assert.deepEqual(errors, [], "No uncaught page errors");
     console.log(`PASS ${name}`);
     passed++;
@@ -46,8 +48,18 @@ async function ready(page) {
   await page.locator('.ride-weather-grid[aria-busy="false"]').waitFor();
 }
 
+async function replacePoints(page, points) {
+  await page.route(rideURL, async route => {
+    const response = await route.fetch();
+    const html = await response.text();
+    const value = JSON.stringify(points.map(point => ({ latitude: -35, longitude: 149, ...point })))
+      .replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+    await route.fulfill({ response, body: html.replace(/data-weather="[^"]*"/, () => `data-weather="${value}"`) });
+  });
+}
+
 try {
-  await scenario("four cards, placement, loading, one request, desktop/mobile and assets", async page => {
+  await scenario("four date cards with AM/PM, one request, accessible conditions and compact responsive layout", async page => {
     await page.setViewportSize({ width: 1440, height: 1100 });
     let release;
     const gate = new Promise(resolve => { release = resolve; });
@@ -55,7 +67,8 @@ try {
     await page.route("**/api/weather?*", async route => {
       count++;
       const points = JSON.parse(new URL(route.request().url()).searchParams.get("points"));
-      assert.equal(points.length, 4);
+      assert.equal(points.length, 8);
+      for (const point of points) assert.deepEqual(Object.keys(point).sort(), ["date", "latitude", "longitude", "period"]);
       await gate;
       await route.fulfill({ json: { forecasts: points.map(forecast) } });
     });
@@ -68,71 +81,92 @@ try {
     assert.equal(count, 1);
     assert.equal(await page.locator(".ride-weather-today").count(), 1);
     assert.equal(await page.locator(".ride-weather-today").isVisible(), true);
-    assert.equal(await page.getByText("24°C / 10°C", { exact: true }).count(), 4);
-    const after = await page.locator(".ride-weather").boundingBox();
-    assert.equal(await page.locator(".ride-weather-metrics").getByText("Gusts", { exact: true }).count(), 0);
-    assert.deepEqual(await page.locator(".ride-weather-card").first().locator("dt").allTextContents(), ["Rain", "Wind"]);
-    assert.equal(await page.locator('.ride-weather-header > .ride-weather-location').count(), 4);
-    assert.equal(await page.locator('.ride-weather-header > .ride-weather-date-row > time[datetime]').count(), 4);
-    assert.equal(await page.locator('.ride-weather-temperatures[aria-label="Maximum 24 degrees Celsius, minimum 10 degrees Celsius"]').count(), 4);
-    assert.equal(await page.locator(".ride-weather-summary > .ride-weather-condition").count(), 4);
+    assert.equal(await page.getByText("24° / 10°", { exact: true }).count(), 8);
+    assert.equal(await page.locator(".ride-weather").getByText("Gusts", { exact: true }).count(), 0);
+    assert.equal(await page.locator(".ride-weather-region").count(), 0);
+    assert.equal(await page.locator("h1.bb-page-title").evaluate(node => getComputedStyle(node).overflowWrap), "anywhere");
+    const section = await page.locator(".ride-weather").boundingBox();
     const facts = await page.locator(".ride-detail-meta").boundingBox();
     const hero = await page.locator('img[src="/uploads/bnbride_hero.jpg"]').boundingBox();
-    assert.ok(facts.y < after.y && after.y < hero.y);
+    assert.ok(facts.y < section.y && section.y < hero.y);
     const cards = await page.locator(".ride-weather-card").all();
     const first = await cards[0].boundingBox();
     const second = await cards[1].boundingBox();
-    assert.equal(first.y, second.y);
-    assert.ok(first.x < second.x);
-    assert.ok(first.height < 160, "Single-row metrics further reduce forecast card height");
-    assert.ok(loadingHeight < first.height, "Loading sizes naturally without a reserved forecast body");
+    assert.ok(Math.abs(first.y - second.y) < 2 && first.x < second.x, "Two desktop columns");
+    assert.ok(first.height <= 165, "Two periods remain close to the old 147px cards");
+    assert.ok(loadingHeight < first.height, "Loading sizes naturally");
     for (const card of cards) {
-      const location = await card.locator(".ride-weather-location").boundingBox();
-      const date = await card.locator(".ride-weather-date").boundingBox();
-      assert.ok(location.x < date.x, "Location is left of date");
-      assert.ok(Math.max(location.y, date.y) < Math.min(location.y + location.height, date.y + date.height), "Location and date share a desktop row");
-      assert.equal(await card.locator(".ride-weather-body").evaluate(body => getComputedStyle(body).minHeight), "0px");
-      const metrics = card.locator("dl.ride-weather-metrics");
-      assert.equal(await metrics.count(), 1);
-      assert.equal(await metrics.isVisible(), true);
-      const groups = metrics.locator(".ride-weather-metric");
-      assert.equal(await groups.count(), 2);
-      assert.equal(await groups.nth(0).locator("dt").textContent(), "Rain");
-      assert.equal(await groups.nth(0).locator("dd").textContent(), "15% · 0.4 mm");
-      assert.equal(await groups.nth(1).locator("dt").textContent(), "Wind");
-      assert.equal(await groups.nth(1).locator("dd").textContent(), "18 km/h");
-      const rain = await groups.nth(0).boundingBox();
-      const wind = await groups.nth(1).boundingBox();
-      const row = await metrics.boundingBox();
-      assert.equal(rain.y, wind.y, "Rain and Wind share one desktop metrics row");
-      assert.equal(row.height, rain.height, "No second visible metrics row");
-      assert.ok(Math.abs(rain.x - row.x) < 1, "Rain aligns left");
-      assert.ok(Math.abs(wind.x + wind.width - row.x - row.width) < 1, "Wind aligns right");
-      assert.equal(await groups.nth(0).locator("dt").evaluate(label => getComputedStyle(label).fontWeight), "700");
-      assert.equal(await groups.nth(0).locator("dd").evaluate(value => getComputedStyle(value).fontWeight), "400");
+      assert.deepEqual(await card.locator(".ride-weather-period-label").allTextContents(), ["AM", "PM"]);
+      assert.equal(await card.locator("time[datetime]").count(), 1);
+      assert.equal(await card.locator(".ride-weather-temperatures[aria-label='Maximum 24 degrees Celsius, minimum 10 degrees Celsius']").count(), 2);
+      assert.deepEqual(await card.locator(".ride-weather-condition").allTextContents(), ["Partly cloudy", "Partly cloudy"]);
+      assert.equal(await card.locator(".ride-weather-icon[aria-hidden='true']").count(), 2);
+      assert.ok(["auto", "0px"].includes(await card.evaluate(node => getComputedStyle(node).minHeight)));
+      assert.equal(await card.locator(".ride-weather-body").evaluate(node => getComputedStyle(node).minHeight), "0px");
+      for (const row of await card.locator(".ride-weather-period").all()) {
+        assert.deepEqual(await row.locator("dt").allTextContents(), ["Rain", "Wind"]);
+        assert.deepEqual(await row.locator("dd").allTextContents(), ["15% · 0.4 mm", "18 km/h"]);
+      }
     }
-    console.log(`Card height: loading ${loadingHeight}px, forecast ${first.height}px`);
+    console.log(`Two-period card: loading ${loadingHeight.toFixed(1)}px, forecast ${first.height.toFixed(1)}px`);
     await page.locator(".ride-weather").screenshot({ path: "/tmp/bbb-weather-desktop.png" });
     assert.equal(await page.locator('img[src="/uploads/bnbride_hero.jpg"]').evaluate(image => image.complete && image.naturalWidth > 0), true);
-    await page.setViewportSize({ width: 390, height: 844 });
-    assert.ok((await cards[1].boundingBox()).y > (await cards[0].boundingBox()).y);
-    const overflow = await page.locator(".ride-weather").evaluate(section => section.scrollWidth > section.clientWidth);
-    assert.equal(overflow, false);
-    const mobileGroups = cards[0].locator(".ride-weather-metric");
-    assert.equal((await mobileGroups.nth(0).boundingBox()).y, (await mobileGroups.nth(1).boundingBox()).y);
-    await page.locator(".ride-weather").screenshot({ path: "/tmp/bbb-weather-mobile.png" });
-    await page.setViewportSize({ width: 320, height: 740 });
-    assert.ok((await cards[1].boundingBox()).y > (await cards[0].boundingBox()).y);
-    assert.equal(await page.locator(".ride-weather-today").isVisible(), true);
-    assert.equal(await page.locator(".ride-weather").evaluate(section => section.scrollWidth > section.clientWidth), false);
-    assert.equal(await cards[0].evaluate(card => card.scrollWidth > card.clientWidth), false);
-    for (const card of cards) {
-      const metrics = card.locator(".ride-weather-metrics");
-      assert.equal(await metrics.evaluate(row => row.scrollWidth > row.clientWidth), false);
-      assert.equal(await metrics.locator("dd").nth(0).textContent(), "15% · 0.4 mm");
-      assert.equal(await metrics.locator("dd").nth(1).textContent(), "18 km/h");
+    for (const width of [390, 320]) {
+      await page.setViewportSize({ width, height: 844 });
+      assert.ok((await cards[1].boundingBox()).y > (await cards[0].boundingBox()).y, "One mobile column");
+      assert.equal(await page.locator(".ride-weather-today").isVisible(), true);
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, "No page overflow");
+      for (const card of cards) {
+        assert.equal(await card.evaluate(node => node.scrollWidth > node.clientWidth), false);
+        for (const row of await card.locator(".ride-weather-period").all()) {
+          assert.equal(await row.evaluate(node => node.scrollWidth > node.clientWidth), false);
+          const rain = await row.locator(".ride-weather-rain").boundingBox();
+          const wind = await row.locator(".ride-weather-wind").boundingBox();
+          assert.ok(rain.x < wind.x, "Rain left, Wind right");
+          assert.deepEqual(await row.locator("dd").allTextContents(), ["15% · 0.4 mm", "18 km/h"]);
+        }
+      }
+      await page.locator(".ride-weather").screenshot({ path: `/tmp/bbb-weather-${width === 390 ? "mobile" : "narrow"}.png` });
     }
-    await page.locator(".ride-weather").screenshot({ path: "/tmp/bbb-weather-narrow.png" });
+  });
+
+  await scenario("synthetic three-period day sorts source order and shows compact accessible hazards", async page => {
+    await page.setViewportSize({ width: 1440, height: 1100 });
+    await replacePoints(page, [
+      { date: "2026-10-24", period: "afternoon", location: "Yarrawonga" },
+      { date: "2026-10-23", period: "afternoon", location: "Beechworth" },
+      { date: "2026-10-23", period: "noon", location: "Gundagai" },
+      { date: "2026-10-23", period: "morning", location: "Canberra" },
+    ]);
+    const requests = await mockWeather(page, values => values.map(value => ({ ...value, localTimeZone: "Australia/Perth", hazards: [
+      { condition: "thunderstorm", label: "Thunderstorm", start: "16:00", end: "17:00" },
+      { condition: "fog", label: "Fog", start: "07:00", end: "07:00" },
+    ] })));
+    await ready(page);
+    assert.equal(requests.length, 1);
+    const card = page.locator(".ride-weather-card").first();
+    assert.equal(await card.locator("time").getAttribute("datetime"), "2026-10-23");
+    assert.deepEqual(await card.locator(".ride-weather-period-label").allTextContents(), ["AM", "NOON", "PM"]);
+    assert.equal(await card.getByRole("img", { name: "Thunderstorm risk from 16:00 to 17:00 local time (Australia/Perth)" }).count(), 3);
+    assert.equal(await card.getByText("⚡ 16–17", { exact: true }).count(), 3);
+    assert.equal(await card.getByRole("img", { name: "Fog risk at 07:00 local time (Australia/Perth)" }).count(), 3);
+    assert.ok(!(await card.innerText()).includes("Australia/Perth"), "Timezone context stays in accessibility text");
+    const withHazards = (await card.boundingBox()).height;
+    for (const width of [390, 320]) {
+      await page.setViewportSize({ width, height: 844 });
+      assert.equal(await card.evaluate(node => node.scrollWidth > node.clientWidth), false, "Hazard markers wrap without overflow");
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+    }
+    await page.setViewportSize({ width: 1440, height: 1100 });
+    await page.locator(".ride-weather-hazards").evaluateAll(nodes => nodes.forEach(node => node.remove()));
+    const height = (await card.boundingBox()).height;
+
+    assert.ok(height <= 180, "Three-period card stays compact without fixed height");
+    console.log(`Three-period card: ${height.toFixed(1)}px; with two hazard markers per period ${withHazards.toFixed(1)}px`);
+    for (const width of [390, 320]) {
+      await page.setViewportSize({ width, height: 844 });
+      assert.equal(await card.evaluate(node => node.scrollWidth > node.clientWidth), false);
+    }
   });
 
   await scenario("past point disappears; today and later points use one request", async page => {
@@ -166,7 +200,7 @@ try {
       await page.route("**/api/weather?*", route => failure === "network" ? route.abort()
         : route.fulfill(failure === "http" ? { status: 503, body: "Failed" } : { json: { forecasts: null } }));
       await ready(page);
-      assert.equal(await page.locator(".ride-weather-card").getByText("Forecast temporarily unavailable.", { exact: true }).count(), 4);
+      assert.equal(await page.locator(".ride-weather-card").getByText("Forecast temporarily unavailable.", { exact: true }).count(), 8);
       assert.equal(await page.locator(".ride-detail-content").isVisible(), true);
       assert.equal(await page.locator(".ride-map-embed iframe").count(), 1);
       const attribution = page.locator(".ride-weather-attribution");
@@ -184,24 +218,24 @@ try {
 
   await scenario("partial response keeps good forecasts and missing metrics are not zero", async page => {
     await mockWeather(page, forecasts => [
-      { ...forecasts[0], windMaxKmh: null }, { ...forecasts[1], status: "unavailable" }, forecasts[2], forecasts[3],
+      ...forecasts.map((value, index) => index === 0 ? { ...value, windMaxKmh: null }
+        : index === 1 ? { ...value, status: "unavailable" } : value),
     ]);
     await ready(page);
-    assert.equal(await page.getByText("24°C / 10°C", { exact: true }).count(), 3);
+    assert.equal(await page.getByText("24° / 10°", { exact: true }).count(), 7);
     assert.equal(await page.getByText("Forecast temporarily unavailable.", { exact: true }).count(), 1);
     assert.equal(await page.getByText("Not available", { exact: true }).count(), 1);
   });
 
   await scenario("invalid individual coordinates do not spoil other cards; names are text", async page => {
-    await page.route(rideURL, async route => {
-      const response = await route.fetch();
-      const html = await response.text();
-      await route.fulfill({ response, body: html.replace("-35.98536", "999").replace("Mulwala&#34;", "&lt;img src=x onerror=alert(1)&gt;&#34;") });
-    });
+    await replacePoints(page, [
+      { date: "2026-10-23", period: "morning", location: "<img src=x onerror=alert(1)>", latitude: 999 },
+      { date: "2026-10-23", period: "afternoon", location: "Canberra" },
+    ]);
     const requests = await mockWeather(page);
     await ready(page);
-    assert.equal(requests[0].length, 3);
-    assert.equal(await page.locator(".ride-weather-card").count(), 4);
+    assert.equal(requests[0].length, 1);
+    assert.equal(await page.locator(".ride-weather-card").count(), 1);
     assert.equal(await page.locator(".ride-weather img").count(), 0);
     assert.equal(await page.getByText("Forecast temporarily unavailable.", { exact: true }).count(), 1);
   });
@@ -212,6 +246,11 @@ try {
     assert.equal(await page.locator(".ride-weather").count(), 0);
     assert.equal(await page.locator('script[src="/js/ride-weather.js"]').count(), 0);
     assert.equal(requests.length, 0);
+  });
+
+  await scenario("page-title wrapping stays scoped to weather-configured Ride pages", async page => {
+    await page.goto(`${baseURL}/rides/`, { waitUntil: "domcontentloaded" });
+    assert.notEqual(await page.locator("h1.bb-page-title").evaluate(node => getComputedStyle(node).overflowWrap), "anywhere");
   });
 
   const noJS = await browser.newContext({ javaScriptEnabled: false });
@@ -258,6 +297,7 @@ try {
     assert.equal(await page.getByLabel("Latitude", { exact: true }).inputValue(), "-37.052");
     assert.equal(await page.getByLabel("Longitude", { exact: true }).inputValue(), "146.08846");
     await page.getByLabel("Date", { exact: true }).fill("2026-10-24");
+    await page.getByLabel("Period", { exact: true }).selectOption("noon");
     await page.getByLabel("Latitude", { exact: true }).fill("-37.1");
     assert.equal(searches.length, 1);
     await page.getByLabel("Title", { exact: true }).fill("Weather authoring test");
@@ -273,9 +313,103 @@ try {
     if (await publishNow.count()) await publishNow.click();
     await page.waitForFunction(() => Boolean(window.weatherSavedData));
     const saved = await page.evaluate(() => window.weatherSavedData.weather);
-    assert.deepEqual(saved, [{ date: "2026-10-24", location: "Mansfield", region: "Victoria", latitude: -37.1, longitude: 146.08846 }]);
-    await page.getByText("2026-10-24 — Mansfield", { exact: true }).waitFor();
+    assert.deepEqual(saved, [{ date: "2026-10-24", period: "noon", location: "Mansfield", region: "Victoria", latitude: -37.1, longitude: 146.08846 }]);
+    await page.getByText("2026-10-24 — noon — Mansfield", { exact: true }).waitFor();
     await page.screenshot({ path: "/tmp/bbb-weather-cms.png", fullPage: true });
+  });
+  await scenario("existing weather-loaded Ride preserves all eight periods through unrelated Decap edit/save", async page => {
+    const content = await readFile(new URL("../content/rides/bastards-bushrangers.md", import.meta.url), "utf8");
+    const expected = [...content.matchAll(/  - date: ([^\n]+)\n    period: ([^\n]+)\n    location: ([^\n]+)\n    region: ([^\n]+)\n    latitude: ([^\n]+)\n    longitude: ([^\n]+)/g)]
+      .map(([, date, period, location, region, latitude, longitude]) => ({ date, period, location, region, latitude: Number(latitude), longitude: Number(longitude) }));
+    await page.addInitScript(content => {
+      window.repoFiles = { content: { rides: { "bastards-bushrangers.md": { content, path: "content/rides/bastards-bushrangers.md" } } } };
+    }, content);
+    await page.route("**/admin/config.yml", async route => {
+      const response = await route.fetch();
+      await route.fulfill({ response, body: (await response.text()).replace(/^backend:[\s\S]*?publish_mode: editorial_workflow/,
+        "backend:\n  name: test-repo\n  login: false\npublish_mode: simple") });
+    });
+    await page.goto(`${baseURL}/admin/`, { waitUntil: "domcontentloaded" });
+    await page.getByRole("link", { name: "Rides", exact: true }).waitFor({ timeout: 60000 });
+    await page.goto(`${baseURL}/admin/#/collections/rides/entries/bastards-bushrangers`, { waitUntil: "domcontentloaded" });
+    await page.getByLabel("Title", { exact: true }).waitFor();
+    await page.getByLabel("Title", { exact: true }).fill("Such Is Life: Bastards & Bushrangers — test edit");
+    await page.evaluate(() => window.CMS.registerEventListener({ name: "preSave", handler: ({ entry }) => {
+      window.weatherSavedData = entry.get("data").toJS();
+    } }));
+    await page.getByRole("button", { name: "Publish", exact: true }).click();
+    const publishNow = page.getByText("Publish now", { exact: true });
+    if (await publishNow.count()) await publishNow.click();
+    await page.waitForFunction(() => Boolean(window.weatherSavedData));
+    const saved = await page.evaluate(() => window.weatherSavedData.weather.map(point => ({ ...point,
+      date: typeof point.date === "string" ? point.date : point.date.toISOString().slice(0, 10),
+    })));
+    assert.deepEqual(saved, expected);
+    await page.waitForFunction(() => window.repoFiles.content.rides["bastards-bushrangers.md"].content.includes("test edit"));
+    // Reopen the serialized Markdown too: catching Date-object regressions requires a second editor load.
+    await page.goto(`${baseURL}/admin/#/collections/rides`, { waitUntil: "domcontentloaded" });
+    await page.goto(`${baseURL}/admin/#/collections/rides/entries/bastards-bushrangers`, { waitUntil: "domcontentloaded" });
+    await page.getByLabel("Title", { exact: true }).waitFor();
+    assert.equal(await page.getByText("2026-10-23 — morning — Canberra", { exact: true }).count(), 1);
+    await page.getByLabel("Title", { exact: true }).fill("Such Is Life: Bastards & Bushrangers — second test edit");
+    await page.evaluate(() => { window.weatherSavedData = null; });
+    await page.getByRole("button", { name: "Publish", exact: true }).click();
+    const secondPublish = page.getByText("Publish now", { exact: true });
+    if (await secondPublish.count()) await secondPublish.click();
+    await page.waitForFunction(() => Boolean(window.weatherSavedData));
+    assert.deepEqual(await page.evaluate(() => window.weatherSavedData.weather.map(point => ({ ...point,
+      date: typeof point.date === "string" ? point.date : point.date.toISOString().slice(0, 10),
+    }))), expected);
+  });
+  await scenario("real Decap rejects duplicate date+period and accepts a different period on the same date", async (page, context, errors) => {
+    const original = await readFile(new URL("../content/rides/bastards-bushrangers.md", import.meta.url), "utf8");
+    const content = original.replace("distance: 1250", `  - date: 2026-10-23
+    period: morning
+    location: Second Canberra
+    region: Australian Capital Territory
+    latitude: -35.28346
+    longitude: 149.12807
+distance: 1250`);
+    await page.addInitScript(content => {
+      window.repoFiles = { content: { rides: { "bastards-bushrangers.md": { content, path: "content/rides/bastards-bushrangers.md" } } } };
+    }, content);
+    await page.route("**/admin/config.yml", async route => {
+      const response = await route.fetch();
+      await route.fulfill({ response, body: (await response.text()).replace(/^backend:[\s\S]*?publish_mode: editorial_workflow/,
+        "backend:\n  name: test-repo\n  login: false\npublish_mode: simple") });
+    });
+    await page.goto(`${baseURL}/admin/`, { waitUntil: "domcontentloaded" });
+    await page.getByRole("link", { name: "Rides", exact: true }).waitFor({ timeout: 60000 });
+    assert.equal(await page.locator('script[src="https://unpkg.com/decap-cms@3.17.1/dist/decap-cms.js"]').count(), 1);
+    await page.goto(`${baseURL}/admin/#/collections/rides/entries/bastards-bushrangers`, { waitUntil: "domcontentloaded" });
+    await page.getByLabel("Title", { exact: true }).fill("Duplicate validation test");
+    await page.evaluate(() => window.CMS.registerEventListener({ name: "preSave", handler: ({ entry }) => {
+      window.weatherSaveCount = (window.weatherSaveCount || 0) + 1;
+      window.weatherSavedData = entry.get("data").toJS();
+    } }));
+    // Decap 3.17.1 rejects invalid publishes with Promise.reject() and no reason.
+    // Expect just that native validation rejection for this failed attempt;
+    // leave all other page errors in the scenario's error list.
+    const expectedError = "Uncaught (in promise) undefined";
+    const rejectedPublish = page.waitForEvent("pageerror", { predicate: error => error.message === expectedError });
+    await page.getByRole("button", { name: "Publish", exact: true }).click();
+    const publishNow = page.getByText("Publish now", { exact: true });
+    if (await publishNow.count()) await publishNow.click();
+    await page.getByText("Duplicate weather period: 2026-10-23 morning. Choose each Morning, Noon or Afternoon only once per date.", { exact: true }).waitFor();
+    await rejectedPublish;
+    errors.splice(errors.indexOf(expectedError), 1);
+    assert.equal(await page.evaluate(() => window.weatherSaveCount || 0), 0, "Duplicate never reaches preSave");
+    assert.equal(await page.evaluate(() => window.repoFiles.content.rides["bastards-bushrangers.md"].content), content, "Duplicate cannot be published");
+    await page.getByText("2026-10-23 — morning — Second Canberra", { exact: true }).locator("..").getByRole("button").first().click();
+    await page.getByLabel("Period", { exact: true }).nth(8).selectOption("noon");
+    await page.getByRole("button", { name: "Publish", exact: true }).click();
+    if (await publishNow.count()) await publishNow.click();
+    await page.waitForFunction(() => Boolean(window.weatherSavedData));
+    const saved = await page.evaluate(() => window.weatherSavedData.weather);
+    assert.equal(saved.length, 9);
+    assert.deepEqual(saved.filter(point => (typeof point.date === "string" ? point.date : point.date.toISOString().slice(0, 10)) === "2026-10-23").map(point => point.period), ["morning", "afternoon", "noon"]);
+    await page.waitForFunction(() => window.repoFiles.content.rides["bastards-bushrangers.md"].content.includes("period: noon"));
+    assert.equal(await page.evaluate(() => window.weatherSaveCount), 1);
   });
   console.log(`${passed} browser scenarios passed; screenshots: /tmp/bbb-weather-{desktop,mobile}.png`);
 } finally { await browser.close(); }

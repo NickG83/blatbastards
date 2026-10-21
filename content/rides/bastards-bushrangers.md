@@ -5,41 +5,49 @@ rideDate: 2026-10-23
 region: Kelly Country
 weather:
   - date: 2026-10-23
+    period: morning
     location: Canberra
     region: Australian Capital Territory
     latitude: -35.28346
     longitude: 149.12807
   - date: 2026-10-23
+    period: afternoon
     location: Yarrawonga
     region: Victoria
     latitude: -36.01923
     longitude: 145.99973
   - date: 2026-10-24
+    period: morning
     location: Yarrawonga
     region: Victoria
     latitude: -36.01923
     longitude: 145.99973
   - date: 2026-10-24
+    period: afternoon
     location: Mansfield
     region: Victoria
     latitude: -37.052
     longitude: 146.08846
   - date: 2026-10-25
+    period: morning
     location: Mansfield
     region: Victoria
     latitude: -37.052
     longitude: 146.08846
   - date: 2026-10-25
+    period: afternoon
     location: Beechworth
     region: Victoria
     latitude: -36.35828
     longitude: 146.68584
   - date: 2026-10-26
+    period: morning
     location: Beechworth
     region: Victoria
     latitude: -36.35828
     longitude: 146.68584
   - date: 2026-10-26
+    period: afternoon
     location: Canberra
     region: Australian Capital Territory
     latitude: -35.28346

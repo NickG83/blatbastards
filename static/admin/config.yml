@@ -106,14 +106,14 @@ collections:
 
       - label: "Weather Forecast Locations"
         name: "weather"
-        widget: "list"
+        widget: "weather-points"
         required: false
         default: []
         min: 0
-        max: 10
+        max: 30
         label_singular: "Weather Forecast Location"
-        summary: "{{fields.point.date}} — {{fields.point.location}}"
-        hint: "Add the key location for each riding day where a forecast is useful, typically an overnight destination or primary riding area. Dates use the Australia/Sydney trip clock."
+        summary: "{{fields.point.date}} — {{fields.point.period}} — {{fields.point.location}}"
+        hint: "Add up to three locations per riding day: one Morning, one Noon and one Afternoon. Maximum 30 points. Dates use the Australia/Sydney trip clock."
         field:
           label: "Forecast Point"
           name: "point"
